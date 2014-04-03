@@ -19,6 +19,12 @@
 		9CD7A6A518EDDA7800641DA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7A68D18EDDA7800641DA9 /* UIKit.framework */; };
 		9CD7A6AD18EDDA7800641DA9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7A6AB18EDDA7800641DA9 /* InfoPlist.strings */; };
 		9CD7A6AF18EDDA7800641DA9 /* EasayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7A6AE18EDDA7800641DA9 /* EasayTests.m */; };
+		9CD7A6BA18EDDCCA00641DA9 /* Nexa Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7A6B818EDDCCA00641DA9 /* Nexa Bold.otf */; };
+		9CD7A6BB18EDDCCA00641DA9 /* Nexa Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7A6B918EDDCCA00641DA9 /* Nexa Light.otf */; };
+		9CD7A6BD18EDDD9100641DA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7A6BC18EDDD9100641DA9 /* Main.storyboard */; };
+		9CD7A6C018EDE1CC00641DA9 /* ESBoldLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7A6BF18EDE1CC00641DA9 /* ESBoldLabel.m */; };
+		9CD7A6C318EDE6F400641DA9 /* ESLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7A6C218EDE6F400641DA9 /* ESLoginViewController.m */; };
+		9CD7A6C618EDF06A00641DA9 /* ESTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7A6C518EDF06A00641DA9 /* ESTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,15 @@
 		9CD7A6AA18EDDA7800641DA9 /* EasayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EasayTests-Info.plist"; sourceTree = "<group>"; };
 		9CD7A6AC18EDDA7800641DA9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9CD7A6AE18EDDA7800641DA9 /* EasayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasayTests.m; sourceTree = "<group>"; };
+		9CD7A6B818EDDCCA00641DA9 /* Nexa Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Bold.otf"; sourceTree = "<group>"; };
+		9CD7A6B918EDDCCA00641DA9 /* Nexa Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nexa Light.otf"; sourceTree = "<group>"; };
+		9CD7A6BC18EDDD9100641DA9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9CD7A6BE18EDE1CC00641DA9 /* ESBoldLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESBoldLabel.h; sourceTree = "<group>"; };
+		9CD7A6BF18EDE1CC00641DA9 /* ESBoldLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESBoldLabel.m; sourceTree = "<group>"; };
+		9CD7A6C118EDE6F400641DA9 /* ESLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESLoginViewController.h; sourceTree = "<group>"; };
+		9CD7A6C218EDE6F400641DA9 /* ESLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESLoginViewController.m; sourceTree = "<group>"; };
+		9CD7A6C418EDF06A00641DA9 /* ESTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTextField.h; sourceTree = "<group>"; };
+		9CD7A6C518EDF06A00641DA9 /* ESTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +122,19 @@
 		9CD7A68F18EDDA7800641DA9 /* Easay */ = {
 			isa = PBXGroup;
 			children = (
+				9CD7A6B818EDDCCA00641DA9 /* Nexa Bold.otf */,
+				9CD7A6B918EDDCCA00641DA9 /* Nexa Light.otf */,
 				9CD7A69818EDDA7800641DA9 /* ESAppDelegate.h */,
 				9CD7A69918EDDA7800641DA9 /* ESAppDelegate.m */,
 				9CD7A69B18EDDA7800641DA9 /* Images.xcassets */,
 				9CD7A69018EDDA7800641DA9 /* Supporting Files */,
+				9CD7A6BC18EDDD9100641DA9 /* Main.storyboard */,
+				9CD7A6BE18EDE1CC00641DA9 /* ESBoldLabel.h */,
+				9CD7A6BF18EDE1CC00641DA9 /* ESBoldLabel.m */,
+				9CD7A6C118EDE6F400641DA9 /* ESLoginViewController.h */,
+				9CD7A6C218EDE6F400641DA9 /* ESLoginViewController.m */,
+				9CD7A6C418EDF06A00641DA9 /* ESTextField.h */,
+				9CD7A6C518EDF06A00641DA9 /* ESTextField.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
@@ -221,6 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD7A69418EDDA7800641DA9 /* InfoPlist.strings in Resources */,
+				9CD7A6BD18EDDD9100641DA9 /* Main.storyboard in Resources */,
+				9CD7A6BB18EDDCCA00641DA9 /* Nexa Light.otf in Resources */,
+				9CD7A6BA18EDDCCA00641DA9 /* Nexa Bold.otf in Resources */,
 				9CD7A69C18EDDA7800641DA9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CD7A6C018EDE1CC00641DA9 /* ESBoldLabel.m in Sources */,
 				9CD7A69A18EDDA7800641DA9 /* ESAppDelegate.m in Sources */,
+				9CD7A6C318EDE6F400641DA9 /* ESLoginViewController.m in Sources */,
 				9CD7A69618EDDA7800641DA9 /* main.m in Sources */,
+				9CD7A6C618EDF06A00641DA9 /* ESTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
