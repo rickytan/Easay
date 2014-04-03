@@ -13,7 +13,7 @@
 @property (nonatomic, assign) IBOutlet UILabel * titleLabel, * subtitleLabel, * startLabel;
 @property (nonatomic, assign) IBOutlet UITextField * userField, * passField;
 @property (nonatomic, assign) IBOutlet NSLayoutConstraint * titleTop;
-@property (nonatomic, assign) IBOutlet NSLayoutConstraint * logoTop, * logoHeight;
+@property (nonatomic, assign) IBOutlet NSLayoutConstraint * logoTop, * logoHeight, * accountBottom;
 @property (nonatomic, assign) IBOutlet NSLayoutConstraint * textFieldTop;
 @property (nonatomic, assign) IBOutlet UIButton * upButton;
 - (IBAction)onUp:(id)sender;
@@ -78,17 +78,15 @@
 
 - (IBAction)onUp:(id)sender
 {
-    self.titleTop.constant = 24;
-    [self.titleLabel setNeedsUpdateConstraints];
-    self.logoTop.constant = 60;
-    self.logoHeight.constant = 118;
-    [self.logo setNeedsUpdateConstraints];
-    self.textFieldTop.constant = 36;
-    
     [UIView animateWithDuration:0.3
                           delay:0
                         options:UIViewAnimationOptionAllowAnimatedContent | UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut
                      animations:^{
+                         self.titleTop.constant = 24;
+                         self.logoTop.constant = 60;
+                         self.logoHeight.constant = 118;
+                         self.textFieldTop.constant = 36;
+                         self.accountBottom.constant = 0;
                          [self.view layoutIfNeeded];
                          self.titleLabel.transform = CGAffineTransformMakeScale(0.6, 0.6);
                          self.subtitleLabel.alpha = 0.0;
