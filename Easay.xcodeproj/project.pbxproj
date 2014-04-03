@@ -25,6 +25,7 @@
 		9CD7A6C018EDE1CC00641DA9 /* ESBoldLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7A6BF18EDE1CC00641DA9 /* ESBoldLabel.m */; };
 		9CD7A6C318EDE6F400641DA9 /* ESLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7A6C218EDE6F400641DA9 /* ESLoginViewController.m */; };
 		9CD7A6C618EDF06A00641DA9 /* ESTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CD7A6C518EDF06A00641DA9 /* ESTextField.m */; };
+		9CD7A6C818EDFFE400641DA9 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7A6C718EDFFE400641DA9 /* iTunesArtwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		9CD7A6C218EDE6F400641DA9 /* ESLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESLoginViewController.m; sourceTree = "<group>"; };
 		9CD7A6C418EDF06A00641DA9 /* ESTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTextField.h; sourceTree = "<group>"; };
 		9CD7A6C518EDF06A00641DA9 /* ESTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTextField.m; sourceTree = "<group>"; };
+		9CD7A6C718EDFFE400641DA9 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		9CD7A69018EDDA7800641DA9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CD7A6C718EDFFE400641DA9 /* iTunesArtwork */,
 				9CD7A69118EDDA7800641DA9 /* Easay-Info.plist */,
 				9CD7A69218EDDA7800641DA9 /* InfoPlist.strings */,
 				9CD7A69518EDDA7800641DA9 /* main.m */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD7A69418EDDA7800641DA9 /* InfoPlist.strings in Resources */,
+				9CD7A6C818EDFFE400641DA9 /* iTunesArtwork in Resources */,
 				9CD7A6BD18EDDD9100641DA9 /* Main.storyboard in Resources */,
 				9CD7A6BB18EDDCCA00641DA9 /* Nexa Light.otf in Resources */,
 				9CD7A6BA18EDDCCA00641DA9 /* Nexa Bold.otf in Resources */,
