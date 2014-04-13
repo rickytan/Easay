@@ -8,8 +8,15 @@
 
 #import "ESSignUpViewController.h"
 
-@interface ESSignUpViewController ()
+@interface ESSignUpViewController () <
+UIImagePickerControllerDelegate,
+UINavigationControllerDelegate,
+UIActionSheetDelegate
+>
 @property (nonatomic, assign) IBOutlet UITextField * userField, * passField, * emailField;
+@property (nonatomic, assign) IBOutlet UIButton * headerButton;
+
+- (IBAction)onHeader:(id)sender;
 @end
 
 @implementation ESSignUpViewController
@@ -44,7 +51,7 @@
     self.emailField.leftView = image;
     self.emailField.leftViewMode = UITextFieldViewModeAlways;
     self.emailField.font = [UIFont fontWithName:@"Nexa Light" size:16];
-
+    
     self.passField.layer.borderColor = [UIColor whiteColor].CGColor;
     self.passField.layer.borderWidth = 1.0;
     image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
@@ -55,10 +62,67 @@
     self.passField.font = [UIFont fontWithName:@"Nexa Light" size:16];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.userField becomeFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Actions
+
+- (IBAction)onHeader:(id)sender
+{
+    UIActionSheet *actions = [[UIActionSheet alloc] initWithTitle:nil
+                                                         delegate:self
+                                                cancelButtonTitle:@"取消"
+                                           destructiveButtonTitle:nil
+                                                otherButtonTitles:@"从相机拍摄", @"从相册选取", nil];
+    [actions showInView:self.view];
+}
+
+#pragma mark - UIAction
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex != actionSheet.cancelButtonIndex) {
+        UIImagePickerControllerSourceType type = (buttonIndex == 0) ? UIImagePickerControllerSourceTypeCamera : UIImagePickerControllerSourceTypePhotoLibrary;
+        if (![UIImagePickerController isSourceTypeAvailable:type]) {
+            [[[UIAlertView alloc] initWithTitle:(type == UIImagePickerControllerSourceTypeCamera) ? @"您的设备不支持拍照":@"您没有相册"
+                                        message:nil
+                                       delegate:nil
+                              cancelButtonTitle:@"好"
+                              otherButtonTitles:nil] show];
+            return;
+        }
+        UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+        imagePicker.delegate = self;
+        imagePicker.sourceType = type;
+        imagePicker.allowsEditing = YES;
+        [self presentViewController:imagePicker
+                           animated:YES
+                         completion:NULL];
+    }
+}
+
+#pragma mark - UIImagePicker
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES
+                               completion:^{
+                                   UIImage *image = info[UIImagePickerControllerEditedImage];
+                                   [self.headerButton setTitle:nil
+                                                      forState:UIControlStateNormal];
+                                   [self.headerButton setImage:image
+                                                      forState:UIControlStateNormal];
+                                   
+                               }];
 }
 
 @end

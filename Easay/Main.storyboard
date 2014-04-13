@@ -43,6 +43,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Lh-bk-6wa" customClass="ESTextField">
                                 <rect key="frame" x="10" y="607" width="300" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="mWG-Yh-a8F"/>
                                 </constraints>
@@ -53,7 +54,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dij-ZH-h7S" customClass="ESTextField">
                                 <rect key="frame" x="10" y="667" width="300" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.46456880379999999" blue="0.26706695359999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="ecw-2A-SpA"/>
                                 </constraints>
@@ -263,6 +264,9 @@
                                 <state key="normal" image="head">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onHeader:" destination="0kM-7g-KIz" eventType="touchUpInside" id="mIX-dm-Lm2"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Username" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pig-ch-BTR" customClass="ESTextField">
                                 <rect key="frame" x="10" y="177" width="300" height="42"/>
@@ -274,15 +278,15 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xaY-W3-rgH" customClass="ESTextField">
                                 <rect key="frame" x="10" y="238" width="300" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.46456880379999999" blue="0.26706695359999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dsh-m7-BY1" customClass="ESTextField">
                                 <rect key="frame" x="10" y="299" width="300" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.46456880379999999" blue="0.26706695359999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -315,6 +319,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="xaY-W3-rgH" id="ec7-47-aWn"/>
+                        <outlet property="headerButton" destination="CXM-cl-Vyf" id="Mt5-mO-uDK"/>
                         <outlet property="passField" destination="Dsh-m7-BY1" id="FGt-t7-16P"/>
                         <outlet property="userField" destination="Pig-ch-BTR" id="3jq-uY-dKK"/>
                     </connections>
@@ -354,13 +359,13 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQo-fU-nwj" customClass="ESTextField">
                                 <rect key="frame" x="10" y="114" width="300" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="1" green="0.46456880379999999" blue="0.26706695359999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TQ-xE-ISw" customClass="ESBoldButton">
-                                <rect key="frame" x="10" y="182" width="300" height="44"/>
+                                <rect key="frame" x="10" y="187" width="300" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -375,8 +380,8 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can find the link in your email, then reset the password." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-6D-c3G" customClass="ESLightLabel">
                                 <rect key="frame" x="7" y="76" width="307" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -386,7 +391,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Find Password" id="4Fs-p9-A1B">
-                        <barButtonItem key="leftBarButtonItem" image="nav-back" id="lgN-RV-Pnh"/>
+                        <barButtonItem key="leftBarButtonItem" image="nav-back" id="lgN-RV-Pnh">
+                            <connections>
+                                <action selector="onDismiss:" destination="pcp-wL-eJM" id="8ai-cU-TYN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="emailField" destination="RQo-fU-nwj" id="Q1n-yz-aqU"/>
@@ -396,11 +405,107 @@
             </objects>
             <point key="canvasLocation" x="1392" y="33"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="TRG-UQ-WtB">
+            <objects>
+                <viewController id="6ZI-0v-fC8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GBt-TY-yOg"/>
+                        <viewControllerLayoutGuide type="bottom" id="hTI-A8-LDu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vuF-ty-pb2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="qRf-Cr-EqW">
+                                <rect key="frame" x="42" y="465" width="237" height="103"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-Se-TlM">
+                                <rect key="frame" x="0.0" y="465" width="320" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="MmV-pJ-8RW">
+                                        <rect key="frame" x="141" y="66" width="39" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </pageControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MmV-pJ-8RW" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" constant="66" id="5i0-uG-iUe"/>
+                                    <constraint firstAttribute="height" constant="103" id="UHw-Ws-uHw"/>
+                                    <constraint firstAttribute="centerX" secondItem="MmV-pJ-8RW" secondAttribute="centerX" id="hQc-gJ-Kbb"/>
+                                </constraints>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gps" translatesAutoresizingMaskIntoConstraints="NO" id="ZhJ-mf-OE7">
+                                <rect key="frame" x="150" y="371" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="J1z-Se-TlM" firstAttribute="top" secondItem="qRf-Cr-EqW" secondAttribute="top" id="0vI-qN-s6K"/>
+                            <constraint firstItem="J1z-Se-TlM" firstAttribute="centerX" secondItem="qRf-Cr-EqW" secondAttribute="centerX" constant="-0.5" id="Dx1-Tv-UEy"/>
+                            <constraint firstItem="J1z-Se-TlM" firstAttribute="leading" secondItem="vuF-ty-pb2" secondAttribute="leading" id="LH9-yb-dTF"/>
+                            <constraint firstItem="hTI-A8-LDu" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="bottom" id="Mdi-9d-Jta"/>
+                            <constraint firstAttribute="trailing" secondItem="J1z-Se-TlM" secondAttribute="trailing" id="Q7m-97-v6H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Hg-Z7-EcZ">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="sel-4Q-ZQR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AwV-1f-R1q">
+                                <rect key="frame" x="16" y="14" width="24" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" image="menu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <view key="titleView" contentMode="scaleToFill" id="fdy-of-emi">
+                            <rect key="frame" x="128" y="6" width="64" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-mini" translatesAutoresizingMaskIntoConstraints="NO" id="mjg-pk-1nD">
+                                    <rect key="frame" x="14" y="6" width="37" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </view>
+                        <barButtonItem key="rightBarButtonItem" image="nav-right" id="gcW-bV-ZfG"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDk-f0-w4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579" y="-963"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cWB-6o-UfN">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="z6Q-W0-Fdu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ljM-he-iqW">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6ZI-0v-fC8" kind="relationship" relationship="rootViewController" id="W26-yf-EiZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QjL-A6-k1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095" y="-963"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="gps" width="20" height="20"/>
         <image name="head" width="90" height="90"/>
         <image name="logo" width="225" height="225"/>
+        <image name="logo-mini" width="37" height="21"/>
+        <image name="menu" width="24" height="15"/>
         <image name="nav-back" width="32" height="30"/>
+        <image name="nav-right" width="24" height="17"/>
+        <image name="shadow" width="237" height="103"/>
         <image name="up" width="32" height="32"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
