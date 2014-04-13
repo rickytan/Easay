@@ -10,9 +10,15 @@
 
 @implementation ESAppDelegate
 
+- (void)setupUI
+{
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Nexa Bold"
+                                                                                                size:16]}];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+    [self setupUI];
     return YES;
 }
 

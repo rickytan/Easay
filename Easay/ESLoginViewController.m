@@ -17,7 +17,6 @@
 @property (nonatomic, assign) IBOutlet NSLayoutConstraint * textFieldTop;
 @property (nonatomic, assign) IBOutlet UIButton * upButton;
 - (IBAction)onUp:(id)sender;
-- (IBAction)onDismissKeyboard:(id)sender;
 @end
 
 @implementation ESLoginViewController
@@ -97,11 +96,6 @@
                          self.startLabel.hidden = YES;
                          self.upButton.hidden = YES;
                      }];
-}
-
-- (IBAction)onDismissKeyboard:(id)sender
-{
-    [self.view endEditing:YES];
 }
 
 @end
