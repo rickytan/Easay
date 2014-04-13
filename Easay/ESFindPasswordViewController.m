@@ -39,6 +39,12 @@
     self.emailField.font = [UIFont fontWithName:@"Nexa Light" size:16];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.emailField becomeFirstResponder];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

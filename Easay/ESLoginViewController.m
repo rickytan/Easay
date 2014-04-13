@@ -17,6 +17,7 @@
 @property (nonatomic, assign) IBOutlet NSLayoutConstraint * textFieldTop;
 @property (nonatomic, assign) IBOutlet UIButton * upButton;
 - (IBAction)onUp:(id)sender;
+- (IBAction)onLogin:(id)sender;
 @end
 
 @implementation ESLoginViewController
@@ -64,12 +65,6 @@
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [self.userField becomeFirstResponder];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -102,6 +97,15 @@
                          self.startLabel.hidden = YES;
                          self.upButton.hidden = YES;
                      }];
+}
+
+- (IBAction)onLogin:(id)sender
+{
+    UIViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeNav"];
+    c.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:c
+                       animated:YES
+                     completion:NULL];
 }
 
 @end
