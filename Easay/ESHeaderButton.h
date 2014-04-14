@@ -1,5 +1,5 @@
 //
-//  ESViewController.h
+//  ESHeaderButton.h
 //  Easay
 //
 //  Created by ricky on 14-4-14.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RTSiderViewController.h"
 
-@interface ESViewController : RTSiderViewController
+@interface ESHeaderButton : UIButton
 
 @end

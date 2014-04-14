@@ -8,6 +8,7 @@
 
 #import "ESLoginViewController.h"
 #import "ESSignUpViewController.h"
+#import "ESViewController.h"
 
 @interface ESLoginViewController () <ESSignUpViewControllerDelegate>
 @property (nonatomic, assign) IBOutlet UIImageView * logo;
@@ -135,11 +136,8 @@
 
 - (IBAction)onLogin:(id)sender
 {
-    UIViewController *c = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeNav"];
-    c.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    [self presentViewController:c
-                       animated:YES
-                     completion:NULL];
+    [self performSegueWithIdentifier:@"ShowHomeSegue"
+                              sender:self];
 }
 
 #pragma mark - ESSignUp

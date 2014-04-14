@@ -7,7 +7,6 @@
 //
 
 #import "ESViewController.h"
-#import "RTSiderViewController.h"
 #import "ESMenuViewController.h"
 #import "ESHomeViewController.h"
 
@@ -29,13 +28,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor clearColor];
 	// Do any additional setup after loading the view.
-    RTSiderViewController *sider = [[RTSiderViewController alloc] init];
-    sider.delegate = self;
-    sider.dataSource = self;
-    [self.view addSubview:sider.view];
+
+    self.delegate = self;
+    self.dataSource = self;
     
-    
+    [self setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeNav"]];
+    [self setLeftViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"Menu"]];
 }
 
 - (void)didReceiveMemoryWarning

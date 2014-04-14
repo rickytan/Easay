@@ -234,6 +234,7 @@
                         <outlet property="titleTop" destination="Ul0-pc-4v7" id="yHT-k7-4pZ"/>
                         <outlet property="upButton" destination="cau-CC-RDJ" id="HOf-v9-RtC"/>
                         <outlet property="userField" destination="1Lh-bk-6wa" id="3Mk-Si-et5"/>
+                        <segue destination="wCZ-V1-anO" kind="modal" identifier="ShowHomeSegue" modalTransitionStyle="flipHorizontal" id="6Hq-TN-zJP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eod-SI-lmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -268,11 +269,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXM-cl-Vyf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CXM-cl-Vyf" customClass="ESHeaderButton">
                                 <rect key="frame" x="115" y="71" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="head">
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -422,10 +423,10 @@
             </objects>
             <point key="canvasLocation" x="1392" y="33"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="TRG-UQ-WtB">
             <objects>
-                <viewController storyboardIdentifier="Home" id="6ZI-0v-fC8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="6ZI-0v-fC8" customClass="ESHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GBt-TY-yOg"/>
                         <viewControllerLayoutGuide type="bottom" id="hTI-A8-LDu"/>
@@ -477,6 +478,9 @@
                                 <state key="normal" image="menu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onMenu:" destination="6ZI-0v-fC8" eventType="touchUpInside" id="2eO-Mn-8uR"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="fdy-of-emi">
@@ -492,6 +496,9 @@
                         </view>
                         <barButtonItem key="rightBarButtonItem" image="nav-right" id="gcW-bV-ZfG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="AwV-1f-R1q" id="kom-Tp-8f4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDk-f0-w4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -500,7 +507,7 @@
         <!--Table View Controller-->
         <scene sceneID="Jes-cy-OZE">
             <objects>
-                <tableViewController id="gUM-NP-3Mk" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Menu" id="gUM-NP-3Mk" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oNw-Gr-MCy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -523,7 +530,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9pl-Z7-ehK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="-963"/>
+            <point key="canvasLocation" x="345" y="-963"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cki-z0-FU7">
+            <objects>
+                <viewController id="wCZ-V1-anO" customClass="ESViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="47u-2u-M4W"/>
+                        <viewControllerLayoutGuide type="bottom" id="F3b-jn-lNq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OHx-ff-Y8k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l21-uS-bBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="715" y="-963"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cWB-6o-UfN">
@@ -544,7 +569,6 @@
     </scenes>
     <resources>
         <image name="gps" width="20" height="20"/>
-        <image name="head" width="90" height="90"/>
         <image name="logo" width="225" height="225"/>
         <image name="logo-mini" width="37" height="21"/>
         <image name="menu" width="24" height="15"/>
