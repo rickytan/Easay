@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ESSignUpViewController : UIViewController
+@class ESSignUpViewController;
 
+@protocol ESSignUpViewControllerDelegate <NSObject>
+@optional
+- (void)signUpViewController:(ESSignUpViewController *)signUp
+           didSignUpWithUser:(id)user
+                       error:(NSError *)error;
+
+@end
+
+@interface ESSignUpViewController : UIViewController
+@property (nonatomic, assign) id<ESSignUpViewControllerDelegate> delegate;
 @end

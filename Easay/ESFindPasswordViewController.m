@@ -7,9 +7,11 @@
 //
 
 #import "ESFindPasswordViewController.h"
+#import "ProgressHUD.h"
 
 @interface ESFindPasswordViewController ()
 @property (nonatomic, assign) IBOutlet UITextField * emailField;
+- (IBAction)onResetPass:(id)sender;
 @end
 
 @implementation ESFindPasswordViewController
@@ -49,6 +51,20 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onResetPass:(id)sender
+{
+    [ProgressHUD show:@"Loading..."];
+    [self.view endEditing:YES];
+    
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [ProgressHUD dismiss];
+        [self dismissViewControllerAnimated:YES
+                                 completion:NULL];
+    });
 }
 
 @end

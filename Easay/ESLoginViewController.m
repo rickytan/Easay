@@ -7,8 +7,9 @@
 //
 
 #import "ESLoginViewController.h"
+#import "ESSignUpViewController.h"
 
-@interface ESLoginViewController ()
+@interface ESLoginViewController () <ESSignUpViewControllerDelegate>
 @property (nonatomic, assign) IBOutlet UIImageView * logo;
 @property (nonatomic, assign) IBOutlet UILabel * titleLabel, * subtitleLabel, * startLabel;
 @property (nonatomic, assign) IBOutlet UITextField * userField, * passField;
@@ -18,6 +19,7 @@
 @property (nonatomic, assign) IBOutlet UIButton * upButton;
 - (IBAction)onUp:(id)sender;
 - (IBAction)onLogin:(id)sender;
+- (IBAction)onPan:(UIPanGestureRecognizer *)pan;
 @end
 
 @implementation ESLoginViewController
@@ -65,6 +67,13 @@
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"SignUpSegue"]) {
+        ((ESSignUpViewController *)((UINavigationController *)segue.destinationViewController).topViewController).delegate = self;
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -74,6 +83,31 @@
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+- (IBAction)onPan:(UIPanGestureRecognizer *)pan
+{
+    switch (pan.state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+        {
+            CGPoint trans = [pan translationInView:self.view];
+            CGFloat ratio = -trans.y / 160;
+        }
+            break;
+        case UIGestureRecognizerStateEnded:
+        case UIGestureRecognizerStateCancelled:
+        {
+            
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (IBAction)onUp:(id)sender
@@ -106,6 +140,18 @@
     [self presentViewController:c
                        animated:YES
                      completion:NULL];
+}
+
+#pragma mark - ESSignUp
+
+- (void)signUpViewController:(ESSignUpViewController *)signUp didSignUpWithUser:(id)user error:(NSError *)error
+{
+    if (user) {
+        [signUp dismissViewControllerAnimated:YES
+                                   completion:^{
+                                       [self onLogin:nil];
+                                   }];
+    }
 }
 
 @end

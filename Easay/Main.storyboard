@@ -81,13 +81,17 @@
                                     <action selector="onLogin:" destination="Sxr-R8-yWS" eventType="touchUpInside" id="inB-wo-CBZ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBt-uf-xsh">
-                                <rect key="frame" x="0.0" y="588" width="320" height="80"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBt-uf-xsh">
+                                <rect key="frame" x="0.0" y="88" width="320" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93v-zs-xRh" customClass="ESBoldButton">
-                                        <rect key="frame" x="11" y="14" width="103" height="27"/>
+                                        <rect key="frame" x="3" y="10" width="120" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="JxW-Xl-TDt"/>
+                                            <constraint firstAttribute="height" constant="36" id="gp1-LB-GRO"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Create an account">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -96,12 +100,16 @@
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="XIR-Ky-G0h" kind="modal" id="jSN-He-XZr"/>
+                                            <segue destination="XIR-Ky-G0h" kind="modal" identifier="SignUpSegue" id="jSN-He-XZr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKt-kP-xqb" customClass="ESBoldButton">
-                                        <rect key="frame" x="179" y="14" width="90" height="27"/>
+                                        <rect key="frame" x="164" y="10" width="120" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="sNf-no-Vfq"/>
+                                            <constraint firstAttribute="height" constant="36" id="syM-eV-VZB"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="Lost Password?">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -110,7 +118,7 @@
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="sCa-71-DR1" kind="modal" id="VJS-9q-yhL"/>
+                                            <segue destination="sCa-71-DR1" kind="modal" identifier="FindPasswordSegue" id="VJS-9q-yhL"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTr-ll-dd4">
@@ -131,7 +139,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ux-If-8mb" customClass="ESLightLabel">
-                                        <rect key="frame" x="11" y="41" width="59" height="10"/>
+                                        <rect key="frame" x="10" y="41" width="59" height="10"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -147,20 +155,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="93v-zs-xRh" firstAttribute="top" secondItem="GBt-uf-xsh" secondAttribute="top" constant="14" id="02H-7b-Fp7"/>
-                                    <constraint firstItem="cKt-kP-xqb" firstAttribute="top" secondItem="GBt-uf-xsh" secondAttribute="top" constant="14" id="5DV-S0-Q4u"/>
+                                    <constraint firstItem="cKt-kP-xqb" firstAttribute="top" secondItem="GBt-uf-xsh" secondAttribute="top" constant="9.5" id="5DV-S0-Q4u"/>
                                     <constraint firstAttribute="centerY" secondItem="It6-mG-tHL" secondAttribute="centerY" id="8yk-yN-MRN"/>
-                                    <constraint firstItem="sEr-2W-2eC" firstAttribute="top" secondItem="cKt-kP-xqb" secondAttribute="bottom" id="ChV-AJ-DMu"/>
-                                    <constraint firstItem="4ux-If-8mb" firstAttribute="top" secondItem="93v-zs-xRh" secondAttribute="bottom" id="GcB-Yp-iDv"/>
+                                    <constraint firstItem="4ux-If-8mb" firstAttribute="leading" secondItem="fTr-ll-dd4" secondAttribute="leading" id="AGj-eh-FY7"/>
+                                    <constraint firstItem="sEr-2W-2eC" firstAttribute="top" secondItem="cKt-kP-xqb" secondAttribute="bottom" constant="-4.5" id="ChV-AJ-DMu"/>
                                     <constraint firstItem="fTr-ll-dd4" firstAttribute="top" secondItem="GBt-uf-xsh" secondAttribute="top" id="JWK-GJ-Hm8"/>
-                                    <constraint firstItem="93v-zs-xRh" firstAttribute="leading" secondItem="GBt-uf-xsh" secondAttribute="leading" constant="11" id="JZQ-WM-N1k"/>
+                                    <constraint firstItem="93v-zs-xRh" firstAttribute="top" secondItem="fTr-ll-dd4" secondAttribute="bottom" constant="8.5" id="P5g-hk-KUN"/>
+                                    <constraint firstItem="4ux-If-8mb" firstAttribute="baseline" secondItem="sEr-2W-2eC" secondAttribute="baseline" id="Qpu-3s-sN4"/>
                                     <constraint firstAttribute="centerX" secondItem="It6-mG-tHL" secondAttribute="centerX" id="Rla-HM-dAF"/>
-                                    <constraint firstItem="93v-zs-xRh" firstAttribute="leading" secondItem="4ux-If-8mb" secondAttribute="leading" id="e31-DD-D1K"/>
-                                    <constraint firstItem="cKt-kP-xqb" firstAttribute="leading" secondItem="GBt-uf-xsh" secondAttribute="leading" constant="179" id="mRf-ha-uIp"/>
+                                    <constraint firstItem="93v-zs-xRh" firstAttribute="leading" secondItem="GBt-uf-xsh" secondAttribute="leading" constant="2.5" id="jiH-Fh-Wnj"/>
+                                    <constraint firstItem="cKt-kP-xqb" firstAttribute="leading" secondItem="GBt-uf-xsh" secondAttribute="leading" constant="164" id="mRf-ha-uIp"/>
                                     <constraint firstItem="fTr-ll-dd4" firstAttribute="leading" secondItem="GBt-uf-xsh" secondAttribute="leading" constant="10" id="nBB-km-TMe"/>
                                     <constraint firstAttribute="trailing" secondItem="fTr-ll-dd4" secondAttribute="trailing" constant="10" id="nIp-NG-on6"/>
                                     <constraint firstAttribute="height" constant="80" id="vl4-RQ-lAq"/>
-                                    <constraint firstItem="cKt-kP-xqb" firstAttribute="leading" secondItem="sEr-2W-2eC" secondAttribute="leading" id="x2K-RK-EH2"/>
+                                    <constraint firstItem="cKt-kP-xqb" firstAttribute="leading" secondItem="sEr-2W-2eC" secondAttribute="leading" constant="-15" id="x2K-RK-EH2"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cau-CC-RDJ">
@@ -306,6 +314,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onContinue:" destination="0kM-7g-KIz" eventType="touchUpInside" id="1RK-da-ir4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
@@ -379,6 +390,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onResetPass:" destination="pcp-wL-eJM" eventType="touchUpInside" id="V48-6D-VSg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can find the link in your email, then reset the password." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efa-6D-c3G" customClass="ESLightLabel">
                                 <rect key="frame" x="7" y="76" width="307" height="14"/>
@@ -482,6 +496,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDk-f0-w4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1579" y="-963"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Jes-cy-OZE">
+            <objects>
+                <tableViewController id="gUM-NP-3Mk" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oNw-Gr-MCy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dRO-63-ybI">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dRO-63-ybI" id="Dpv-B8-kS7">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gUM-NP-3Mk" id="hU3-tz-wA0"/>
+                            <outlet property="delegate" destination="gUM-NP-3Mk" id="B6R-yE-NLR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pl-Z7-ehK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="497" y="-963"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cWB-6o-UfN">

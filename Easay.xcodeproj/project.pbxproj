@@ -10,6 +10,12 @@
 		9C1AC7B918FADB5D009EAB1F /* ESSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7B818FADB5D009EAB1F /* ESSignUpViewController.m */; };
 		9C1AC7BC18FADFB3009EAB1F /* UIViewController+ES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */; };
 		9C1AC7BF18FAE177009EAB1F /* ESFindPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */; };
+		9CC16AB818FBBBE2004D3F8A /* ESViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16AB718FBBBE2004D3F8A /* ESViewController.m */; };
+		9CC16ABB18FBBC13004D3F8A /* RTSiderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16ABA18FBBC13004D3F8A /* RTSiderViewController.m */; };
+		9CC16ABE18FBBEEC004D3F8A /* ESMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16ABD18FBBEEC004D3F8A /* ESMenuViewController.m */; };
+		9CC16AC118FBC000004D3F8A /* ESHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16AC018FBC000004D3F8A /* ESHomeViewController.m */; };
+		9CC16AC618FBC101004D3F8A /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CC16AC318FBC101004D3F8A /* ProgressHUD.bundle */; };
+		9CC16AC718FBC101004D3F8A /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16AC518FBC101004D3F8A /* ProgressHUD.m */; };
 		9CD7A68A18EDDA7800641DA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7A68918EDDA7800641DA9 /* Foundation.framework */; };
 		9CD7A68C18EDDA7800641DA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7A68B18EDDA7800641DA9 /* CoreGraphics.framework */; };
 		9CD7A68E18EDDA7800641DA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7A68D18EDDA7800641DA9 /* UIKit.framework */; };
@@ -48,6 +54,17 @@
 		9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ES.m"; sourceTree = "<group>"; };
 		9C1AC7BD18FAE177009EAB1F /* ESFindPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESFindPasswordViewController.h; sourceTree = "<group>"; };
 		9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESFindPasswordViewController.m; sourceTree = "<group>"; };
+		9CC16AB618FBBBE2004D3F8A /* ESViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESViewController.h; sourceTree = "<group>"; };
+		9CC16AB718FBBBE2004D3F8A /* ESViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESViewController.m; sourceTree = "<group>"; };
+		9CC16AB918FBBC13004D3F8A /* RTSiderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSiderViewController.h; sourceTree = "<group>"; };
+		9CC16ABA18FBBC13004D3F8A /* RTSiderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSiderViewController.m; sourceTree = "<group>"; };
+		9CC16ABC18FBBEEC004D3F8A /* ESMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESMenuViewController.h; sourceTree = "<group>"; };
+		9CC16ABD18FBBEEC004D3F8A /* ESMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESMenuViewController.m; sourceTree = "<group>"; };
+		9CC16ABF18FBC000004D3F8A /* ESHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHomeViewController.h; sourceTree = "<group>"; };
+		9CC16AC018FBC000004D3F8A /* ESHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHomeViewController.m; sourceTree = "<group>"; };
+		9CC16AC318FBC101004D3F8A /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		9CC16AC418FBC101004D3F8A /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		9CC16AC518FBC101004D3F8A /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		9CD7A68618EDDA7800641DA9 /* Easay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD7A68918EDDA7800641DA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9CD7A68B18EDDA7800641DA9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -100,9 +117,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CC16AC218FBC101004D3F8A /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				9CC16AC318FBC101004D3F8A /* ProgressHUD.bundle */,
+				9CC16AC418FBC101004D3F8A /* ProgressHUD.h */,
+				9CC16AC518FBC101004D3F8A /* ProgressHUD.m */,
+			);
+			name = ProgressHUD;
+			path = ProgressHUD/ProgressHUD;
+			sourceTree = "<group>";
+		};
 		9CD7A67D18EDDA7800641DA9 = {
 			isa = PBXGroup;
 			children = (
+				9CC16AC218FBC101004D3F8A /* ProgressHUD */,
 				9CD7A68F18EDDA7800641DA9 /* Easay */,
 				9CD7A6A818EDDA7800641DA9 /* EasayTests */,
 				9CD7A68818EDDA7800641DA9 /* Frameworks */,
@@ -133,6 +162,8 @@
 		9CD7A68F18EDDA7800641DA9 /* Easay */ = {
 			isa = PBXGroup;
 			children = (
+				9CC16AB918FBBC13004D3F8A /* RTSiderViewController.h */,
+				9CC16ABA18FBBC13004D3F8A /* RTSiderViewController.m */,
 				9CD7A69818EDDA7800641DA9 /* ESAppDelegate.h */,
 				9CD7A69918EDDA7800641DA9 /* ESAppDelegate.m */,
 				9CD7A6BE18EDE1CC00641DA9 /* ESBoldLabel.h */,
@@ -152,6 +183,12 @@
 				9CD7A69018EDDA7800641DA9 /* Supporting Files */,
 				9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */,
 				9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */,
+				9CC16AB618FBBBE2004D3F8A /* ESViewController.h */,
+				9CC16AB718FBBBE2004D3F8A /* ESViewController.m */,
+				9CC16ABC18FBBEEC004D3F8A /* ESMenuViewController.h */,
+				9CC16ABD18FBBEEC004D3F8A /* ESMenuViewController.m */,
+				9CC16ABF18FBC000004D3F8A /* ESHomeViewController.h */,
+				9CC16AC018FBC000004D3F8A /* ESHomeViewController.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
@@ -267,6 +304,7 @@
 			files = (
 				9CD7A69418EDDA7800641DA9 /* InfoPlist.strings in Resources */,
 				9CD7A6C818EDFFE400641DA9 /* iTunesArtwork in Resources */,
+				9CC16AC618FBC101004D3F8A /* ProgressHUD.bundle in Resources */,
 				9CD7A6BD18EDDD9100641DA9 /* Main.storyboard in Resources */,
 				9CD7A6BB18EDDCCA00641DA9 /* Nexa Light.otf in Resources */,
 				9CD7A6BA18EDDCCA00641DA9 /* Nexa Bold.otf in Resources */,
@@ -290,11 +328,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD7A6C018EDE1CC00641DA9 /* ESBoldLabel.m in Sources */,
+				9CC16AC718FBC101004D3F8A /* ProgressHUD.m in Sources */,
+				9CC16ABE18FBBEEC004D3F8A /* ESMenuViewController.m in Sources */,
 				9CD7A69A18EDDA7800641DA9 /* ESAppDelegate.m in Sources */,
 				9C1AC7BC18FADFB3009EAB1F /* UIViewController+ES.m in Sources */,
 				9C1AC7B918FADB5D009EAB1F /* ESSignUpViewController.m in Sources */,
+				9CC16AC118FBC000004D3F8A /* ESHomeViewController.m in Sources */,
 				9C1AC7BF18FAE177009EAB1F /* ESFindPasswordViewController.m in Sources */,
 				9CD7A6C318EDE6F400641DA9 /* ESLoginViewController.m in Sources */,
+				9CC16ABB18FBBC13004D3F8A /* RTSiderViewController.m in Sources */,
+				9CC16AB818FBBBE2004D3F8A /* ESViewController.m in Sources */,
 				9CD7A69618EDDA7800641DA9 /* main.m in Sources */,
 				9CD7A6C618EDF06A00641DA9 /* ESTextField.m in Sources */,
 			);

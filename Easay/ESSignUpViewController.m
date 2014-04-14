@@ -7,6 +7,7 @@
 //
 
 #import "ESSignUpViewController.h"
+#import "ProgressHUD.h"
 
 @interface ESSignUpViewController () <
 UIImagePickerControllerDelegate,
@@ -17,6 +18,7 @@ UIActionSheetDelegate
 @property (nonatomic, assign) IBOutlet UIButton * headerButton;
 
 - (IBAction)onHeader:(id)sender;
+- (IBAction)onContinue:(id)sender;
 @end
 
 @implementation ESSignUpViewController
@@ -84,6 +86,23 @@ UIActionSheetDelegate
                                            destructiveButtonTitle:nil
                                                 otherButtonTitles:@"从相机拍摄", @"从相册选取", nil];
     [actions showInView:self.view];
+}
+
+- (IBAction)onContinue:(id)sender
+{
+    [ProgressHUD show:@"Loading..."];
+    [self.view endEditing:YES];
+    
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [ProgressHUD dismiss];
+        if ([self.delegate respondsToSelector:@selector(signUpViewController:didSignUpWithUser:error:)]) {
+            [self.delegate signUpViewController:self
+                              didSignUpWithUser:[NSObject new]
+                                          error:nil];
+        }
+    });
 }
 
 #pragma mark - UIAction
