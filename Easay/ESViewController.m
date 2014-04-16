@@ -59,6 +59,7 @@
 - (BOOL)siderViewController:(RTSiderViewController *)controller
         canSlideToDirection:(SlideState)state
 {
+    return NO;
     if ([controller.currentMiddleViewController isKindOfClass:[UINavigationController class]]) {
         UINavigationController *nav = (UINavigationController *)controller.currentMiddleViewController;
         if (nav.childViewControllers.firstObject != nav.topViewController)
