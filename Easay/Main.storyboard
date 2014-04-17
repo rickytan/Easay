@@ -602,10 +602,10 @@
             </objects>
             <point key="canvasLocation" x="1187" y="-2468"/>
         </scene>
-        <!--Sider Middle Base Table View Controller - ACTIVITY-->
+        <!--Sider Middle Base View Controller - ACTIVITY-->
         <scene sceneID="Qfo-pb-fxM">
             <objects>
-                <viewController id="p2m-jL-a8L" customClass="ESSiderMiddleBaseTableViewController" sceneMemberID="viewController">
+                <viewController id="p2m-jL-a8L" customClass="ESSiderMiddleBaseViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g6V-AH-nX5"/>
                         <viewControllerLayoutGuide type="bottom" id="8mc-NH-Up3"/>
@@ -660,18 +660,63 @@
             </objects>
             <point key="canvasLocation" x="1995" y="-2468"/>
         </scene>
-        <!--View Controller - SHARE-->
+        <!--Share View Controller - SHARE-->
         <scene sceneID="dPC-fw-IZx">
             <objects>
-                <viewController id="ObL-a5-lqT" sceneMemberID="viewController">
+                <viewController id="ObL-a5-lqT" customClass="ESShareViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kvu-gC-nlz"/>
                         <viewControllerLayoutGuide type="bottom" id="O0v-BD-AGe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DrN-lk-ALp">
+                    <view key="view" contentMode="scaleToFill" id="DrN-lk-ALp" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rg-t9-tRU">
+                                <rect key="frame" x="143" y="91" width="34" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="camera">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I traveled 43km with my Easay today, and saved $28 by using public transport." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YeT-sS-RLm">
+                                <rect key="frame" x="10" y="132" width="300" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="rDm-OR-Z4s"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ObL-a5-lqT" id="TWX-t9-dLw"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcW-DH-KBp">
+                                <rect key="frame" x="130" y="186" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="RlO-gi-bHQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="Xap-sQ-x0P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="VcW-DH-KBp" secondAttribute="centerX" id="8BX-8x-ncZ"/>
+                            <constraint firstAttribute="trailing" secondItem="YeT-sS-RLm" secondAttribute="trailing" constant="10" id="8RD-nO-xPa"/>
+                            <constraint firstItem="VcW-DH-KBp" firstAttribute="top" secondItem="kvu-gC-nlz" secondAttribute="bottom" constant="122" id="IzS-Yk-DiW"/>
+                            <constraint firstItem="YeT-sS-RLm" firstAttribute="leading" secondItem="DrN-lk-ALp" secondAttribute="leading" constant="10" id="O6m-M2-f5m"/>
+                            <constraint firstItem="YeT-sS-RLm" firstAttribute="top" secondItem="kvu-gC-nlz" secondAttribute="bottom" constant="68" id="qgL-K5-CpI"/>
+                        </constraints>
+                        <connections>
+                            <action selector="onDismissKeyboard:" destination="ObL-a5-lqT" eventType="touchDown" id="Aaw-LM-ugS"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="SHARE" id="bWf-T0-abg">
                         <barButtonItem key="rightBarButtonItem" title="Close" id="uJO-qb-0yZ">
@@ -680,6 +725,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="YeT-sS-RLm" id="3L5-7G-6rZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83r-Z5-2XF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -964,6 +1012,7 @@
     </scenes>
     <resources>
         <image name="battery" width="28" height="28"/>
+        <image name="camera" width="34" height="25"/>
         <image name="chat" width="17" height="17"/>
         <image name="dollar" width="67" height="67"/>
         <image name="gps" width="20" height="20"/>
