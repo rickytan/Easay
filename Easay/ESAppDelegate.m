@@ -17,7 +17,8 @@
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init]
                                        forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont lightFontWithSize:14]}
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont lightFontWithSize:14],
+                                                           NSForegroundColorAttributeName: [UIColor whiteColor]}
                                                 forState:UIControlStateNormal];
 }
 

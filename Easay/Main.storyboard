@@ -86,7 +86,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93v-zs-xRh" customClass="ESBoldButton">
-                                        <rect key="frame" x="3.5" y="10.5" width="120" height="36"/>
+                                        <rect key="frame" x="3" y="10" width="120" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="JxW-Xl-TDt"/>
@@ -104,7 +104,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKt-kP-xqb" customClass="ESBoldButton">
-                                        <rect key="frame" x="164" y="10.5" width="120" height="36"/>
+                                        <rect key="frame" x="164" y="10" width="120" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="sNf-no-Vfq"/>
@@ -597,11 +597,23 @@
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.21568629145622253" green="0.21960785984992981" blue="0.23529413342475891" alpha="1" colorSpace="deviceRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="TMZ-fG-XpX" userLabel="Header View">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="154"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wda-bD-jGd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <items>
+                                        <barButtonItem image="battery" id="NKc-2A-OXo"/>
+                                        <barButtonItem title="Connecting" id="gTv-PJ-3Bl"/>
+                                        <barButtonItem style="plain" systemItem="flexibleSpace" id="dgk-Kc-Pcd"/>
+                                        <barButtonItem image="chat" id="tbn-A9-58X"/>
+                                    </items>
+                                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </toolbar>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5Q-Vd-Wea">
-                                    <rect key="frame" x="0.0" y="46" width="320" height="108"/>
+                                    <rect key="frame" x="0.0" y="44" width="320" height="108"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjC-HZ-4RE" customClass="ESHeaderButton">
@@ -631,7 +643,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.21568629149999999" green="0.2196078598" blue="0.23529413339999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="centerY" secondItem="kjC-HZ-4RE" secondAttribute="centerY" id="HkA-GL-OWs"/>
                                         <constraint firstItem="kjC-HZ-4RE" firstAttribute="leading" secondItem="f5Q-Vd-Wea" secondAttribute="leading" constant="20" id="IqE-ao-Myh"/>
@@ -642,18 +654,6 @@
                                         <constraint firstItem="vPg-Dt-8X1" firstAttribute="leading" secondItem="PEa-sl-5mp" secondAttribute="leading" id="r9U-Hp-JtC"/>
                                     </constraints>
                                 </view>
-                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wda-bD-jGd">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    <items>
-                                        <barButtonItem image="battery" id="NKc-2A-OXo"/>
-                                        <barButtonItem title="Connecting" id="gTv-PJ-3Bl"/>
-                                        <barButtonItem width="93" style="plain" systemItem="fixedSpace" id="GXy-o7-YfA"/>
-                                        <barButtonItem image="chat" id="tbn-A9-58X"/>
-                                    </items>
-                                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </toolbar>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -667,7 +667,7 @@
                             </constraints>
                         </view>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LEf-0H-E4W">
-                            <rect key="frame" x="0.0" y="231" width="320" height="72"/>
+                            <rect key="frame" x="0.0" y="229" width="320" height="68"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="logout">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -676,7 +676,7 @@
                         </button>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuCell" textLabel="sYX-ew-tSb" style="IBUITableViewCellStyleDefault" id="dRO-63-ybI" customClass="ESMenuCell">
-                                <rect key="frame" x="0.0" y="176" width="320" height="55"/>
+                                <rect key="frame" x="0.0" y="174" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dRO-63-ybI" id="Dpv-B8-kS7">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="54"/>
@@ -728,7 +728,8 @@
         <!--Navigation Controller-->
         <scene sceneID="cWB-6o-UfN">
             <objects>
-                <navigationController storyboardIdentifier="HomeNav" definesPresentationContext="YES" id="z6Q-W0-Fdu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNav" definesPresentationContext="YES" id="z6Q-W0-Fdu" customClass="ESNavigationController" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ljM-he-iqW">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C108DF319003F79004CD572 /* UIColor+RExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF219003F79004CD572 /* UIColor+RExtension.m */; };
 		9C108DF619004815004CD572 /* UIFont+ES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF519004815004CD572 /* UIFont+ES.m */; };
+		9C108DF919004B7E004CD572 /* ESNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF819004B7E004CD572 /* ESNavigationController.m */; };
 		9C1AC7B918FADB5D009EAB1F /* ESSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7B818FADB5D009EAB1F /* ESSignUpViewController.m */; };
 		9C1AC7BC18FADFB3009EAB1F /* UIViewController+ES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */; };
 		9C1AC7BF18FAE177009EAB1F /* ESFindPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */; };
@@ -55,6 +56,8 @@
 		9C108DF219003F79004CD572 /* UIColor+RExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RExtension.m"; sourceTree = "<group>"; };
 		9C108DF419004815004CD572 /* UIFont+ES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ES.h"; sourceTree = "<group>"; };
 		9C108DF519004815004CD572 /* UIFont+ES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+ES.m"; sourceTree = "<group>"; };
+		9C108DF719004B7E004CD572 /* ESNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESNavigationController.h; sourceTree = "<group>"; };
+		9C108DF819004B7E004CD572 /* ESNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESNavigationController.m; sourceTree = "<group>"; };
 		9C1AC7B718FADB5D009EAB1F /* ESSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSignUpViewController.h; sourceTree = "<group>"; };
 		9C1AC7B818FADB5D009EAB1F /* ESSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSignUpViewController.m; sourceTree = "<group>"; };
 		9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ES.h"; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				9C108DF519004815004CD572 /* UIFont+ES.m */,
 				9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */,
 				9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */,
+				9C108DF719004B7E004CD572 /* ESNavigationController.h */,
+				9C108DF819004B7E004CD572 /* ESNavigationController.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
@@ -344,6 +349,7 @@
 			files = (
 				9CD7A6C018EDE1CC00641DA9 /* ESBoldLabel.m in Sources */,
 				9CC16AC718FBC101004D3F8A /* ProgressHUD.m in Sources */,
+				9C108DF919004B7E004CD572 /* ESNavigationController.m in Sources */,
 				9CC16ABE18FBBEEC004D3F8A /* ESMenuViewController.m in Sources */,
 				9CD7A69A18EDDA7800641DA9 /* ESAppDelegate.m in Sources */,
 				9C1AC7BC18FADFB3009EAB1F /* UIViewController+ES.m in Sources */,

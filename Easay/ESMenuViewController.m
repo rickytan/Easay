@@ -44,9 +44,19 @@
 @property (nonatomic, assign) IBOutlet UIToolbar *headBar;
 
 @property (nonatomic, strong) NSArray * cellItems;
+@property (nonatomic, strong) NSIndexPath * selectedIndex;
 @end
 
 @implementation ESMenuViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.selectedIndex = [NSIndexPath indexPathForRow:1 inSection:0];
+    }
+    return self;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -63,6 +73,8 @@
     [self.headBar setBackgroundImage:[[UIImage alloc] init]
                   forToolbarPosition:UIBarPositionTop
                           barMetrics:UIBarMetricsDefault];
+    self.headBar.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
+    self.headBar.tintColor = [UIColor whiteColor];
 
     self.cellItems = @[@{@"image": @"today", @"title": @"TODAY"},
                        @{@"image": @"activity", @"title": @"AVTIVITY"},
@@ -70,7 +82,17 @@
                        @{@"image": @"my-trip", @"title": @"MY TRIP"},
                        @{@"image": @"the-hot", @"title": @"THE HOT"},
                        @{@"image": @"settings", @"title": @"SETTINGS"}];
-    //[self.tableView reloadData];
+
+    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+    self.tableView.backgroundColor = [UIColor colorWithHexString:@"#37383c"];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView selectRowAtIndexPath:self.selectedIndex
+                                animated:animated
+                          scrollPosition:UITableViewScrollPositionNone];
 }
 
 - (void)didReceiveMemoryWarning
@@ -105,44 +127,22 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    self.selectedIndex = indexPath;
+    switch (indexPath.row) {
+        case 0:
+            
+            break;
+        case 1:
+            break;
+        case 2:
+            break;
+        default:
+            break;
+    }
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation

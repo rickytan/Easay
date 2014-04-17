@@ -26,6 +26,11 @@
     return self;
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -45,6 +50,8 @@
     [self.view.layer addSublayer:dotLine];
     
     self.scrollView.contentSize = CGSizeMake(960, 640);
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)viewDidAppear:(BOOL)animated
