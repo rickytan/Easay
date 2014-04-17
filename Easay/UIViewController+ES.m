@@ -12,8 +12,9 @@
 
 - (IBAction)onDismiss:(id)sender
 {
-    [self dismissViewControllerAnimated:YES
-                             completion:NULL];
+    if (![self.navigationController popViewControllerAnimated:YES])
+        [self dismissViewControllerAnimated:YES
+                                 completion:NULL];
 }
 
 - (IBAction)onDismissKeyboard:(id)sender

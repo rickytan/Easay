@@ -48,3 +48,17 @@
 }
 
 @end
+
+@implementation ESLightButton
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.titleLabel.font = [UIFont lightFontWithSize:self.titleLabel.font.pointSize];
+        [self setNeedsLayout];
+    }
+    return self;
+}
+
+@end

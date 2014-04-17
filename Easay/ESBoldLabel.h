@@ -19,3 +19,7 @@
 @interface ESBoldButton : UIButton
 
 @end
+
+@interface ESLightButton : UIButton
+
+@end

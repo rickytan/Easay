@@ -46,6 +46,8 @@
 
 @property (nonatomic, strong) NSArray * cellItems;
 @property (nonatomic, strong) NSIndexPath * selectedIndex;
+
+- (IBAction)onLogout:(id)sender;
 @end
 
 @implementation ESMenuViewController
@@ -54,7 +56,8 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.selectedIndex = [NSIndexPath indexPathForRow:1 inSection:0];
+        self.selectedIndex = [NSIndexPath indexPathForRow:0
+                                                inSection:0];
     }
     return self;
 }
@@ -102,6 +105,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Action
+
+- (IBAction)onLogout:(id)sender
+{
+    [self dismissViewControllerAnimated:YES
+                             completion:NULL];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -134,9 +145,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     self.selectedIndex = indexPath;
     switch (indexPath.row) {
         case 0:
-            
+            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeNav"]
+                                                     animated:YES];
             break;
         case 1:
+            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ActivityNav"]
+                                                     animated:YES];
             break;
         case 2:
             [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"FriendNav"]
