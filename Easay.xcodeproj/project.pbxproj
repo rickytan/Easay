@@ -11,6 +11,7 @@
 		9C108DF619004815004CD572 /* UIFont+ES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF519004815004CD572 /* UIFont+ES.m */; };
 		9C108DF919004B7E004CD572 /* ESNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF819004B7E004CD572 /* ESNavigationController.m */; };
 		9C108DFC1900514A004CD572 /* ESSiderMiddleBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DFB1900514A004CD572 /* ESSiderMiddleBaseViewController.m */; };
+		9C108DFF19005601004CD572 /* ESFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DFE19005601004CD572 /* ESFriendViewController.m */; };
 		9C1AC7B918FADB5D009EAB1F /* ESSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7B818FADB5D009EAB1F /* ESSignUpViewController.m */; };
 		9C1AC7BC18FADFB3009EAB1F /* UIViewController+ES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */; };
 		9C1AC7BF18FAE177009EAB1F /* ESFindPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */; };
@@ -61,6 +62,8 @@
 		9C108DF819004B7E004CD572 /* ESNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESNavigationController.m; sourceTree = "<group>"; };
 		9C108DFA1900514A004CD572 /* ESSiderMiddleBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSiderMiddleBaseViewController.h; sourceTree = "<group>"; };
 		9C108DFB1900514A004CD572 /* ESSiderMiddleBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSiderMiddleBaseViewController.m; sourceTree = "<group>"; };
+		9C108DFD19005601004CD572 /* ESFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESFriendViewController.h; sourceTree = "<group>"; };
+		9C108DFE19005601004CD572 /* ESFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESFriendViewController.m; sourceTree = "<group>"; };
 		9C1AC7B718FADB5D009EAB1F /* ESSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSignUpViewController.h; sourceTree = "<group>"; };
 		9C1AC7B818FADB5D009EAB1F /* ESSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSignUpViewController.m; sourceTree = "<group>"; };
 		9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ES.h"; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 				9C108DF519004815004CD572 /* UIFont+ES.m */,
 				9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */,
 				9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */,
+				9C108DFD19005601004CD572 /* ESFriendViewController.h */,
+				9C108DFE19005601004CD572 /* ESFriendViewController.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				9C1AC7BF18FAE177009EAB1F /* ESFindPasswordViewController.m in Sources */,
 				9C108DF319003F79004CD572 /* UIColor+RExtension.m in Sources */,
 				9CD7A6C318EDE6F400641DA9 /* ESLoginViewController.m in Sources */,
+				9C108DFF19005601004CD572 /* ESFriendViewController.m in Sources */,
 				9CC16ABB18FBBC13004D3F8A /* RTSiderViewController.m in Sources */,
 				9CC16ACA18FBC7EB004D3F8A /* ESHeaderButton.m in Sources */,
 				9CC16AB818FBBBE2004D3F8A /* ESViewController.m in Sources */,

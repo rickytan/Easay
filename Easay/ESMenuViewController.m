@@ -9,6 +9,7 @@
 #import "ESMenuViewController.h"
 #import "UIColor+RExtension.h"
 #import "UIFont+ES.h"
+#import "RTSiderViewController.h"
 
 @interface ESMenuCell : UITableViewCell
 @end
@@ -138,6 +139,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         case 1:
             break;
         case 2:
+            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"FriendNav"]
+                                                     animated:YES];
             break;
         default:
             break;

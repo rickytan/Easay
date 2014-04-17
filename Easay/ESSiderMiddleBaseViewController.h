@@ -11,3 +11,7 @@
 @interface ESSiderMiddleBaseViewController : UIViewController
 
 @end
+
+@interface ESSiderMiddleBaseTableViewController : UITableViewController
+
+@end

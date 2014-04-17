@@ -13,7 +13,7 @@
 
 - (void)setupUI
 {
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldFontWithSize:16]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldFontWithSize:16], NSForegroundColorAttributeName: [UIColor whiteColor]}];
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init]
                                        forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
