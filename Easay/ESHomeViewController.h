@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 ricky. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ESSiderMiddleBaseViewController.h"
 
-@interface ESHomeViewController : UIViewController
+@interface ESHomeViewController : ESSiderMiddleBaseViewController
 
 @end

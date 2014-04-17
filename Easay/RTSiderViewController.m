@@ -89,6 +89,7 @@
     _maskView.hidden = YES;
 
     self.wantsFullScreenLayout = YES;
+    self.
     self.tapToCenter = YES;
     self.allowOverDrag = YES;
     self.middleTranslationStyle = MiddleViewTranslationStyleDefault;

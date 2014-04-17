@@ -7,10 +7,8 @@
 //
 
 #import "ESHomeViewController.h"
-#import "RTSiderViewController.h"
 
 @interface ESHomeViewController () <UIScrollViewDelegate>
-@property (nonatomic, assign) IBOutlet UIButton * menuButton;
 @property (nonatomic, assign) IBOutlet UIScrollView * scrollView;
 @property (nonatomic, assign) IBOutlet UIPageControl * pageControl;
 @end
@@ -54,21 +52,6 @@
     [self setNeedsStatusBarAppearanceUpdate];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    [UIView animateWithDuration:0.2
-                          delay:0.0
-                        options:UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         self.menuButton.transform = CGAffineTransformIdentity;
-                     }
-                     completion:^(BOOL finished) {
-                         
-                     }];
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -80,20 +63,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Actions
-
-- (IBAction)onMenu:(id)sender
-{
-    [self.siderViewController slideToRightAnimated:YES];
-    [UIView animateWithDuration:0.2
-                          delay:0.35
-                        options:UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         self.menuButton.transform = CGAffineTransformMakeRotation(M_PI_2);
-                     }
-                     completion:^(BOOL finished) {
-                         
-                     }];
-}
 
 @end

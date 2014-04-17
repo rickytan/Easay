@@ -548,19 +548,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Hg-Z7-EcZ">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="sel-4Q-ZQR">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AwV-1f-R1q">
-                                <rect key="frame" x="16" y="14" width="24" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" image="menu">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onMenu:" destination="6ZI-0v-fC8" eventType="touchUpInside" id="2eO-Mn-8uR"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="fdy-of-emi">
                             <rect key="frame" x="128" y="6" width="64" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -575,7 +562,6 @@
                         <barButtonItem key="rightBarButtonItem" image="nav-right" id="gcW-bV-ZfG"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="AwV-1f-R1q" id="kom-Tp-8f4"/>
                         <outlet property="pageControl" destination="MmV-pJ-8RW" id="khb-cQ-i2c"/>
                         <outlet property="scrollView" destination="J1z-Se-TlM" id="ahI-sV-kDK"/>
                     </connections>
@@ -740,7 +726,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QjL-A6-k1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1095" y="-963"/>
+            <point key="canvasLocation" x="1187" y="-963"/>
         </scene>
     </scenes>
     <resources>
@@ -753,7 +739,6 @@
         <image name="logo-mini" width="37" height="21"/>
         <image name="logout" width="40" height="40"/>
         <image name="logout-highlighted" width="40" height="40"/>
-        <image name="menu" width="24" height="15"/>
         <image name="nav-back" width="32" height="30"/>
         <image name="nav-right" width="24" height="17"/>
         <image name="shadow" width="237" height="103"/>
