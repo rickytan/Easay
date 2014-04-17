@@ -7,6 +7,7 @@
 //
 
 #import "ESBoldLabel.h"
+#import "UIFont+ES.h"
 
 @implementation ESBoldLabel
 
@@ -14,8 +15,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.font = [UIFont fontWithName:@"Nexa Bold"
-                                    size:self.font.pointSize];
+        self.font = [UIFont boldFontWithSize:self.font.pointSize];
     }
     return self;
 }
@@ -28,8 +28,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.font = [UIFont fontWithName:@"Nexa Light"
-                                    size:self.font.pointSize];
+        self.font = [UIFont lightFontWithSize:self.font.pointSize];
     }
     return self;
 }
@@ -42,8 +41,7 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.titleLabel.font = [UIFont fontWithName:@"Nexa Bold"
-                                               size:self.titleLabel.font.pointSize];
+        self.titleLabel.font = [UIFont boldFontWithSize:self.titleLabel.font.pointSize];
         [self setNeedsLayout];
     }
     return self;

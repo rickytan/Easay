@@ -7,16 +7,18 @@
 //
 
 #import "ESAppDelegate.h"
+#import "UIFont+ES.h"
 
 @implementation ESAppDelegate
 
 - (void)setupUI
 {
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Nexa Bold"
-                                                                                                size:16]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldFontWithSize:16]}];
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init]
                                        forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont lightFontWithSize:14]}
+                                                forState:UIControlStateNormal];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

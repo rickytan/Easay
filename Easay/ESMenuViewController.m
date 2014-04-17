@@ -7,8 +7,42 @@
 //
 
 #import "ESMenuViewController.h"
+#import "UIColor+RExtension.h"
+#import "UIFont+ES.h"
+
+@interface ESMenuCell : UITableViewCell
+@end
+
+@implementation ESMenuCell
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+    [self setNeedsDisplay];
+}
+
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated
+{
+    [super setHighlighted:highlighted animated:animated];
+    [self setNeedsDisplay];
+}
+
+- (void)drawRect:(CGRect)rect
+{
+    if (self.isSelected || self.isHighlighted) {
+        [[UIColor colorWithHexString:@"#252629"] setFill];
+    }
+    else {
+        [[UIColor colorWithHexString:@"#37383c"] setFill];
+    }
+    CGContextFillRect(UIGraphicsGetCurrentContext(), rect);
+}
+
+@end
 
 @interface ESMenuViewController ()
+@property (nonatomic, assign) IBOutlet UIToolbar *headBar;
+
 @property (nonatomic, strong) NSArray * cellItems;
 @end
 
@@ -26,13 +60,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.headBar setBackgroundImage:[[UIImage alloc] init]
+                  forToolbarPosition:UIBarPositionTop
+                          barMetrics:UIBarMetricsDefault];
 
     self.cellItems = @[@{@"image": @"today", @"title": @"TODAY"},
-                       @{@"image": @"avtivity", @"title": @"AVTIVITY"},
+                       @{@"image": @"activity", @"title": @"AVTIVITY"},
                        @{@"image": @"friends", @"title": @"FRIENDS"},
                        @{@"image": @"my-trip", @"title": @"MY TRIP"},
                        @{@"image": @"the-hot", @"title": @"THE HOT"},
                        @{@"image": @"settings", @"title": @"SETTINGS"}];
+    //[self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,9 +95,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"MenuCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    cell.imageView.image = [UIImage imageNamed:self.cellItems[indexPath.row][@"image"]];
+    cell.textLabel.text = self.cellItems[indexPath.row][@"title"];
+    cell.textLabel.font = [UIFont lightFontWithSize:16];
     
     return cell;
 }
