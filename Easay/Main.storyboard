@@ -678,8 +678,11 @@
                                 <state key="normal" image="camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onCamera:" destination="ObL-a5-lqT" eventType="touchUpInside" id="nkS-s1-Z5h"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I traveled 43km with my Easay today, and saved $28 by using public transport." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YeT-sS-RLm">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="I traveled 43km with my Easay today, and saved $28 by using public transport." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YeT-sS-RLm">
                                 <rect key="frame" x="10" y="132" width="300" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -693,7 +696,7 @@
                                     <outlet property="delegate" destination="ObL-a5-lqT" id="TWX-t9-dLw"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcW-DH-KBp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcW-DH-KBp">
                                 <rect key="frame" x="130" y="186" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -701,10 +704,18 @@
                                     <constraint firstAttribute="height" constant="30" id="Xap-sQ-x0P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="OK">
+                                <state key="normal" title="Edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onEdit:" destination="ObL-a5-lqT" eventType="touchUpInside" id="yfz-gj-YIW"/>
+                                </connections>
                             </button>
+                            <view tag="10" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UD4-2d-sCE">
+                                <rect key="frame" x="112" y="331" width="96" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -726,6 +737,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="VcW-DH-KBp" id="50D-zV-TLb"/>
                         <outlet property="textView" destination="YeT-sS-RLm" id="3L5-7G-6rZ"/>
                     </connections>
                 </viewController>

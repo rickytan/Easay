@@ -189,6 +189,8 @@
 				9CD7A6BF18EDE1CC00641DA9 /* ESBoldLabel.m */,
 				9C1AC7BD18FAE177009EAB1F /* ESFindPasswordViewController.h */,
 				9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */,
+				9C108DFD19005601004CD572 /* ESFriendViewController.h */,
+				9C108DFE19005601004CD572 /* ESFriendViewController.m */,
 				9CC16AC818FBC7EB004D3F8A /* ESHeaderButton.h */,
 				9CC16AC918FBC7EB004D3F8A /* ESHeaderButton.m */,
 				9CC16ABF18FBC000004D3F8A /* ESHomeViewController.h */,
@@ -199,6 +201,8 @@
 				9CC16ABD18FBBEEC004D3F8A /* ESMenuViewController.m */,
 				9C108DF719004B7E004CD572 /* ESNavigationController.h */,
 				9C108DF819004B7E004CD572 /* ESNavigationController.m */,
+				9C108E00190060DA004CD572 /* ESShareViewController.h */,
+				9C108E01190060DA004CD572 /* ESShareViewController.m */,
 				9C108DFA1900514A004CD572 /* ESSiderMiddleBaseViewController.h */,
 				9C108DFB1900514A004CD572 /* ESSiderMiddleBaseViewController.m */,
 				9C1AC7B718FADB5D009EAB1F /* ESSignUpViewController.h */,
@@ -220,10 +224,6 @@
 				9C108DF519004815004CD572 /* UIFont+ES.m */,
 				9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */,
 				9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */,
-				9C108DFD19005601004CD572 /* ESFriendViewController.h */,
-				9C108DFE19005601004CD572 /* ESFriendViewController.m */,
-				9C108E00190060DA004CD572 /* ESShareViewController.h */,
-				9C108E01190060DA004CD572 /* ESShareViewController.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
