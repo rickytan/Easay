@@ -435,6 +435,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="QYP-W3-Omi" customClass="ESBoldLabel">
+                                <rect key="frame" x="137" y="74" width="47" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">3,29,2014
+Saturday</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="qRf-Cr-EqW">
                                 <rect key="frame" x="42" y="465" width="237" height="103"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -443,8 +452,22 @@
                                 <rect key="frame" x="150" y="371" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San dun, Hangzhou" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWp-jG-nMk" customClass="ESBoldLabel">
+                                <rect key="frame" x="114" y="403" width="93" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$81" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i2-hc-Jux" customClass="ESBoldLabel">
+                                <rect key="frame" x="146" y="430" width="28" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-Se-TlM">
-                                <rect key="frame" x="0.0" y="465" width="320" height="103"/>
+                                <rect key="frame" x="0.0" y="465" width="321" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-EO-fyL">
@@ -540,10 +563,16 @@
                         <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="J1z-Se-TlM" firstAttribute="top" secondItem="qRf-Cr-EqW" secondAttribute="top" id="0vI-qN-s6K"/>
+                            <constraint firstAttribute="centerX" secondItem="uWp-jG-nMk" secondAttribute="centerX" id="49a-S2-KlL"/>
+                            <constraint firstItem="QYP-W3-Omi" firstAttribute="top" secondItem="GBt-TY-yOg" secondAttribute="bottom" constant="10" id="CVn-FU-hfI"/>
                             <constraint firstItem="J1z-Se-TlM" firstAttribute="centerX" secondItem="qRf-Cr-EqW" secondAttribute="centerX" id="Dx1-Tv-UEy"/>
+                            <constraint firstAttribute="centerX" secondItem="QYP-W3-Omi" secondAttribute="centerX" id="Gf9-yX-Yy6"/>
+                            <constraint firstItem="2i2-hc-Jux" firstAttribute="top" secondItem="uWp-jG-nMk" secondAttribute="bottom" constant="15" id="GgI-xg-YLj"/>
+                            <constraint firstItem="J1z-Se-TlM" firstAttribute="top" secondItem="2i2-hc-Jux" secondAttribute="bottom" constant="15" id="KsK-tx-sg0"/>
                             <constraint firstItem="J1z-Se-TlM" firstAttribute="leading" secondItem="vuF-ty-pb2" secondAttribute="leading" id="LH9-yb-dTF"/>
                             <constraint firstItem="hTI-A8-LDu" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="bottom" id="Mdi-9d-Jta"/>
                             <constraint firstAttribute="trailing" secondItem="J1z-Se-TlM" secondAttribute="trailing" id="Q7m-97-v6H"/>
+                            <constraint firstAttribute="centerX" secondItem="2i2-hc-Jux" secondAttribute="centerX" id="gRk-2U-0pv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Hg-Z7-EcZ">
@@ -562,6 +591,9 @@
                         <barButtonItem key="rightBarButtonItem" image="nav-right" id="gcW-bV-ZfG"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateLabel" destination="QYP-W3-Omi" id="tk6-0Y-9tk"/>
+                        <outlet property="locationLabel" destination="uWp-jG-nMk" id="D9u-NR-Yw1"/>
+                        <outlet property="moneyLabel" destination="2i2-hc-Jux" id="nm6-Ke-vZd"/>
                         <outlet property="pageControl" destination="MmV-pJ-8RW" id="khb-cQ-i2c"/>
                         <outlet property="scrollView" destination="J1z-Se-TlM" id="ahI-sV-kDK"/>
                     </connections>

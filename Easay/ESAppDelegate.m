@@ -25,6 +25,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self setupUI];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

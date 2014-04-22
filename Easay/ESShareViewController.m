@@ -9,7 +9,7 @@
 #import "ESShareViewController.h"
 #import "UIFont+ES.h"
 
-@interface ESShareViewController () <UITextViewDelegate, UIDynamicItem>
+@interface ESShareViewController () <UITextViewDelegate>
 @property (nonatomic, assign) IBOutlet UITextView * textView;
 @property (nonatomic, assign) IBOutlet UIButton * editButton;
 

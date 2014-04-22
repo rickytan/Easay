@@ -58,7 +58,7 @@ typedef enum {
 }MiddleViewTranslationStyle;
 
 @protocol RTSiderViewControllerDelegate <NSObject>
-
+@optional
 - (BOOL)siderViewController:(RTSiderViewController*)controller
         canSlideToDirection:(SlideState)state;
 - (void)siderViewController:(RTSiderViewController*)controller

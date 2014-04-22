@@ -7,10 +7,13 @@
 //
 
 #import "ESHomeViewController.h"
+#import "UIColor+RExtension.h"
 
 @interface ESHomeViewController () <UIScrollViewDelegate>
 @property (nonatomic, assign) IBOutlet UIScrollView * scrollView;
 @property (nonatomic, assign) IBOutlet UIPageControl * pageControl;
+@property (nonatomic, assign) IBOutlet UILabel * dateLabel, * locationLabel, * moneyLabel;
+@property (nonatomic, strong) CAShapeLayer * shape0, * shape1, * shape2;
 @end
 
 @implementation ESHomeViewController
@@ -27,6 +30,23 @@
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+- (void)loadView
+{
+    [super loadView];
+    
+    self.shape0 = [CAShapeLayer layer];
+    self.shape0.lineCap = kCALineCapSquare;
+    self.shape0.lineWidth = 32.0;
+    self.shape0.path = [UIBezierPath bezierPathWithArcCenter:CGPointZero
+                                                      radius:120
+                                                  startAngle:0
+                                                    endAngle:2*M_PI
+                                                   clockwise:YES].CGPath;
+    self.shape0.backgroundColor = [UIColor colorWithHexString:@"#ffe400"].CGColor;
+    self.shape0.strokeStart = 0;
+    [self.view.layer addSublayer:self.shape0];
 }
 
 - (void)viewDidLoad
@@ -50,6 +70,14 @@
     self.scrollView.contentSize = CGSizeMake(960, 640);
     
     [self setNeedsStatusBarAppearanceUpdate];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    [self.dateLabel sizeToFit];
+    self.shape0.position = CGPointMake(CGRectGetWidth(self.view.bounds) / 2,
+                                       CGRectGetHeight(self.view.bounds) / 2);
 }
 
 - (void)viewWillAppear:(BOOL)animated

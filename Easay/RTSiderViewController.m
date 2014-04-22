@@ -88,8 +88,9 @@
     _maskView.alpha = 0.0f;
     _maskView.hidden = YES;
 
-    self.wantsFullScreenLayout = YES;
-    self.
+    //self.wantsFullScreenLayout = YES;
+    self.edgesForExtendedLayout = UIRectEdgeAll;
+    self.automaticallyAdjustsScrollViewInsets = YES;
     self.tapToCenter = YES;
     self.allowOverDrag = YES;
     self.middleTranslationStyle = MiddleViewTranslationStyleDefault;
