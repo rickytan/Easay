@@ -10,6 +10,8 @@
 		9C05FC7C191CB07D00889724 /* ESFindFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C05FC7B191CB07D00889724 /* ESFindFriendViewController.m */; };
 		9C05FC7F191CB3B100889724 /* ESActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C05FC7E191CB3B100889724 /* ESActivityViewController.m */; };
 		9C05FC82191CB5F200889724 /* ESSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C05FC81191CB5F200889724 /* ESSegmentView.m */; };
+		9C05FC85191CEE9400889724 /* ESSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C05FC84191CEE9400889724 /* ESSettingViewController.m */; };
+		9C05FC92191D6F2600889724 /* ESOptionSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C05FC91191D6F2600889724 /* ESOptionSelectViewController.m */; };
 		9C108DF319003F79004CD572 /* UIColor+RExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF219003F79004CD572 /* UIColor+RExtension.m */; };
 		9C108DF619004815004CD572 /* UIFont+ES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF519004815004CD572 /* UIFont+ES.m */; };
 		9C108DF919004B7E004CD572 /* ESNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF819004B7E004CD572 /* ESNavigationController.m */; };
@@ -64,6 +66,10 @@
 		9C05FC7E191CB3B100889724 /* ESActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESActivityViewController.m; sourceTree = "<group>"; };
 		9C05FC80191CB5F200889724 /* ESSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSegmentView.h; sourceTree = "<group>"; };
 		9C05FC81191CB5F200889724 /* ESSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSegmentView.m; sourceTree = "<group>"; };
+		9C05FC83191CEE9400889724 /* ESSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSettingViewController.h; sourceTree = "<group>"; };
+		9C05FC84191CEE9400889724 /* ESSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSettingViewController.m; sourceTree = "<group>"; };
+		9C05FC90191D6F2500889724 /* ESOptionSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESOptionSelectViewController.h; sourceTree = "<group>"; };
+		9C05FC91191D6F2600889724 /* ESOptionSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESOptionSelectViewController.m; sourceTree = "<group>"; };
 		9C108DF119003F79004CD572 /* UIColor+RExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RExtension.h"; sourceTree = "<group>"; };
 		9C108DF219003F79004CD572 /* UIColor+RExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RExtension.m"; sourceTree = "<group>"; };
 		9C108DF419004815004CD572 /* UIFont+ES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ES.h"; sourceTree = "<group>"; };
@@ -216,6 +222,8 @@
 				9C108DF819004B7E004CD572 /* ESNavigationController.m */,
 				9C05FC80191CB5F200889724 /* ESSegmentView.h */,
 				9C05FC81191CB5F200889724 /* ESSegmentView.m */,
+				9C05FC83191CEE9400889724 /* ESSettingViewController.h */,
+				9C05FC84191CEE9400889724 /* ESSettingViewController.m */,
 				9C108E00190060DA004CD572 /* ESShareViewController.h */,
 				9C108E01190060DA004CD572 /* ESShareViewController.m */,
 				9C108DFA1900514A004CD572 /* ESSiderMiddleBaseViewController.h */,
@@ -239,6 +247,8 @@
 				9C108DF519004815004CD572 /* UIFont+ES.m */,
 				9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */,
 				9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */,
+				9C05FC90191D6F2500889724 /* ESOptionSelectViewController.h */,
+				9C05FC91191D6F2600889724 /* ESOptionSelectViewController.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
@@ -378,6 +388,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD7A6C018EDE1CC00641DA9 /* ESBoldLabel.m in Sources */,
+				9C05FC85191CEE9400889724 /* ESSettingViewController.m in Sources */,
+				9C05FC92191D6F2600889724 /* ESOptionSelectViewController.m in Sources */,
 				9C05FC82191CB5F200889724 /* ESSegmentView.m in Sources */,
 				9CC16AC718FBC101004D3F8A /* ProgressHUD.m in Sources */,
 				9C108DFC1900514A004CD572 /* ESSiderMiddleBaseViewController.m in Sources */,
@@ -518,12 +530,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Easay/Easay-Prefix.pch";
 				INFOPLIST_FILE = "Easay/Easay-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "371617D6-0E13-432F-A2E4-29AEB5B3B981";
+				PROVISIONING_PROFILE = "333BFD0C-0CAB-4F22-B636-4B880CE1B89D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -533,12 +545,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Easay/Easay-Prefix.pch";
 				INFOPLIST_FILE = "Easay/Easay-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "371617D6-0E13-432F-A2E4-29AEB5B3B981";
+				PROVISIONING_PROFILE = "333BFD0C-0CAB-4F22-B636-4B880CE1B89D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

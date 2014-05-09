@@ -16,6 +16,11 @@
 
 @implementation ESSiderMiddleBaseViewController
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -29,6 +34,8 @@
     [self.menuButton sizeToFit];
     UIBarButtonItem *menuItem = [[UIBarButtonItem alloc] initWithCustomView:self.menuButton];
     self.navigationItem.leftBarButtonItem = menuItem;
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -71,6 +78,11 @@
 
 @implementation ESSiderMiddleBaseTableViewController
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -84,6 +96,8 @@
     [self.menuButton sizeToFit];
     UIBarButtonItem *menuItem = [[UIBarButtonItem alloc] initWithCustomView:self.menuButton];
     self.navigationItem.leftBarButtonItem = menuItem;
+    
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)viewDidAppear:(BOOL)animated

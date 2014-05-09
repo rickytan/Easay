@@ -13,4 +13,5 @@
 + (instancetype)colorForIndex:(NSInteger)index;
 + (UIColor *)iOS7DefaultBlueTint;
 - (UIColor*)colorByLighting:(CGFloat)rate;
++ (UIColor *)themeColor;
 @end

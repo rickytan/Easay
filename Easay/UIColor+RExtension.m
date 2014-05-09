@@ -56,6 +56,14 @@ static NSString *cellColors[] = {@"#866fd7", @"#3cc", @"#086ca2", @"#ffd200", @"
                            alpha:1.0];
 }
 
++ (UIColor *)themeColor
+{
+    return [UIColor colorWithRed:54.0/255
+                           green:137.0/255
+                            blue:229.0/255
+                           alpha:1.0];
+}
+
 - (UIColor*)colorByLighting:(CGFloat)rate
 {
     CGFloat hue, saturation, brightness, alpha;

@@ -9,8 +9,8 @@
 #import "ESSegmentView.h"
 
 @interface ESSegmentView ()
-@property (nonatomic, strong) NSArray * titleLayers;
-@property (nonatomic, strong) NSArray * segmentLayers;
+@property (nonatomic, strong) NSMutableArray * titleLayers;
+@property (nonatomic, strong) NSMutableArray * segmentLayers;
 @end
 
 @implementation ESSegmentView
@@ -38,16 +38,57 @@
 {
     self.layer.masksToBounds = YES;
     self.layer.backgroundColor = [UIColor clearColor].CGColor;
+    self.backgroundColor = [UIColor clearColor];
+    self.segments = @[@2, @3, @1, @8];
+    
+    [self performSelector:@selector(setSegments:)
+               withObject:@[@4, @1,@12, @5]
+               afterDelay:2];
+}
+
+- (NSMutableArray *)segmentLayers
+{
+    if (!_segmentLayers) {
+        _segmentLayers = [[NSMutableArray alloc] init];
+    }
+    return _segmentLayers;
+}
+
+- (NSMutableArray *)titleLayers
+{
+    if (!_titleLayers) {
+        _titleLayers = [[NSMutableArray alloc] init];
+    }
+    return _titleLayers;
 }
 
 - (void)setSegments:(NSArray *)segments
 {
-    if (![_segments isEqual:segments]) {
+    if (_segments != segments) {
+        BOOL numEqual = _segments.count == segments.count;
+        if (!segments.count)
+            return;
+        
         _segments = segments;
-
-        [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
-        for (NSNumber *num in _segments) {
+        
+        if (!numEqual) {
+            [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+            [self.segmentLayers removeAllObjects];
             
+            NSInteger greenStep = (0xff - 0xa0) / _segments.count;
+            NSInteger count = _segments.count;
+            for (NSNumber *num in _segments) {
+                CALayer *layer = [CALayer layer];
+                layer.backgroundColor = [UIColor colorWithRed:1.0
+                                                        green:1.0 * (0xa0 + count-- * greenStep) / 255
+                                                         blue:0.0
+                                                        alpha:1.0].CGColor;
+                [self.segmentLayers addObject:layer];
+                [self.layer addSublayer:layer];
+            }
+        }
+        else {
+            [self setNeedsLayout];
         }
     }
 }
@@ -57,6 +98,8 @@
     
 }
 
+#define SEGMENT_MARGIN  2.0f
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -64,6 +107,31 @@
     CGSize size = self.bounds.size;
     self.layer.cornerRadius = size.height / 2;
     
+    CGFloat sum = 0.f;
+    for (NSNumber *num in self.segments) {
+        sum += num.floatValue;
+    }
+    
+    [CATransaction setDisableActions:NO];
+    
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                         CGFloat width = size.width - (self.segments.count - 1) * SEGMENT_MARGIN;
+                         CGRect rect = self.bounds;
+                         CGRect split = CGRectZero;
+                         CGRect remain = CGRectZero;
+                         for (int i=0; i<self.segments.count; ++i) {
+                             NSNumber *num = self.segments[i];
+                             CALayer *layer = self.segmentLayers[i];
+                             CGRectDivide(rect, &split, &remain, num.floatValue / sum * width, CGRectMinXEdge);
+                             layer.frame = split;
+                             remain.origin.x += SEGMENT_MARGIN;
+                             rect = remain;
+                         }
+                     }
+                     completion:NULL];
 }
 
 @end

@@ -30,11 +30,6 @@
     return self;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
 - (CAShapeLayer *)shapeWithRadius:(CGFloat)radius andColor:(UIColor *)color
 {
     CAShapeLayer *shape = [CAShapeLayer layer];
@@ -79,9 +74,10 @@
     
     dotLine.position = CGPointMake(0, self.scrollView.frame.origin.y);
     [self.view.layer addSublayer:dotLine];
-
+    
     self.textLayer = [CATextLayer layer];
     self.textLayer.fontSize = 44;
+    self.textLayer.hidden = YES;
     self.textLayer.font = (__bridge CFTypeRef)[UIFont lightFontName];
     self.textLayer.foregroundColor = [UIColor whiteColor].CGColor;
     self.textLayer.string = @"0";
@@ -89,6 +85,7 @@
     self.textLayer.contentsScale = [UIScreen mainScreen].scale;
     self.textLayer.alignmentMode = kCAAlignmentCenter;
     self.textLayer.bounds = (CGRect){{0,0}, {120, self.textLayer.preferredFrameSize.height}};
+    self.textLayer.transform = CATransform3DMakeScale(CGFLOAT_MIN, CGFLOAT_MIN, CGFLOAT_MIN);
     [self.view.layer addSublayer:self.textLayer];
 }
 
@@ -96,17 +93,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
+    
     
     self.scrollView.contentSize = CGSizeMake(960, 640);
     
-    [self setNeedsStatusBarAppearanceUpdate];
+    [self performSelector:@selector(showContent)
+               withObject:nil
+               afterDelay:0.5];
 }
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-
+    
     self.shape0.position = CGPointMake(CGRectGetWidth(self.view.bounds) / 2,
                                        CGRectGetHeight(self.view.bounds) / 2 - 44);
     self.shape1.position = self.shape0.position;
@@ -124,41 +123,35 @@
 {
     [super viewDidAppear:animated];
     //[CATransaction setDisableActions:YES];
+    
+}
 
-    [CATransaction setAnimationDuration:0.6];
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)showContent
+{
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:0.5];
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithControlPoints:0.0
                                                                                               :0.0
                                                                                               :0.75
                                                                                               :1.5]];
-    [CATransaction begin];
-    /*
-    CABasicAnimation * anim = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    anim.fromValue = [NSNumber numberWithFloat:0];
-    anim.toValue = [NSNumber numberWithFloat:0.8];
-    anim.duration = 5;
-    anim.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.0
-                                                                          :0.0
-                                                                          :0.9
-                                                                          :1.2];
-
-    [self.shape0 addAnimation:anim
-                       forKey:@"Show"];
-    */
     self.shape0.strokeEnd = 0.8;
     self.shape1.strokeEnd = 0.75;
     self.shape2.strokeEnd = 0.6;
+    [CATransaction commit];
     
     NSInteger finalNum = 58;
     
-    CABasicAnimation * pop = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    pop.fromValue = [NSNumber numberWithFloat:0.0];
-    pop.toValue = [NSNumber numberWithFloat:1.0];
-    pop.duration = .5;
-    pop.removedOnCompletion = YES;
-    pop.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    [CATransaction begin];
+    
+    self.textLayer.transform = CATransform3DIdentity;
+    self.textLayer.hidden = NO;
     [CATransaction setCompletionBlock:^{
-        [CATransaction begin];
-        
         CAKeyframeAnimation * numjump = [CAKeyframeAnimation animationWithKeyPath:@"string"];
         NSMutableArray *values = [NSMutableArray arrayWithCapacity:finalNum + 1];
         for (int i=0; i <= finalNum; ++i) {
@@ -167,23 +160,13 @@
         numjump.values = values;
         numjump.duration = 2.0;
         numjump.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-        numjump.removedOnCompletion = YES;
-        self.textLayer.string = values.lastObject;
+        numjump.removedOnCompletion = NO;
+        numjump.timeOffset = 1.0;
         [self.textLayer addAnimation:numjump
                               forKey:@"NumberJump"];
-        
-        [CATransaction commit];
+        self.textLayer.string = values.lastObject;
     }];
-    
-    [self.textLayer addAnimation:pop
-                          forKey:@"Pop"];
     [CATransaction commit];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 

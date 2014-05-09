@@ -8,9 +8,10 @@
 
 #import "ESActivityViewController.h"
 #import "UIColor+RExtension.h"
+#import "ESSegmentView.h"
 
 @interface ESActivityViewController ()
-@property (nonatomic, strong) CAShapeLayer * shapeLayer;
+@property (nonatomic, assign) ESSegmentView *segmentView;
 @end
 
 @implementation ESActivityViewController
@@ -28,17 +29,6 @@
 {
     [super loadView];
     
-    self.shapeLayer = [CAShapeLayer layer];
-    self.shapeLayer.lineCap = kCALineCapSquare;
-    self.shapeLayer.lineDashPattern = @[@3, @30];
-    self.shapeLayer.strokeColor = [UIColor yellowColor].CGColor;
-    self.shapeLayer.lineWidth = 24;
-    
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointZero];
-    [path addLineToPoint:CGPointMake(300, 0)];
-    self.shapeLayer.path = path.CGPath;
-    [self.view.layer addSublayer:self.shapeLayer];
 }
 
 - (void)viewDidLoad
@@ -50,7 +40,6 @@
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    self.shapeLayer.frame = CGRectMake(10, 300, 300, 32);
 }
 
 - (void)didReceiveMemoryWarning

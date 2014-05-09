@@ -31,6 +31,7 @@
 	// Do any additional setup after loading the view.
     self.searchDisplayController.searchBar.layer.borderColor = [UIColor whiteColor].CGColor;
     self.searchDisplayController.searchBar.layer.borderWidth = 1.0;
+    self.navigationController.view.backgroundColor = self.view.backgroundColor;
     
     self.formatter = [[NSNumberFormatter alloc] init];
     self.formatter.formatterBehavior = NSNumberFormatterBehavior10_4;

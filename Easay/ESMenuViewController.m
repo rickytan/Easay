@@ -156,6 +156,15 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"FriendNav"]
                                                      animated:YES];
             break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        case 5:
+            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingNav"]];
+            break;
         default:
             break;
     }
