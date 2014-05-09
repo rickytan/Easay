@@ -12,15 +12,24 @@
 
 + (instancetype)lightFontWithSize:(CGFloat)size
 {
-    return [UIFont fontWithName:@"Nexa Light"
+    return [UIFont fontWithName:[self lightFontName]
                            size:size];
 }
 
 + (instancetype)boldFontWithSize:(CGFloat)size
 {
-    return [UIFont fontWithName:@"Nexa Bold"
+    return [UIFont fontWithName:[self boldFontName]
                            size:size];
 }
 
++ (NSString *)lightFontName
+{
+    return @"NexaLight";
+}
+
++ (NSString *)boldFontName
+{
+    return @"NexaBold";
+}
 
 @end

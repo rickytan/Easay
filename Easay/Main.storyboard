@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Sxr-R8-yWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCZ-V1-anO">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -435,21 +435,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="QYP-W3-Omi" customClass="ESBoldLabel">
-                                <rect key="frame" x="137" y="74" width="47" height="24"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="80" translatesAutoresizingMaskIntoConstraints="NO" id="QYP-W3-Omi" customClass="ESBoldLabel">
+                                <rect key="frame" x="120" y="74" width="80" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="83m-t5-fKx"/>
+                                </constraints>
                                 <string key="text">3,29,2014
 Saturday</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="x86-9l-8eB">
+                                <rect key="frame" x="231" y="206" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="walk" translatesAutoresizingMaskIntoConstraints="NO" id="ub9-ul-Xhp">
+                                <rect key="frame" x="251" y="206" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bus" translatesAutoresizingMaskIntoConstraints="NO" id="dG7-3T-Daa">
+                                <rect key="frame" x="271" y="206" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shadow" translatesAutoresizingMaskIntoConstraints="NO" id="qRf-Cr-EqW">
                                 <rect key="frame" x="42" y="465" width="237" height="103"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gps" translatesAutoresizingMaskIntoConstraints="NO" id="ZhJ-mf-OE7">
-                                <rect key="frame" x="150" y="371" width="20" height="20"/>
+                                <rect key="frame" x="150" y="376" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="San dun, Hangzhou" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWp-jG-nMk" customClass="ESBoldLabel">
@@ -467,25 +482,25 @@ Saturday</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-Se-TlM">
-                                <rect key="frame" x="0.0" y="465" width="321" height="103"/>
+                                <rect key="frame" x="0.0" y="465" width="320" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-EO-fyL">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-EO-fyL">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="LeF-Hp-Mhr">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="LeF-Hp-Mhr">
                                                 <rect key="frame" x="20" y="18" width="67" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGf-sE-Dc5" userLabel="distance this week" customClass="ESBoldLabel">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total 574km, this week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGf-sE-Dc5" userLabel="distance this week" customClass="ESBoldLabel">
                                                 <rect key="frame" x="95" y="30" width="205" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIt-WW-rrx" userLabel="distance last week" customClass="ESLightLabel">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Less about 69km, last week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIt-WW-rrx" userLabel="distance last week" customClass="ESLightLabel">
                                                 <rect key="frame" x="95" y="50" width="205" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -494,8 +509,12 @@ Saturday</string>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="centerY" secondItem="LeF-Hp-Mhr" secondAttribute="centerY" id="Ny5-aG-T5h"/>
+                                            <constraint firstItem="LeF-Hp-Mhr" firstAttribute="leading" secondItem="Hdf-EO-fyL" secondAttribute="leading" constant="20" id="OZC-sU-wWy"/>
+                                        </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62J-FT-WPb">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62J-FT-WPb">
                                         <rect key="frame" x="320" y="0.0" width="320" height="103"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -520,7 +539,7 @@ Saturday</string>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-s7-O79">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-s7-O79">
                                         <rect key="frame" x="640" y="0.0" width="320" height="103"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
@@ -528,14 +547,14 @@ Saturday</string>
                                                 <rect key="frame" x="20" y="18" width="67" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reE-W2-4kg" userLabel="cost this week" customClass="ESBoldLabel">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total 613USD, this week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reE-W2-4kg" userLabel="cost this week" customClass="ESBoldLabel">
                                                 <rect key="frame" x="95" y="30" width="205" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0F-wK-U2G" userLabel="cost last week" customClass="ESLightLabel">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More about 14USD, last week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0F-wK-U2G" userLabel="cost last week" customClass="ESLightLabel">
                                                 <rect key="frame" x="95" y="50" width="205" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -551,9 +570,21 @@ Saturday</string>
                                     </pageControl>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Hdf-EO-fyL" secondAttribute="trailing" id="0qb-XI-Lef"/>
+                                    <constraint firstItem="62J-FT-WPb" firstAttribute="leading" secondItem="J1z-Se-TlM" secondAttribute="leading" constant="320" id="2MU-lQ-6I4"/>
+                                    <constraint firstAttribute="trailing" secondItem="62J-FT-WPb" secondAttribute="trailing" constant="-320" id="2rj-fc-e8A"/>
+                                    <constraint firstAttribute="bottom" secondItem="62J-FT-WPb" secondAttribute="bottom" id="3oy-8S-kSr"/>
                                     <constraint firstItem="MmV-pJ-8RW" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" constant="66" id="5i0-uG-iUe"/>
+                                    <constraint firstItem="62J-FT-WPb" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" id="9Qa-gr-35g"/>
+                                    <constraint firstItem="GeN-s7-O79" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" id="G6X-wt-hbC"/>
+                                    <constraint firstAttribute="bottom" secondItem="GeN-s7-O79" secondAttribute="bottom" id="Gdu-vb-1In"/>
+                                    <constraint firstItem="GeN-s7-O79" firstAttribute="leading" secondItem="62J-FT-WPb" secondAttribute="trailing" id="J7W-ey-UiI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hdf-EO-fyL" secondAttribute="bottom" id="JpP-F3-VeB"/>
                                     <constraint firstAttribute="height" constant="103" id="UHw-Ws-uHw"/>
+                                    <constraint firstAttribute="trailing" secondItem="GeN-s7-O79" secondAttribute="trailing" constant="-640" id="a2e-GS-ed7"/>
                                     <constraint firstAttribute="centerX" secondItem="MmV-pJ-8RW" secondAttribute="centerX" id="hQc-gJ-Kbb"/>
+                                    <constraint firstItem="Hdf-EO-fyL" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" id="mYF-8a-1dF"/>
+                                    <constraint firstItem="Hdf-EO-fyL" firstAttribute="leading" secondItem="J1z-Se-TlM" secondAttribute="leading" id="tc7-Ic-Jcw"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="6ZI-0v-fC8" id="5mJ-bC-fc6"/>
@@ -591,7 +622,11 @@ Saturday</string>
                         <barButtonItem key="rightBarButtonItem" image="nav-right" id="gcW-bV-ZfG"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="costLastWeek" destination="i0F-wK-U2G" id="mHD-b0-UD1"/>
+                        <outlet property="costThisWeek" destination="reE-W2-4kg" id="d1X-BB-Nfq"/>
                         <outlet property="dateLabel" destination="QYP-W3-Omi" id="tk6-0Y-9tk"/>
+                        <outlet property="distLastWeek" destination="AIt-WW-rrx" id="TY1-Mn-1Zl"/>
+                        <outlet property="distThisWeek" destination="EGf-sE-Dc5" id="6Q3-El-Rln"/>
                         <outlet property="locationLabel" destination="uWp-jG-nMk" id="D9u-NR-Yw1"/>
                         <outlet property="moneyLabel" destination="2i2-hc-Jux" id="nm6-Ke-vZd"/>
                         <outlet property="pageControl" destination="MmV-pJ-8RW" id="khb-cQ-i2c"/>
@@ -606,7 +641,7 @@ Saturday</string>
         <scene sceneID="kte-xa-fne">
             <objects>
                 <navigationController storyboardIdentifier="FriendNav" definesPresentationContext="YES" id="Ow2-gM-1O4" customClass="ESNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ABx-ip-75Z">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ABx-ip-75Z">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
@@ -634,10 +669,10 @@ Saturday</string>
             </objects>
             <point key="canvasLocation" x="1187" y="-2468"/>
         </scene>
-        <!--Sider Middle Base View Controller - ACTIVITY-->
+        <!--Activity View Controller - ACTIVITY-->
         <scene sceneID="Qfo-pb-fxM">
             <objects>
-                <viewController id="p2m-jL-a8L" customClass="ESSiderMiddleBaseViewController" sceneMemberID="viewController">
+                <viewController id="p2m-jL-a8L" customClass="ESActivityViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g6V-AH-nX5"/>
                         <viewControllerLayoutGuide type="bottom" id="8mc-NH-Up3"/>
@@ -781,13 +816,14 @@ Saturday</string>
         <scene sceneID="xc9-1l-Ad8">
             <objects>
                 <tableViewController id="kO6-1c-KcL" customClass="ESFriendViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="22" sectionFooterHeight="22" id="rmq-kL-KrJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="rmq-kL-KrJ">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" placeholder="SEARCH BY NAME" id="PP2-ye-pAN">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -797,13 +833,35 @@ Saturday</string>
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="99" id="UdF-nq-Ug6">
-                                <rect key="frame" x="0.0" y="130" width="320" height="99"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" textLabel="FfS-r8-CvY" detailTextLabel="lOm-wg-mnz" imageView="ufT-QF-Cqr" style="IBUITableViewCellStyleValue1" id="UdF-nq-Ug6">
+                                <rect key="frame" x="0.0" y="66" width="320" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UdF-nq-Ug6" id="B2z-gg-kPq">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FfS-r8-CvY">
+                                            <rect key="frame" x="117" y="33" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lOm-wg-mnz">
+                                            <rect key="frame" x="261" y="33" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="head" id="ufT-QF-Cqr">
+                                            <rect key="frame" x="15" y="0.0" width="87" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -835,17 +893,19 @@ Saturday</string>
             </objects>
             <point key="canvasLocation" x="1579" y="-1754"/>
         </scene>
-        <!--Table View Controller - FIND FRIENDS-->
+        <!--Find Friend View Controller - FIND FRIENDS-->
         <scene sceneID="JVO-Di-FUw">
             <objects>
-                <tableViewController id="bL4-Pm-EB7" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" sectionHeaderHeight="22" sectionFooterHeight="22" id="Pos-fW-ktd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                <tableViewController id="bL4-Pm-EB7" customClass="ESFindFriendViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="91" sectionHeaderHeight="22" sectionFooterHeight="22" id="Pos-fW-ktd">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" placeholder="SEARCH BY NAME" id="Qv4-zw-sLS">
-                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
                             <textInputTraits key="textInputTraits"/>
@@ -854,15 +914,33 @@ Saturday</string>
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="91" id="cUQ-Ml-oXV">
-                                <rect key="frame" x="0.0" y="130" width="320" height="91"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="QbM-kq-ZJa" detailTextLabel="yhi-qv-IFw" rowHeight="91" style="IBUITableViewCellStyleSubtitle" id="cUQ-Ml-oXV">
+                                <rect key="frame" x="0.0" y="66" width="320" height="91"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cUQ-Ml-oXV" id="t9s-2c-fnc">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QbM-kq-ZJa">
+                                            <rect key="frame" x="15" y="27" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yhi-qv-IFw">
+                                            <rect key="frame" x="15" y="49" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="bL4-Pm-EB7" id="Skv-Fw-1US"/>
                             <outlet property="delegate" destination="bL4-Pm-EB7" id="1tl-CK-DVH"/>
@@ -880,7 +958,7 @@ Saturday</string>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AP-gx-PyZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="9Mh-zR-bwd">
+                <searchDisplayController searchResultsTitle="Search" id="9Mh-zR-bwd">
                     <connections>
                         <outlet property="delegate" destination="bL4-Pm-EB7" id="f0V-Cs-Bek"/>
                         <outlet property="searchBar" destination="Qv4-zw-sLS" id="vfO-Xu-O2S"/>
@@ -1056,7 +1134,9 @@ Saturday</string>
     </scenes>
     <resources>
         <image name="battery" width="28" height="28"/>
+        <image name="bus" width="20" height="20"/>
         <image name="camera" width="34" height="25"/>
+        <image name="car" width="20" height="20"/>
         <image name="chat" width="17" height="17"/>
         <image name="dollar" width="67" height="67"/>
         <image name="gps" width="20" height="20"/>
@@ -1071,6 +1151,7 @@ Saturday</string>
         <image name="shadow" width="237" height="103"/>
         <image name="time" width="67" height="67"/>
         <image name="up" width="32" height="32"/>
+        <image name="walk" width="20" height="20"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C05FC7C191CB07D00889724 /* ESFindFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C05FC7B191CB07D00889724 /* ESFindFriendViewController.m */; };
+		9C05FC7F191CB3B100889724 /* ESActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C05FC7E191CB3B100889724 /* ESActivityViewController.m */; };
+		9C05FC82191CB5F200889724 /* ESSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C05FC81191CB5F200889724 /* ESSegmentView.m */; };
 		9C108DF319003F79004CD572 /* UIColor+RExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF219003F79004CD572 /* UIColor+RExtension.m */; };
 		9C108DF619004815004CD572 /* UIFont+ES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF519004815004CD572 /* UIFont+ES.m */; };
 		9C108DF919004B7E004CD572 /* ESNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C108DF819004B7E004CD572 /* ESNavigationController.m */; };
@@ -55,6 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C05FC7A191CB07D00889724 /* ESFindFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESFindFriendViewController.h; sourceTree = "<group>"; };
+		9C05FC7B191CB07D00889724 /* ESFindFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESFindFriendViewController.m; sourceTree = "<group>"; };
+		9C05FC7D191CB3B100889724 /* ESActivityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESActivityViewController.h; sourceTree = "<group>"; };
+		9C05FC7E191CB3B100889724 /* ESActivityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESActivityViewController.m; sourceTree = "<group>"; };
+		9C05FC80191CB5F200889724 /* ESSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSegmentView.h; sourceTree = "<group>"; };
+		9C05FC81191CB5F200889724 /* ESSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSegmentView.m; sourceTree = "<group>"; };
 		9C108DF119003F79004CD572 /* UIColor+RExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RExtension.h"; sourceTree = "<group>"; };
 		9C108DF219003F79004CD572 /* UIColor+RExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RExtension.m"; sourceTree = "<group>"; };
 		9C108DF419004815004CD572 /* UIFont+ES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+ES.h"; sourceTree = "<group>"; };
@@ -183,10 +192,14 @@
 		9CD7A68F18EDDA7800641DA9 /* Easay */ = {
 			isa = PBXGroup;
 			children = (
+				9C05FC7D191CB3B100889724 /* ESActivityViewController.h */,
+				9C05FC7E191CB3B100889724 /* ESActivityViewController.m */,
 				9CD7A69818EDDA7800641DA9 /* ESAppDelegate.h */,
 				9CD7A69918EDDA7800641DA9 /* ESAppDelegate.m */,
 				9CD7A6BE18EDE1CC00641DA9 /* ESBoldLabel.h */,
 				9CD7A6BF18EDE1CC00641DA9 /* ESBoldLabel.m */,
+				9C05FC7A191CB07D00889724 /* ESFindFriendViewController.h */,
+				9C05FC7B191CB07D00889724 /* ESFindFriendViewController.m */,
 				9C1AC7BD18FAE177009EAB1F /* ESFindPasswordViewController.h */,
 				9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */,
 				9C108DFD19005601004CD572 /* ESFriendViewController.h */,
@@ -201,6 +214,8 @@
 				9CC16ABD18FBBEEC004D3F8A /* ESMenuViewController.m */,
 				9C108DF719004B7E004CD572 /* ESNavigationController.h */,
 				9C108DF819004B7E004CD572 /* ESNavigationController.m */,
+				9C05FC80191CB5F200889724 /* ESSegmentView.h */,
+				9C05FC81191CB5F200889724 /* ESSegmentView.m */,
 				9C108E00190060DA004CD572 /* ESShareViewController.h */,
 				9C108E01190060DA004CD572 /* ESShareViewController.m */,
 				9C108DFA1900514A004CD572 /* ESSiderMiddleBaseViewController.h */,
@@ -363,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CD7A6C018EDE1CC00641DA9 /* ESBoldLabel.m in Sources */,
+				9C05FC82191CB5F200889724 /* ESSegmentView.m in Sources */,
 				9CC16AC718FBC101004D3F8A /* ProgressHUD.m in Sources */,
 				9C108DFC1900514A004CD572 /* ESSiderMiddleBaseViewController.m in Sources */,
 				9C108DF919004B7E004CD572 /* ESNavigationController.m in Sources */,
@@ -375,11 +391,13 @@
 				9C1AC7BF18FAE177009EAB1F /* ESFindPasswordViewController.m in Sources */,
 				9C108DF319003F79004CD572 /* UIColor+RExtension.m in Sources */,
 				9CD7A6C318EDE6F400641DA9 /* ESLoginViewController.m in Sources */,
+				9C05FC7F191CB3B100889724 /* ESActivityViewController.m in Sources */,
 				9C108DFF19005601004CD572 /* ESFriendViewController.m in Sources */,
 				9CC16ABB18FBBC13004D3F8A /* RTSiderViewController.m in Sources */,
 				9CC16ACA18FBC7EB004D3F8A /* ESHeaderButton.m in Sources */,
 				9CC16AB818FBBBE2004D3F8A /* ESViewController.m in Sources */,
 				9CD7A69618EDDA7800641DA9 /* main.m in Sources */,
+				9C05FC7C191CB07D00889724 /* ESFindFriendViewController.m in Sources */,
 				9C108DF619004815004CD572 /* UIFont+ES.m in Sources */,
 				9CD7A6C618EDF06A00641DA9 /* ESTextField.m in Sources */,
 			);
