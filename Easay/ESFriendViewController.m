@@ -8,6 +8,7 @@
 
 #import "ESFriendViewController.h"
 #import "UIFont+ES.h"
+#import "UIColor+RExtension.h"
 
 @interface ESFriendViewController ()
 @property (nonatomic, strong) NSArray * friends;
@@ -31,6 +32,7 @@
 	// Do any additional setup after loading the view.
     self.searchDisplayController.searchBar.layer.borderColor = [UIColor whiteColor].CGColor;
     self.searchDisplayController.searchBar.layer.borderWidth = 1.0;
+    self.view.backgroundColor = [UIColor themeColor];
     self.navigationController.view.backgroundColor = self.view.backgroundColor;
     
     self.formatter = [[NSNumberFormatter alloc] init];

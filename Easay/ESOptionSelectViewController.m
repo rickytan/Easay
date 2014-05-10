@@ -11,6 +11,19 @@
 #import "UIViewController+ES.h"
 #import "UIColor+RExtension.h"
 
+@implementation ESOptionItem
+
++ (instancetype)optionItemWithText:(NSString *)text description:(NSString *)desc image:(UIImage *)image
+{
+    ESOptionItem *item = [[ESOptionItem alloc] init];
+    item.text = text;
+    item.description = desc;
+    item.image = image;
+    return item;
+}
+
+@end
+
 @interface ESOptionSelectViewController ()
 
 @end
@@ -45,10 +58,14 @@
                                                                 target:self
                                                                 action:@selector(onDismiss:)];
     self.navigationItem.leftBarButtonItem = leftItem;
-
-    [self.tableView selectRowAtIndexPath:self.selectedIndexPath
-                                animated:NO
-                          scrollPosition:UITableViewScrollPositionNone];
+    
+    double delayInSeconds = .1;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self.tableView selectRowAtIndexPath:self.selectedIndexPath
+                                    animated:NO
+                              scrollPosition:UITableViewScrollPositionNone];
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,8 +100,15 @@
         cell.contentView.backgroundColor = [UIColor clearColor];
         cell.backgroundColor = [UIColor clearColor];
     }
-
-    cell.textLabel.text = self.options[indexPath.row];
+    
+    ESOptionItem *item = (ESOptionItem *)self.options[indexPath.row];
+    if ([item isKindOfClass:[NSString class]])
+        cell.textLabel.text = (NSString *)item;
+    else {
+        cell.textLabel.text = item.text;
+        cell.detailTextLabel.text = item.description;
+        cell.imageView.image = item.image;
+    }
     
     return cell;
 }

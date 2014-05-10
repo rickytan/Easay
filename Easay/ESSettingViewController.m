@@ -9,6 +9,7 @@
 #import "ESSettingViewController.h"
 #import "UIFont+ES.h"
 #import "ESOptionSelectViewController.h"
+#import "ESPrivacyCell.h"
 
 @interface ESSettingViewController () <ESOptionSelectDelegate>
 @property (nonatomic, strong) NSArray *sections;
@@ -70,18 +71,20 @@ viewForHeaderInSection:(NSInteger)section
         header = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:@"Header"];
         header.contentView.backgroundColor = [UIColor clearColor];
         header.textLabel.font = [UIFont boldFontWithSize:14];
-        header.textLabel.textColor = [UIColor colorWithRed:200.0/255
-                                                     green:216.0/255
-                                                      blue:233.0/255
-                                                     alpha:1.0];
-        header.tintColor = [UIColor colorWithRed:200.0/255
-                                           green:216.0/255
-                                            blue:233.0/255
-                                           alpha:1.0];
     }
     static NSString *headerString[] = {@"ACCOUNT", @"EASAY(CONNECTED)", @"SHARING"};
     header.textLabel.text = headerString[section];
     return header;
+}
+
+- (void)tableView:(UITableView *)tableView
+willDisplayHeaderView:(UIView *)view
+       forSection:(NSInteger)section
+{
+    ((UITableViewHeaderFooterView *)view).textLabel.textColor = [UIColor colorWithRed:200.0/255
+                                                                                green:216.0/255
+                                                                                 blue:233.0/255
+                                                                                alpha:1.0];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -102,14 +105,36 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
         case 0:
-            
+        {
+            ESOptionSelectViewController *option = [[ESOptionSelectViewController alloc] init];
+            option.title = @"Privacy Settings";
+            option.delegate = self;
+            option.options = @[[ESOptionItem optionItemWithText:@"Everyone(Public)"
+                                                    description:@"Everyone on Easay can search for you, view your full profile, send you invites and see your activi."
+                                                          image:[UIImage imageNamed:@"priv-radar"]],
+                               [ESOptionItem optionItemWithText:@"Friends(Social)"
+                                                    description:@"Everyone on Easay can search for you, view your limited profile, and sned you invites. Only friends can view your full profile and see your activity."
+                                                          image:[UIImage imageNamed:@"priv-head"]],
+                               [ESOptionItem optionItemWithText:@"Me Only(Private)"
+                                                    description:@"Nobody on Easay can search for you, view your profile, send you invites or see your activity."
+                                                          image:[UIImage imageNamed:@"priv-avatar"]]
+                               ];
+            option.tableView.rowHeight = 108.0f;
+            [option.tableView registerClass:[ESPrivacyCell class]
+                     forCellReuseIdentifier:@"Cell"];
+            //option.selectedIndexPath = [NSIndexPath indexPathForRow:0
+            //                                              inSection:0];
+            [self.navigationController pushViewController:option
+                                                 animated:YES];
+        }
             break;
         case 1:
         {
             switch (indexPath.row) {
                 case 0:
                 {
-                    
+                    [self performSegueWithIdentifier:@"SetName"
+                                              sender:self];
                 }
                     break;
                 case 1:
@@ -147,6 +172,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                                        @"OFF"];
                     option.selectedIndexPath = [NSIndexPath indexPathForRow:0
                                                                   inSection:0];
+
                     [self.navigationController pushViewController:option
                                                          animated:YES];
                 }
@@ -159,6 +185,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         default:
             break;
     }
+}
+
+#pragma mark - ESOptionSelectDelegate
+
+- (void)optionSelectViewController:(ESOptionSelectViewController *)controller
+                didSelectIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 @end

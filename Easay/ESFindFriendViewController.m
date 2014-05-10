@@ -27,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.searchDisplayController.searchBar.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.searchDisplayController.searchBar.layer.borderWidth = 1.0;
+    
     self.array = @[@{@"image": @"friend-weibo",
                      @"title": @"Weibo",
                      @"subtitle": @"Tap to Connect"},
@@ -61,7 +64,7 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:CellIdentifier];

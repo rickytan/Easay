@@ -10,6 +10,15 @@
 
 @class ESOptionSelectViewController;
 
+@interface ESOptionItem : NSObject
+@property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) UIImage *image;
++ (instancetype)optionItemWithText:(NSString *)text
+                       description:(NSString *)desc
+                             image:(UIImage *)image;
+@end
+
 @protocol ESOptionSelectDelegate <NSObject>
 @optional
 - (void)optionSelectViewController:(ESOptionSelectViewController *)controller

@@ -190,7 +190,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470588235294" green="0.53725490196078429" blue="0.89803921568627454" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="qYc-vX-GSG" secondAttribute="centerX" id="8YD-at-Hxl"/>
@@ -247,7 +247,7 @@
                 <navigationController definesPresentationContext="YES" id="XIR-Ky-G0h" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="bmJ-ke-iq9">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="0kM-7g-KIz" kind="relationship" relationship="rootViewController" id="DjQ-Fq-AqM"/>
@@ -320,7 +320,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <connections>
                             <action selector="onDismissKeyboard:" destination="0kM-7g-KIz" eventType="touchDown" id="j4k-Au-CVr"/>
                         </connections>
@@ -349,7 +349,7 @@
                 <navigationController definesPresentationContext="YES" id="sCa-71-DR1" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="QYe-pk-zGN">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="pcp-wL-eJM" kind="relationship" relationship="rootViewController" id="7ax-pb-vzQ"/>
@@ -403,7 +403,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <connections>
                             <action selector="onDismissKeyboard:" destination="pcp-wL-eJM" eventType="touchDown" id="029-UR-IkI"/>
                         </connections>
@@ -591,7 +591,7 @@ Saturday</string>
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.2627450980392157" green="0.61568627450980395" blue="0.91764705882352937" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstItem="J1z-Se-TlM" firstAttribute="top" secondItem="qRf-Cr-EqW" secondAttribute="top" id="0vI-qN-s6K"/>
                             <constraint firstAttribute="centerX" secondItem="uWp-jG-nMk" secondAttribute="centerX" id="49a-S2-KlL"/>
@@ -644,9 +644,8 @@ Saturday</string>
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="54" sectionHeaderHeight="10" sectionFooterHeight="10" id="DTf-6I-9zz">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.21365240216255188" green="0.53663462400436401" blue="0.89604967832565308" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.0" green="0.32941176470588235" blue="0.62745098039215685" alpha="1" colorSpace="deviceRGB"/>
-                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingCell" textLabel="Sch-Vn-ec0" detailTextLabel="phY-32-eZK" style="IBUITableViewCellStyleValue1" id="zoC-l8-gyn">
                                 <rect key="frame" x="0.0" y="55" width="320" height="54"/>
@@ -679,10 +678,88 @@ Saturday</string>
                     <navigationItem key="navigationItem" title="SETTINGS" id="vOY-e0-OLa">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="oct-aW-V5X"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="4Na-nX-dNZ" kind="push" identifier="SetName" id="LHr-R0-ntJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rqd-e0-oWx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2533" y="-699"/>
+        </scene>
+        <!--Set Name View Controller - The Name-->
+        <scene sceneID="6oZ-xO-BY7">
+            <objects>
+                <viewController id="4Na-nX-dNZ" customClass="ESSetNameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nTU-7s-e8m"/>
+                        <viewControllerLayoutGuide type="bottom" id="DOR-WX-dMV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P5J-jW-Gbk">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8X-ZP-Taw" customClass="ESHeaderButton">
+                                <rect key="frame" x="110" y="20" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="uZF-ta-PeI"/>
+                                    <constraint firstAttribute="width" constant="100" id="zL1-qU-Lsj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onHeader:" destination="0kM-7g-KIz" eventType="touchUpInside" id="3sC-Qa-oK5"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Import your name" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HHW-eC-bbO" customClass="ESTextField">
+                                <rect key="frame" x="10" y="134" width="300" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Qme-6J-Zxh"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ur7-UG-oce">
+                                <rect key="frame" x="130" y="198" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="TuB-76-Vye"/>
+                                    <constraint firstAttribute="width" constant="60" id="aZE-lf-Wa6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="e7n-hH-zCe"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="yDC-Ve-jdT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onEdit:" destination="ObL-a5-lqT" eventType="touchUpInside" id="b67-bP-eT4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21365240220000001" green="0.53663462399999995" blue="0.89604967830000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ur7-UG-oce" firstAttribute="top" secondItem="HHW-eC-bbO" secondAttribute="bottom" constant="22" id="Gfg-PS-fNf"/>
+                            <constraint firstItem="HHW-eC-bbO" firstAttribute="top" secondItem="w8X-ZP-Taw" secondAttribute="bottom" constant="14" id="iBt-OP-37j"/>
+                            <constraint firstItem="HHW-eC-bbO" firstAttribute="leading" secondItem="P5J-jW-Gbk" secondAttribute="leading" constant="10" id="imJ-1M-6EN"/>
+                            <constraint firstAttribute="centerX" secondItem="ur7-UG-oce" secondAttribute="centerX" id="jhn-Yw-u2v"/>
+                            <constraint firstAttribute="centerX" secondItem="w8X-ZP-Taw" secondAttribute="centerX" id="oZk-km-092"/>
+                            <constraint firstAttribute="trailing" secondItem="HHW-eC-bbO" secondAttribute="trailing" constant="10" id="r2t-uS-vZp"/>
+                            <constraint firstItem="w8X-ZP-Taw" firstAttribute="top" secondItem="nTU-7s-e8m" secondAttribute="bottom" constant="20" id="uqD-Sv-Edf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="The Name" id="eOp-Lg-3iw"/>
+                    <connections>
+                        <outlet property="textField" destination="HHW-eC-bbO" id="BV3-CK-kHK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VF-Rz-ToV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3149" y="-699"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vR2-4l-9QP">
@@ -691,7 +768,7 @@ Saturday</string>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="s94-ue-1Jl">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.21365240216255188" green="0.53663462400436401" blue="0.89604967832565308" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="ron-bf-RpT" kind="relationship" relationship="rootViewController" id="GEt-yg-J3v"/>
@@ -707,7 +784,7 @@ Saturday</string>
                 <navigationController storyboardIdentifier="FriendNav" definesPresentationContext="YES" id="Ow2-gM-1O4" customClass="ESNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ABx-ip-75Z">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="kO6-1c-KcL" kind="relationship" relationship="rootViewController" id="MZW-df-rZj"/>
@@ -723,7 +800,7 @@ Saturday</string>
                 <navigationController storyboardIdentifier="ActivityNav" definesPresentationContext="YES" id="Q68-y4-xfw" customClass="ESNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MNB-r2-4h1">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="p2m-jL-a8L" kind="relationship" relationship="rootViewController" id="FU1-ay-Rzc"/>
@@ -767,7 +844,7 @@ Saturday</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="o9u-Al-crG" secondAttribute="trailing" constant="10" id="OKZ-Cz-yn6"/>
                             <constraint firstItem="8mc-NH-Up3" firstAttribute="top" secondItem="o9u-Al-crG" secondAttribute="bottom" constant="10" id="QvY-oX-kT1"/>
@@ -786,7 +863,7 @@ Saturday</string>
                 <navigationController definesPresentationContext="YES" id="RTv-lD-EIT" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gji-Jc-nGc">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="ObL-a5-lqT" kind="relationship" relationship="rootViewController" id="Ary-55-AZp"/>
@@ -853,7 +930,7 @@ Saturday</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="VcW-DH-KBp" secondAttribute="centerX" id="8BX-8x-ncZ"/>
                             <constraint firstAttribute="trailing" secondItem="YeT-sS-RLm" secondAttribute="trailing" constant="10" id="8RD-nO-xPa"/>
@@ -885,10 +962,10 @@ Saturday</string>
         <scene sceneID="xc9-1l-Ad8">
             <objects>
                 <tableViewController id="kO6-1c-KcL" customClass="ESFriendViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="88" sectionHeaderHeight="22" sectionFooterHeight="22" id="rmq-kL-KrJ">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="88" sectionHeaderHeight="10" sectionFooterHeight="10" id="rmq-kL-KrJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackTranslucent" searchBarStyle="minimal" placeholder="SEARCH BY NAME" id="PP2-ye-pAN">
@@ -903,7 +980,7 @@ Saturday</string>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendCell" textLabel="FfS-r8-CvY" detailTextLabel="lOm-wg-mnz" imageView="ufT-QF-Cqr" style="IBUITableViewCellStyleValue1" id="UdF-nq-Ug6">
-                                <rect key="frame" x="0.0" y="66" width="320" height="88"/>
+                                <rect key="frame" x="0.0" y="99" width="320" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UdF-nq-Ug6" id="B2z-gg-kPq">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="87"/>
@@ -969,7 +1046,7 @@ Saturday</string>
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="91" sectionHeaderHeight="22" sectionFooterHeight="22" id="Pos-fW-ktd">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
@@ -1190,7 +1267,7 @@ Saturday</string>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ljM-he-iqW">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="6ZI-0v-fC8" kind="relationship" relationship="rootViewController" id="W26-yf-EiZ"/>
