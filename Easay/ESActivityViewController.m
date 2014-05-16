@@ -11,7 +11,7 @@
 #import "ESSegmentView.h"
 
 @interface ESActivityViewController ()
-@property (nonatomic, assign) ESSegmentView *segmentView;
+@property (nonatomic, assign) IBOutlet ESSegmentView *segmentView;
 @end
 
 @implementation ESActivityViewController
@@ -35,6 +35,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.segmentView.segments = @[@2, @3, @8];
+    self.segmentView.titles = @[@"BUS", @"SUBWAY", @"OIL"];
+    
+    [self.segmentView performSelector:@selector(setSegments:)
+               withObject:@[@4, @1, @5]
+               afterDelay:2];
 }
 
 - (void)viewDidLayoutSubviews

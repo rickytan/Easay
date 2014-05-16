@@ -45,6 +45,7 @@
     shape.strokeColor = color.CGColor;
     shape.strokeStart = 0.0;
     shape.strokeEnd = 0.0;
+    shape.delegate = self;
     shape.path = [UIBezierPath bezierPathWithArcCenter:CGPointZero
                                                 radius:radius
                                             startAngle:0
@@ -142,7 +143,7 @@
 - (void)showContent
 {
     [CATransaction begin];
-    [CATransaction setAnimationDuration:1.5];
+    [CATransaction setAnimationDuration:0.5];
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithControlPoints:0.0
                                                                                               :0.0
                                                                                               :0.75
@@ -165,7 +166,7 @@
             [values addObject:[NSString stringWithFormat:@"%d", i]];
         }
         numjump.values = values;
-        numjump.duration = 4.0;
+        numjump.duration = 2.0;
         numjump.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
         numjump.removedOnCompletion = NO;
         [self.textLayer addAnimation:numjump
@@ -206,6 +207,29 @@
     if (!decelerate) {
         [self updatePageControl];
     }
+}
+
+#pragma mark - CALayer
+
+- (void)displayLayer:(CALayer *)layer
+{
+    
+}
+
+/* If defined, called by the default implementation of -drawInContext: */
+
+- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
+{
+    
+}
+
+/* Called by the default -layoutSublayers implementation before the layout
+ * manager is checked. Note that if the delegate method is invoked, the
+ * layout manager will be ignored. */
+
+- (void)layoutSublayersOfLayer:(CALayer *)layer
+{
+    
 }
 
 @end

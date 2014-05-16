@@ -68,7 +68,7 @@ static NSString *cellColors[] = {@"#866fd7", @"#3cc", @"#086ca2", @"#ffd200", @"
                            total:(NSInteger)total
 {
 #define START   (40.f / 360.f)
-#define END     (60.f / 360.f)
+#define END     (54.f / 360.f)
     return [UIColor colorWithHue:(END - START) * level / total + START
                saturation:1.0
                brightness:1.0

@@ -10,5 +10,5 @@
 
 @interface ESSegmentView : UIView
 @property (nonatomic, strong) NSArray * segments;
-@property (nonatomic, strong) NSString * titles;    // Assert titles.count == segments.count
+@property (nonatomic, strong) NSArray * titles;    // Assert titles.count == segments.count
 @end

@@ -8,6 +8,7 @@
 
 #import "ESSegmentView.h"
 #import "UIColor+RExtension.h"
+#import "UIFont+ES.h"
 
 @interface ESSegmentView ()
 @property (nonatomic, strong) NSMutableArray * titleLayers;
@@ -40,11 +41,6 @@
     self.layer.masksToBounds = YES;
     self.layer.backgroundColor = [UIColor clearColor].CGColor;
     self.backgroundColor = [UIColor clearColor];
-    self.segments = @[@2, @3, @1, @8];
-    
-    [self performSelector:@selector(setSegments:)
-               withObject:@[@4, @1,@12, @5]
-               afterDelay:2];
 }
 
 - (NSMutableArray *)segmentLayers
@@ -73,7 +69,7 @@
         _segments = segments;
         
         if (!numEqual) {
-            [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+            [self.segmentLayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
             [self.segmentLayers removeAllObjects];
             
             NSInteger count = _segments.count;
@@ -87,6 +83,38 @@
         }
         else {
             [self setNeedsLayout];
+        }
+    }
+}
+
+- (void)setTitles:(NSArray *)titles
+{
+    if (_titles != titles) {
+        BOOL numEqual = _titles.count == titles.count;
+        if (!titles.count)
+            return;
+        _titles = titles;
+        
+        if (!numEqual) {
+            [self.titleLayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+            [self.titleLayers removeAllObjects];
+            
+            for (NSString *str in _titles) {
+                CATextLayer *layer = [CATextLayer layer];
+                layer.string = str;
+                layer.fontSize = 8;
+                layer.contentsGravity = kCAGravityBottom;
+                layer.font = (__bridge CFTypeRef)([UIFont boldFontName]);
+                layer.contentsScale = [UIScreen mainScreen].scale;
+                layer.alignmentMode = kCAAlignmentCenter;
+                [self.titleLayers addObject:layer];
+                [self.layer addSublayer:layer];
+            }
+        }
+        else {
+            for (int i=0; i < _titles.count; ++i) {
+                ((CATextLayer *)self.titleLayers[i]).string = _titles[i];
+            }
         }
     }
 }
@@ -123,8 +151,13 @@
                          for (int i=0; i<self.segments.count; ++i) {
                              NSNumber *num = self.segments[i];
                              CALayer *layer = self.segmentLayers[i];
+                             CATextLayer *textLayer = self.titleLayers.count > 0 ? self.titleLayers[i] : nil;
                              CGRectDivide(rect, &split, &remain, num.floatValue / sum * width, CGRectMinXEdge);
                              layer.frame = split;
+                             split = layer.frame;
+                             split.size = textLayer.preferredFrameSize;
+                             textLayer.bounds = split;
+                             textLayer.position = layer.position;
                              remain.origin.x += SEGMENT_MARGIN;
                              rect = remain;
                          }

@@ -96,8 +96,8 @@
             break;
         case UIGestureRecognizerStateChanged:
         {
-            CGPoint trans = [pan translationInView:self.view];
-            CGFloat ratio = -trans.y / 160;
+            //CGPoint trans = [pan translationInView:self.view];
+            //CGFloat ratio = -trans.y / 160;
         }
             break;
         case UIGestureRecognizerStateEnded:
