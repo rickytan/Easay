@@ -49,6 +49,7 @@
 		9CD7A6C818EDFFE400641DA9 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 9CD7A6C718EDFFE400641DA9 /* iTunesArtwork */; };
 		9CE36877191E6CF2003F064D /* ESPrivacyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE36876191E6CF2003F064D /* ESPrivacyCell.m */; };
 		9CE3687A191E7625003F064D /* ESSetNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE36879191E7625003F064D /* ESSetNameViewController.m */; };
+		9CEEF67F19269CF1009018D3 /* ESWeekDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CEEF67E19269CF1009018D3 /* ESWeekDataView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,8 @@
 		9CE36876191E6CF2003F064D /* ESPrivacyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPrivacyCell.m; sourceTree = "<group>"; };
 		9CE36878191E7625003F064D /* ESSetNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSetNameViewController.h; sourceTree = "<group>"; };
 		9CE36879191E7625003F064D /* ESSetNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSetNameViewController.m; sourceTree = "<group>"; };
+		9CEEF67D19269CF1009018D3 /* ESWeekDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESWeekDataView.h; sourceTree = "<group>"; };
+		9CEEF67E19269CF1009018D3 /* ESWeekDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESWeekDataView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +262,8 @@
 				9CE36876191E6CF2003F064D /* ESPrivacyCell.m */,
 				9CE36878191E7625003F064D /* ESSetNameViewController.h */,
 				9CE36879191E7625003F064D /* ESSetNameViewController.m */,
+				9CEEF67D19269CF1009018D3 /* ESWeekDataView.h */,
+				9CEEF67E19269CF1009018D3 /* ESWeekDataView.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
@@ -341,9 +346,6 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = ricky;
 				TargetAttributes = {
-					9CD7A68518EDDA7800641DA9 = {
-						DevelopmentTeam = JM9WSY7Q38;
-					};
 					9CD7A6A018EDDA7800641DA9 = {
 						TestTargetID = 9CD7A68518EDDA7800641DA9;
 					};
@@ -409,6 +411,7 @@
 				9CD7A69A18EDDA7800641DA9 /* ESAppDelegate.m in Sources */,
 				9C1AC7BC18FADFB3009EAB1F /* UIViewController+ES.m in Sources */,
 				9C1AC7B918FADB5D009EAB1F /* ESSignUpViewController.m in Sources */,
+				9CEEF67F19269CF1009018D3 /* ESWeekDataView.m in Sources */,
 				9C108E02190060DA004CD572 /* ESShareViewController.m in Sources */,
 				9CE3687A191E7625003F064D /* ESSetNameViewController.m in Sources */,
 				9CC16AC118FBC000004D3F8A /* ESHomeViewController.m in Sources */,
@@ -547,7 +550,7 @@
 				GCC_PREFIX_HEADER = "Easay/Easay-Prefix.pch";
 				INFOPLIST_FILE = "Easay/Easay-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "333BFD0C-0CAB-4F22-B636-4B880CE1B89D";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

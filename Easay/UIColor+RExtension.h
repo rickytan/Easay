@@ -14,4 +14,5 @@
 + (UIColor *)iOS7DefaultBlueTint;
 - (UIColor*)colorByLighting:(CGFloat)rate;
 + (UIColor *)themeColor;
++ (UIColor *)yellowColorForLevel:(NSInteger)level total:(NSInteger)total;
 @end

@@ -9,6 +9,7 @@
 #import "ESHomeViewController.h"
 #import "UIColor+RExtension.h"
 #import "UIFont+ES.h"
+#import "ESWeekDataView.h"
 
 @interface ESHomeViewController () <UIScrollViewDelegate>
 @property (nonatomic, assign) IBOutlet UIScrollView * scrollView;
@@ -17,6 +18,11 @@
 @property (nonatomic, assign) IBOutlet UILabel * distThisWeek, * distLastWeek, * costThisWeek, * costLastWeek;
 @property (nonatomic, strong) CAShapeLayer * shape0, * shape1, * shape2;
 @property (nonatomic, strong) CATextLayer * textLayer;
+@property (nonatomic, assign) IBOutlet ESWeekDataView * weekDataView;
+
+@property (nonatomic, strong) NSArray * weekData;
+
+- (IBAction)onPageControl:(id)sender;
 @end
 
 @implementation ESHomeViewController
@@ -94,9 +100,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.weekData = @[@10, @8, @4, @7, @2, @5, @9];
     
     self.scrollView.contentSize = CGSizeMake(960, 640);
-    
+    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     [self performSelector:@selector(showContent)
                withObject:nil
                afterDelay:0.5];
@@ -135,7 +142,7 @@
 - (void)showContent
 {
     [CATransaction begin];
-    [CATransaction setAnimationDuration:0.5];
+    [CATransaction setAnimationDuration:1.5];
     [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithControlPoints:0.0
                                                                                               :0.0
                                                                                               :0.75
@@ -158,10 +165,9 @@
             [values addObject:[NSString stringWithFormat:@"%d", i]];
         }
         numjump.values = values;
-        numjump.duration = 2.0;
+        numjump.duration = 4.0;
         numjump.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
         numjump.removedOnCompletion = NO;
-        numjump.timeOffset = 1.0;
         [self.textLayer addAnimation:numjump
                               forKey:@"NumberJump"];
         self.textLayer.string = values.lastObject;
@@ -169,5 +175,37 @@
     [CATransaction commit];
 }
 
+#pragma mark - Methods
+
+- (void)updatePageControl
+{
+    self.pageControl.currentPage = (NSInteger)floorf(self.scrollView.contentOffset.x / self.scrollView.bounds.size.width + 0.5);
+    if (self.pageControl.currentPage == 1) {
+        self.weekDataView.weekData = self.weekData;
+    }
+}
+
+#pragma mark - Actions
+
+- (IBAction)onPageControl:(id)sender
+{
+    [self.scrollView setContentOffset:CGPointMake(self.pageControl.currentPage * self.scrollView.bounds.size.width, 0)
+                             animated:YES];
+}
+
+#pragma mark - UIScrollView
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self updatePageControl];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
+                  willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate) {
+        [self updatePageControl];
+    }
+}
 
 @end

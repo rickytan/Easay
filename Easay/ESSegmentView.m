@@ -7,6 +7,7 @@
 //
 
 #import "ESSegmentView.h"
+#import "UIColor+RExtension.h"
 
 @interface ESSegmentView ()
 @property (nonatomic, strong) NSMutableArray * titleLayers;
@@ -75,14 +76,11 @@
             [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
             [self.segmentLayers removeAllObjects];
             
-            NSInteger greenStep = (0xff - 0xa0) / _segments.count;
             NSInteger count = _segments.count;
             for (NSNumber *num in _segments) {
                 CALayer *layer = [CALayer layer];
-                layer.backgroundColor = [UIColor colorWithRed:1.0
-                                                        green:1.0 * (0xa0 + count-- * greenStep) / 255
-                                                         blue:0.0
-                                                        alpha:1.0].CGColor;
+                layer.backgroundColor = [UIColor yellowColorForLevel:count--
+                                                               total:_segments.count].CGColor;
                 [self.segmentLayers addObject:layer];
                 [self.layer addSublayer:layer];
             }

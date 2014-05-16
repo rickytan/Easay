@@ -16,24 +16,24 @@ static NSString *cellColors[] = {@"#866fd7", @"#3cc", @"#086ca2", @"#ffd200", @"
 {
     if (![colorString hasPrefix:@"#"] || (colorString.length != 7 && colorString.length != 4))
         return nil;
-
+    
     char colorValue[8] = {0};
     if (![colorString getCString:colorValue
                        maxLength:8
                         encoding:NSUTF8StringEncoding])
         return nil;
-
+    
     if (strlen(colorValue) == 4) {
         char r, g, b;
         r = colorValue[1];
         g = colorValue[2];
         b = colorValue[3];
-
+        
         colorValue[2] = r;
         colorValue[3] = colorValue[4] = g;
         colorValue[5] = colorValue[6] = b;
     }
-
+    
     unsigned int value = 0;
     sscanf(colorValue+1, "%x", &value);
     return [UIColor colorWithRed:1.0 * (value >> 16) / 255
@@ -62,6 +62,17 @@ static NSString *cellColors[] = {@"#866fd7", @"#3cc", @"#086ca2", @"#ffd200", @"
                            green:137.0/255
                             blue:229.0/255
                            alpha:1.0];
+}
+
++ (UIColor *)yellowColorForLevel:(NSInteger)level
+                           total:(NSInteger)total
+{
+#define START   (40.f / 360.f)
+#define END     (60.f / 360.f)
+    return [UIColor colorWithHue:(END - START) * level / total + START
+               saturation:1.0
+               brightness:1.0
+                    alpha:1.0];
 }
 
 - (UIColor*)colorByLighting:(CGFloat)rate

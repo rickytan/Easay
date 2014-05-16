@@ -481,115 +481,135 @@ Saturday</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-Se-TlM">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1z-Se-TlM">
                                 <rect key="frame" x="0.0" y="465" width="320" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-EO-fyL">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8g-eg-Xyu" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="960" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="LeF-Hp-Mhr">
-                                                <rect key="frame" x="20" y="18" width="67" height="67"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total 574km, this week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGf-sE-Dc5" userLabel="distance this week" customClass="ESBoldLabel">
-                                                <rect key="frame" x="95" y="30" width="205" height="21"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-EO-fyL">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Less about 69km, last week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIt-WW-rrx" userLabel="distance last week" customClass="ESLightLabel">
-                                                <rect key="frame" x="95" y="50" width="205" height="21"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="LeF-Hp-Mhr">
+                                                        <rect key="frame" x="20" y="18" width="67" height="67"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total 574km, this week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGf-sE-Dc5" userLabel="distance this week" customClass="ESBoldLabel">
+                                                        <rect key="frame" x="95" y="30" width="205" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Less about 69km, last week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIt-WW-rrx" userLabel="distance last week" customClass="ESLightLabel">
+                                                        <rect key="frame" x="95" y="50" width="205" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="103" id="KGJ-eB-pZa"/>
+                                                    <constraint firstAttribute="centerY" secondItem="LeF-Hp-Mhr" secondAttribute="centerY" id="Ny5-aG-T5h"/>
+                                                    <constraint firstItem="LeF-Hp-Mhr" firstAttribute="leading" secondItem="Hdf-EO-fyL" secondAttribute="leading" constant="20" id="OZC-sU-wWy"/>
+                                                    <constraint firstAttribute="width" constant="320" id="Vze-PC-cWM"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62J-FT-WPb" userLabel="Week View">
+                                                <rect key="frame" x="320" y="0.0" width="320" height="103"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Fe-oU-OeO" customClass="ESWeekDataView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </view>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="THIS WEEK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9B-DL-4Fn" customClass="ESBoldLabel">
+                                                        <rect key="frame" x="127" y="8" width="66" height="15"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="320" id="3HZ-e0-mMO"/>
+                                                    <constraint firstItem="C9B-DL-4Fn" firstAttribute="top" secondItem="62J-FT-WPb" secondAttribute="top" constant="8" id="3bX-22-B0o"/>
+                                                    <constraint firstAttribute="centerX" secondItem="C9B-DL-4Fn" secondAttribute="centerX" id="5rh-4q-o5S"/>
+                                                    <constraint firstItem="8Fe-oU-OeO" firstAttribute="top" secondItem="62J-FT-WPb" secondAttribute="top" id="BhB-mS-N30"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8Fe-oU-OeO" secondAttribute="trailing" id="L8W-ao-DfI"/>
+                                                    <constraint firstItem="8Fe-oU-OeO" firstAttribute="leading" secondItem="62J-FT-WPb" secondAttribute="leading" id="XnZ-JI-fsZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8Fe-oU-OeO" secondAttribute="bottom" id="cQS-LA-565"/>
+                                                    <constraint firstAttribute="height" constant="103" id="zpo-tm-Inb"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-s7-O79">
+                                                <rect key="frame" x="640" y="0.0" width="320" height="103"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dollar" translatesAutoresizingMaskIntoConstraints="NO" id="FKm-Bo-XeT">
+                                                        <rect key="frame" x="20" y="18" width="67" height="67"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total 613USD, this week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reE-W2-4kg" userLabel="cost this week" customClass="ESBoldLabel">
+                                                        <rect key="frame" x="95" y="30" width="205" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More about 14USD, last week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0F-wK-U2G" userLabel="cost last week" customClass="ESLightLabel">
+                                                        <rect key="frame" x="95" y="50" width="205" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="320" id="ZaP-kM-faK"/>
+                                                    <constraint firstAttribute="height" constant="103" id="gwh-q3-hXo"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="centerY" secondItem="LeF-Hp-Mhr" secondAttribute="centerY" id="Ny5-aG-T5h"/>
-                                            <constraint firstItem="LeF-Hp-Mhr" firstAttribute="leading" secondItem="Hdf-EO-fyL" secondAttribute="leading" constant="20" id="OZC-sU-wWy"/>
+                                            <constraint firstItem="GeN-s7-O79" firstAttribute="leading" secondItem="62J-FT-WPb" secondAttribute="trailing" id="1aH-N6-dfz"/>
+                                            <constraint firstItem="62J-FT-WPb" firstAttribute="leading" secondItem="Hdf-EO-fyL" secondAttribute="trailing" id="I02-5a-zu3"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hdf-EO-fyL" secondAttribute="bottom" constant="-103" id="ORL-St-9qY"/>
+                                            <constraint firstItem="Hdf-EO-fyL" firstAttribute="leading" secondItem="e8g-eg-Xyu" secondAttribute="leading" id="f4p-YU-Pc1"/>
+                                            <constraint firstAttribute="trailing" secondItem="GeN-s7-O79" secondAttribute="trailing" id="gIE-YX-RJ5"/>
+                                            <constraint firstItem="Hdf-EO-fyL" firstAttribute="top" secondItem="e8g-eg-Xyu" secondAttribute="top" id="i5Z-PS-2xh"/>
+                                            <constraint firstItem="62J-FT-WPb" firstAttribute="top" secondItem="e8g-eg-Xyu" secondAttribute="top" id="iSX-fF-ajt"/>
+                                            <constraint firstItem="GeN-s7-O79" firstAttribute="top" secondItem="e8g-eg-Xyu" secondAttribute="top" id="rbF-OS-SiS"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="62J-FT-WPb">
-                                        <rect key="frame" x="320" y="0.0" width="320" height="103"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="sye-Hf-gf4">
-                                                <rect key="frame" x="20" y="18" width="67" height="67"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lv-UG-nLS" userLabel="distance this week" customClass="ESBoldLabel">
-                                                <rect key="frame" x="95" y="30" width="205" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-AH-EKK" userLabel="distance last week" customClass="ESLightLabel">
-                                                <rect key="frame" x="95" y="50" width="205" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-s7-O79">
-                                        <rect key="frame" x="640" y="0.0" width="320" height="103"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dollar" translatesAutoresizingMaskIntoConstraints="NO" id="FKm-Bo-XeT">
-                                                <rect key="frame" x="20" y="18" width="67" height="67"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total 613USD, this week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reE-W2-4kg" userLabel="cost this week" customClass="ESBoldLabel">
-                                                <rect key="frame" x="95" y="30" width="205" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="More about 14USD, last week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0F-wK-U2G" userLabel="cost last week" customClass="ESLightLabel">
-                                                <rect key="frame" x="95" y="50" width="205" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="MmV-pJ-8RW">
-                                        <rect key="frame" x="141" y="66" width="39" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </pageControl>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Hdf-EO-fyL" secondAttribute="trailing" id="0qb-XI-Lef"/>
-                                    <constraint firstItem="62J-FT-WPb" firstAttribute="leading" secondItem="J1z-Se-TlM" secondAttribute="leading" constant="320" id="2MU-lQ-6I4"/>
-                                    <constraint firstAttribute="trailing" secondItem="62J-FT-WPb" secondAttribute="trailing" constant="-320" id="2rj-fc-e8A"/>
-                                    <constraint firstAttribute="bottom" secondItem="62J-FT-WPb" secondAttribute="bottom" id="3oy-8S-kSr"/>
-                                    <constraint firstItem="MmV-pJ-8RW" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" constant="66" id="5i0-uG-iUe"/>
-                                    <constraint firstItem="62J-FT-WPb" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" id="9Qa-gr-35g"/>
-                                    <constraint firstItem="GeN-s7-O79" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" id="G6X-wt-hbC"/>
-                                    <constraint firstAttribute="bottom" secondItem="GeN-s7-O79" secondAttribute="bottom" id="Gdu-vb-1In"/>
-                                    <constraint firstItem="GeN-s7-O79" firstAttribute="leading" secondItem="62J-FT-WPb" secondAttribute="trailing" id="J7W-ey-UiI"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hdf-EO-fyL" secondAttribute="bottom" id="JpP-F3-VeB"/>
+                                    <constraint firstItem="e8g-eg-Xyu" firstAttribute="leading" secondItem="J1z-Se-TlM" secondAttribute="leading" id="3fN-EW-8vV"/>
+                                    <constraint firstAttribute="trailing" secondItem="e8g-eg-Xyu" secondAttribute="trailing" id="HYT-aU-4UA"/>
+                                    <constraint firstItem="e8g-eg-Xyu" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" id="KMv-3E-vSM"/>
+                                    <constraint firstAttribute="bottom" secondItem="e8g-eg-Xyu" secondAttribute="bottom" id="R9l-5J-N9P"/>
                                     <constraint firstAttribute="height" constant="103" id="UHw-Ws-uHw"/>
-                                    <constraint firstAttribute="trailing" secondItem="GeN-s7-O79" secondAttribute="trailing" constant="-640" id="a2e-GS-ed7"/>
-                                    <constraint firstAttribute="centerX" secondItem="MmV-pJ-8RW" secondAttribute="centerX" id="hQc-gJ-Kbb"/>
-                                    <constraint firstItem="Hdf-EO-fyL" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="top" id="mYF-8a-1dF"/>
-                                    <constraint firstItem="Hdf-EO-fyL" firstAttribute="leading" secondItem="J1z-Se-TlM" secondAttribute="leading" id="tc7-Ic-Jcw"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="6ZI-0v-fC8" id="5mJ-bC-fc6"/>
                                 </connections>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="MmV-pJ-8RW">
+                                <rect key="frame" x="141" y="539" width="39" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onPageControl:" destination="6ZI-0v-fC8" eventType="valueChanged" id="Vva-6j-lWE"/>
+                                </connections>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.2627450980392157" green="0.61568627450980395" blue="0.91764705882352937" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -603,7 +623,9 @@ Saturday</string>
                             <constraint firstItem="J1z-Se-TlM" firstAttribute="leading" secondItem="vuF-ty-pb2" secondAttribute="leading" id="LH9-yb-dTF"/>
                             <constraint firstItem="hTI-A8-LDu" firstAttribute="top" secondItem="J1z-Se-TlM" secondAttribute="bottom" id="Mdi-9d-Jta"/>
                             <constraint firstAttribute="trailing" secondItem="J1z-Se-TlM" secondAttribute="trailing" id="Q7m-97-v6H"/>
+                            <constraint firstAttribute="centerX" secondItem="MmV-pJ-8RW" secondAttribute="centerX" id="eqv-xK-u6N"/>
                             <constraint firstAttribute="centerX" secondItem="2i2-hc-Jux" secondAttribute="centerX" id="gRk-2U-0pv"/>
+                            <constraint firstItem="hTI-A8-LDu" firstAttribute="top" secondItem="MmV-pJ-8RW" secondAttribute="bottom" constant="-8" id="nXR-Ou-2zD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Hg-Z7-EcZ">
@@ -631,6 +653,7 @@ Saturday</string>
                         <outlet property="moneyLabel" destination="2i2-hc-Jux" id="nm6-Ke-vZd"/>
                         <outlet property="pageControl" destination="MmV-pJ-8RW" id="khb-cQ-i2c"/>
                         <outlet property="scrollView" destination="J1z-Se-TlM" id="ahI-sV-kDK"/>
+                        <outlet property="weekDataView" destination="8Fe-oU-OeO" id="SZn-r2-pCG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KDk-f0-w4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
