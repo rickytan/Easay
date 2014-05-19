@@ -845,6 +845,42 @@ Saturday</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3, 29, Saturday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOS-fy-K1M" customClass="ESBoldLabel">
+                                <rect key="frame" x="124" y="67" width="72" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="47 km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOU-0k-c9S" customClass="ESBoldLabel">
+                                <rect key="frame" x="138" y="82" width="45" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$28" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EC-xr-STR" customClass="ESBoldLabel">
+                                <rect key="frame" x="150" y="104" width="21" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiZ-EB-Qfh" userLabel="Chart Container">
+                                <rect key="frame" x="0.0" y="133" width="320" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-y8-JPH">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="IQj-5K-KIm"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9u-Al-crG" customClass="ESLightButton">
                                 <rect key="frame" x="10" y="516" width="300" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -881,48 +917,156 @@ Saturday</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8f-bP-txG" customClass="ESUnderLineButton">
-                                <rect key="frame" x="0.0" y="313" width="46" height="30"/>
+                                <rect key="frame" x="0.0" y="301" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="DAY">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDateButton:" destination="p2m-jL-a8L" eventType="touchUpInside" id="Nms-4e-9Qy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N42-ya-xWN" customClass="ESUnderLineButton">
-                                <rect key="frame" x="92" y="313" width="46" height="30"/>
+                                <rect key="frame" x="92" y="301" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="WEEK">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDateButton:" destination="p2m-jL-a8L" eventType="touchUpInside" id="CE7-iV-K8l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wU-Zk-MeI" customClass="ESUnderLineButton">
-                                <rect key="frame" x="193" y="313" width="46" height="30"/>
+                                <rect key="frame" x="193" y="301" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="MONTH">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDateButton:" destination="p2m-jL-a8L" eventType="touchUpInside" id="Ibd-dk-gsT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tC-BU-98w" customClass="ESUnderLineButton">
-                                <rect key="frame" x="274" y="313" width="46" height="30"/>
+                                <rect key="frame" x="274" y="301" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="YEAR">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDateButton:" destination="p2m-jL-a8L" eventType="touchUpInside" id="la3-7J-qi0"/>
+                                </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="30" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GTt-nV-Hsc">
+                                <rect key="frame" x="0.0" y="332" width="320" height="92"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DataCell" id="xIT-xe-SCt" customClass="ESActivityViewDataCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xIT-xe-SCt" id="yfi-LF-BKC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFZ-Yt-wzc" userLabel="Traffic" customClass="ESBoldLabel">
+                                                    <rect key="frame" x="11" y="9" width="26" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4o-jZ-bJq" userLabel="Distance" customClass="ESBoldLabel">
+                                                    <rect key="frame" x="114" y="9" width="26" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KM-ib-0cv" userLabel="Money" customClass="ESBoldLabel">
+                                                    <rect key="frame" x="201" y="9" width="26" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYj-VZ-CaT" userLabel="Percentage" customClass="ESBoldLabel">
+                                                    <rect key="frame" x="284" y="9" width="26" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="t4o-jZ-bJq" secondAttribute="trailing" constant="180" id="07w-Nw-wpF"/>
+                                                <constraint firstAttribute="centerY" secondItem="4KM-ib-0cv" secondAttribute="centerY" id="9bJ-SD-34C"/>
+                                                <constraint firstAttribute="centerY" secondItem="DYj-VZ-CaT" secondAttribute="centerY" id="OWv-Hv-W78"/>
+                                                <constraint firstAttribute="centerY" secondItem="t4o-jZ-bJq" secondAttribute="centerY" id="WzT-fp-4PA"/>
+                                                <constraint firstItem="cFZ-Yt-wzc" firstAttribute="leading" secondItem="yfi-LF-BKC" secondAttribute="leading" constant="11" id="ZjO-U9-zLW"/>
+                                                <constraint firstAttribute="centerY" secondItem="cFZ-Yt-wzc" secondAttribute="centerY" id="dCU-PV-MQe"/>
+                                                <constraint firstAttribute="trailing" secondItem="DYj-VZ-CaT" secondAttribute="trailing" constant="10" id="dla-vB-nKt"/>
+                                                <constraint firstAttribute="trailing" secondItem="4KM-ib-0cv" secondAttribute="trailing" constant="93" id="zz1-QO-Nxt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="distance" destination="t4o-jZ-bJq" id="AYZ-Ts-XMG"/>
+                                            <outlet property="money" destination="4KM-ib-0cv" id="p3C-xm-h9l"/>
+                                            <outlet property="percentage" destination="DYj-VZ-CaT" id="xFH-qy-2P2"/>
+                                            <outlet property="trafficMethod" destination="cFZ-Yt-wzc" id="uNg-CU-gWf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="p2m-jL-a8L" id="PAu-zS-AqS"/>
+                                    <outlet property="delegate" destination="p2m-jL-a8L" id="9x0-Yi-iLu"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4JZ-dv-7CN" userLabel="Seperator">
+                                <rect key="frame" x="64" y="312" width="1" height="8"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nLi-jt-9AT" userLabel="Seperator">
+                                <rect key="frame" x="160" y="312" width="1" height="8"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TWh-M3-FXl" userLabel="Seperator">
+                                <rect key="frame" x="262" y="312" width="1" height="8"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
+                            <constraint firstItem="qOU-0k-c9S" firstAttribute="top" secondItem="OOS-fy-K1M" secondAttribute="bottom" constant="3" id="Gf8-I6-tv0"/>
+                            <constraint firstAttribute="centerX" secondItem="qOU-0k-c9S" secondAttribute="centerX" id="Gx9-jC-1RH"/>
                             <constraint firstAttribute="trailing" secondItem="o9u-Al-crG" secondAttribute="trailing" constant="10" id="OKZ-Cz-yn6"/>
                             <constraint firstItem="8mc-NH-Up3" firstAttribute="top" secondItem="o9u-Al-crG" secondAttribute="bottom" constant="10" id="QvY-oX-kT1"/>
+                            <constraint firstAttribute="centerX" secondItem="OOS-fy-K1M" secondAttribute="centerX" id="TTL-ou-PRj"/>
+                            <constraint firstItem="OOS-fy-K1M" firstAttribute="top" secondItem="g6V-AH-nX5" secondAttribute="bottom" constant="3" id="TwS-8Y-6ae"/>
+                            <constraint firstAttribute="centerX" secondItem="3EC-xr-STR" secondAttribute="centerX" id="VFX-fp-lWW"/>
+                            <constraint firstItem="MiZ-EB-Qfh" firstAttribute="leading" secondItem="r4R-D0-2do" secondAttribute="leading" id="cHU-yj-KFl"/>
+                            <constraint firstAttribute="trailing" secondItem="MiZ-EB-Qfh" secondAttribute="trailing" id="ddV-V5-Q53"/>
                             <constraint firstItem="o9u-Al-crG" firstAttribute="leading" secondItem="r4R-D0-2do" secondAttribute="leading" constant="10" id="jqW-Nl-VS9"/>
+                            <constraint firstItem="3EC-xr-STR" firstAttribute="top" secondItem="qOU-0k-c9S" secondAttribute="bottom" constant="2" id="muY-KA-S2G"/>
+                            <constraint firstItem="MiZ-EB-Qfh" firstAttribute="top" secondItem="g6V-AH-nX5" secondAttribute="bottom" constant="69" id="tY2-6n-YHZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ACTIVITY" id="ubW-jl-fes"/>
                     <connections>
+                        <outlet property="dataView" destination="GTt-nV-Hsc" id="DnH-00-Kaf"/>
+                        <outlet property="dayBtn" destination="N8f-bP-txG" id="wel-yX-Aq6"/>
+                        <outlet property="monthBtn" destination="9wU-Zk-MeI" id="Ugr-LE-iqA"/>
                         <outlet property="segmentView" destination="ZMj-is-j8a" id="pSP-KD-N9Q"/>
+                        <outlet property="weekBtn" destination="N42-ya-xWN" id="7kn-Io-A3x"/>
+                        <outlet property="yearBtn" destination="9tC-BU-98w" id="Cit-SG-7vn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfU-ZK-Y9m" userLabel="First Responder" sceneMemberID="firstResponder"/>

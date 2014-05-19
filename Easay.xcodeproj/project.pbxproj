@@ -21,6 +21,7 @@
 		9C1AC7B918FADB5D009EAB1F /* ESSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7B818FADB5D009EAB1F /* ESSignUpViewController.m */; };
 		9C1AC7BC18FADFB3009EAB1F /* UIViewController+ES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */; };
 		9C1AC7BF18FAE177009EAB1F /* ESFindPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */; };
+		9C782688192A824E00D01BB5 /* ESChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C782687192A824E00D01BB5 /* ESChartView.m */; };
 		9CC16AB818FBBBE2004D3F8A /* ESViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16AB718FBBBE2004D3F8A /* ESViewController.m */; };
 		9CC16ABB18FBBC13004D3F8A /* RTSiderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16ABA18FBBC13004D3F8A /* RTSiderViewController.m */; };
 		9CC16ABE18FBBEEC004D3F8A /* ESMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16ABD18FBBEEC004D3F8A /* ESMenuViewController.m */; };
@@ -92,6 +93,8 @@
 		9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ES.m"; sourceTree = "<group>"; };
 		9C1AC7BD18FAE177009EAB1F /* ESFindPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESFindPasswordViewController.h; sourceTree = "<group>"; };
 		9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESFindPasswordViewController.m; sourceTree = "<group>"; };
+		9C782686192A824E00D01BB5 /* ESChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESChartView.h; sourceTree = "<group>"; };
+		9C782687192A824E00D01BB5 /* ESChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESChartView.m; sourceTree = "<group>"; };
 		9CC16AB618FBBBE2004D3F8A /* ESViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESViewController.h; sourceTree = "<group>"; };
 		9CC16AB718FBBBE2004D3F8A /* ESViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESViewController.m; sourceTree = "<group>"; };
 		9CC16AB918FBBC13004D3F8A /* RTSiderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSiderViewController.h; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 				9C1AC7B818FADB5D009EAB1F /* ESSignUpViewController.m */,
 				9CD7A6C418EDF06A00641DA9 /* ESTextField.h */,
 				9CD7A6C518EDF06A00641DA9 /* ESTextField.m */,
+				9CEEF6801926AAA0009018D3 /* ESUnderLineButton.h */,
+				9CEEF6811926AAA0009018D3 /* ESUnderLineButton.m */,
 				9CC16AB618FBBBE2004D3F8A /* ESViewController.h */,
 				9CC16AB718FBBBE2004D3F8A /* ESViewController.m */,
 				9CEEF67D19269CF1009018D3 /* ESWeekDataView.h */,
@@ -267,8 +272,8 @@
 				9C108DF519004815004CD572 /* UIFont+ES.m */,
 				9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */,
 				9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */,
-				9CEEF6801926AAA0009018D3 /* ESUnderLineButton.h */,
-				9CEEF6811926AAA0009018D3 /* ESUnderLineButton.m */,
+				9C782686192A824E00D01BB5 /* ESChartView.h */,
+				9C782687192A824E00D01BB5 /* ESChartView.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 				9C05FC85191CEE9400889724 /* ESSettingViewController.m in Sources */,
 				9C05FC92191D6F2600889724 /* ESOptionSelectViewController.m in Sources */,
 				9C05FC82191CB5F200889724 /* ESSegmentView.m in Sources */,
+				9C782688192A824E00D01BB5 /* ESChartView.m in Sources */,
 				9CC16AC718FBC101004D3F8A /* ProgressHUD.m in Sources */,
 				9C108DFC1900514A004CD572 /* ESSiderMiddleBaseViewController.m in Sources */,
 				9C108DF919004B7E004CD572 /* ESNavigationController.m in Sources */,

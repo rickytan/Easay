@@ -15,14 +15,16 @@
 {
     NSString *title = [self titleForState:UIControlStateNormal];
     NSDictionary *attr = @{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),
-                           NSUnderlineColorAttributeName: [UIColor whiteColor]};
+                           NSUnderlineColorAttributeName: [UIColor whiteColor],
+                           NSForegroundColorAttributeName: [UIColor whiteColor]};
     [self setAttributedTitle:[[NSAttributedString alloc] initWithString:title
                                                              attributes:attr]
                     forState:UIControlStateSelected];
-    [self setTitleColor:[UIColor whiteColor]
-               forState:UIControlStateSelected];
-    [self setTitleColor:[UIColor colorWithHexString:@"#16579f"]
-               forState:UIControlStateNormal];
+    NSDictionary *attrNorm = @{NSUnderlineStyleAttributeName: @(NSUnderlineStyleNone),
+                               NSForegroundColorAttributeName: [UIColor colorWithHexString:@"#16579f"]};
+    [self setAttributedTitle:[[NSAttributedString alloc] initWithString:title
+                                                             attributes:attrNorm]
+                    forState:UIControlStateNormal];
 }
 
 @end
