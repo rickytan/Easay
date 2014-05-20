@@ -867,18 +867,22 @@ Saturday</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiZ-EB-Qfh" userLabel="Chart Container">
-                                <rect key="frame" x="0.0" y="133" width="320" height="160"/>
+                                <rect key="frame" x="0.0" y="120" width="320" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-y8-JPH">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-y8-JPH" customClass="ESLineChartView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="IQj-5K-KIm"/>
+                                    <constraint firstItem="KVu-y8-JPH" firstAttribute="leading" secondItem="MiZ-EB-Qfh" secondAttribute="leading" id="112-tX-gu6"/>
+                                    <constraint firstAttribute="trailing" secondItem="KVu-y8-JPH" secondAttribute="trailing" id="51e-oh-ZtS"/>
+                                    <constraint firstAttribute="height" constant="176" id="IQj-5K-KIm"/>
+                                    <constraint firstAttribute="bottom" secondItem="KVu-y8-JPH" secondAttribute="bottom" id="eaq-nn-hYc"/>
+                                    <constraint firstItem="KVu-y8-JPH" firstAttribute="top" secondItem="MiZ-EB-Qfh" secondAttribute="top" id="hpV-pg-oUG"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9u-Al-crG" customClass="ESLightButton">
@@ -1056,7 +1060,7 @@ Saturday</string>
                             <constraint firstAttribute="trailing" secondItem="MiZ-EB-Qfh" secondAttribute="trailing" id="ddV-V5-Q53"/>
                             <constraint firstItem="o9u-Al-crG" firstAttribute="leading" secondItem="r4R-D0-2do" secondAttribute="leading" constant="10" id="jqW-Nl-VS9"/>
                             <constraint firstItem="3EC-xr-STR" firstAttribute="top" secondItem="qOU-0k-c9S" secondAttribute="bottom" constant="2" id="muY-KA-S2G"/>
-                            <constraint firstItem="MiZ-EB-Qfh" firstAttribute="top" secondItem="g6V-AH-nX5" secondAttribute="bottom" constant="69" id="tY2-6n-YHZ"/>
+                            <constraint firstItem="MiZ-EB-Qfh" firstAttribute="top" secondItem="g6V-AH-nX5" secondAttribute="bottom" constant="56" id="tY2-6n-YHZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ACTIVITY" id="ubW-jl-fes"/>

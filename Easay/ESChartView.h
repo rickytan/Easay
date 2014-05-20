@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ESLineChartView : UIView
+@property (nonatomic, strong) NSArray * data;
 @end
 
 @interface ESBarChartView : UIView
