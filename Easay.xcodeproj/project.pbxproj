@@ -24,6 +24,8 @@
 		9C782688192A824E00D01BB5 /* ESChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C782687192A824E00D01BB5 /* ESChartView.m */; };
 		9C782699192FCED900D01BB5 /* ESTheHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C782698192FCED900D01BB5 /* ESTheHotViewController.m */; };
 		9C78269B192FD3EE00D01BB5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C78269A192FD3EE00D01BB5 /* MapKit.framework */; };
+		9C78269E192FD99500D01BB5 /* ESMyTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C78269D192FD99500D01BB5 /* ESMyTripViewController.m */; };
+		9C7826A1192FDB1C00D01BB5 /* ESTripCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7826A0192FDB1C00D01BB5 /* ESTripCell.m */; };
 		9CC16AB818FBBBE2004D3F8A /* ESViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16AB718FBBBE2004D3F8A /* ESViewController.m */; };
 		9CC16ABB18FBBC13004D3F8A /* RTSiderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16ABA18FBBC13004D3F8A /* RTSiderViewController.m */; };
 		9CC16ABE18FBBEEC004D3F8A /* ESMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16ABD18FBBEEC004D3F8A /* ESMenuViewController.m */; };
@@ -100,6 +102,10 @@
 		9C782697192FCED900D01BB5 /* ESTheHotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTheHotViewController.h; sourceTree = "<group>"; };
 		9C782698192FCED900D01BB5 /* ESTheHotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTheHotViewController.m; sourceTree = "<group>"; };
 		9C78269A192FD3EE00D01BB5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9C78269C192FD99500D01BB5 /* ESMyTripViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESMyTripViewController.h; sourceTree = "<group>"; };
+		9C78269D192FD99500D01BB5 /* ESMyTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESMyTripViewController.m; sourceTree = "<group>"; };
+		9C78269F192FDB1C00D01BB5 /* ESTripCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTripCell.h; sourceTree = "<group>"; };
+		9C7826A0192FDB1C00D01BB5 /* ESTripCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTripCell.m; sourceTree = "<group>"; };
 		9CC16AB618FBBBE2004D3F8A /* ESViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESViewController.h; sourceTree = "<group>"; };
 		9CC16AB718FBBBE2004D3F8A /* ESViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESViewController.m; sourceTree = "<group>"; };
 		9CC16AB918FBBC13004D3F8A /* RTSiderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSiderViewController.h; sourceTree = "<group>"; };
@@ -242,6 +248,8 @@
 				9CD7A6C218EDE6F400641DA9 /* ESLoginViewController.m */,
 				9CC16ABC18FBBEEC004D3F8A /* ESMenuViewController.h */,
 				9CC16ABD18FBBEEC004D3F8A /* ESMenuViewController.m */,
+				9C78269C192FD99500D01BB5 /* ESMyTripViewController.h */,
+				9C78269D192FD99500D01BB5 /* ESMyTripViewController.m */,
 				9C108DF719004B7E004CD572 /* ESNavigationController.h */,
 				9C108DF819004B7E004CD572 /* ESNavigationController.m */,
 				9C05FC90191D6F2500889724 /* ESOptionSelectViewController.h */,
@@ -283,6 +291,8 @@
 				9C108DF519004815004CD572 /* UIFont+ES.m */,
 				9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */,
 				9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */,
+				9C78269F192FDB1C00D01BB5 /* ESTripCell.h */,
+				9C7826A0192FDB1C00D01BB5 /* ESTripCell.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
@@ -426,6 +436,7 @@
 				9C782688192A824E00D01BB5 /* ESChartView.m in Sources */,
 				9CC16AC718FBC101004D3F8A /* ProgressHUD.m in Sources */,
 				9C108DFC1900514A004CD572 /* ESSiderMiddleBaseViewController.m in Sources */,
+				9C7826A1192FDB1C00D01BB5 /* ESTripCell.m in Sources */,
 				9C108DF919004B7E004CD572 /* ESNavigationController.m in Sources */,
 				9CC16ABE18FBBEEC004D3F8A /* ESMenuViewController.m in Sources */,
 				9CD7A69A18EDDA7800641DA9 /* ESAppDelegate.m in Sources */,
@@ -433,6 +444,7 @@
 				9C1AC7B918FADB5D009EAB1F /* ESSignUpViewController.m in Sources */,
 				9CEEF67F19269CF1009018D3 /* ESWeekDataView.m in Sources */,
 				9C108E02190060DA004CD572 /* ESShareViewController.m in Sources */,
+				9C78269E192FD99500D01BB5 /* ESMyTripViewController.m in Sources */,
 				9CE3687A191E7625003F064D /* ESSetNameViewController.m in Sources */,
 				9CC16AC118FBC000004D3F8A /* ESHomeViewController.m in Sources */,
 				9C1AC7BF18FAE177009EAB1F /* ESFindPasswordViewController.m in Sources */,

@@ -158,7 +158,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
                                                      animated:YES];
             break;
         case 3:
-            
+            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"MytripNav"]
+                                                     animated:YES];
+            break;
             break;
         case 4:
             [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ThehotNav"]

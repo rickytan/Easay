@@ -10,4 +10,5 @@
 
 @interface ESTextField : UITextField
 @property (nonatomic, strong) UIColor * placeholderTextColor;
+@property (nonatomic, strong) UIFont * placeholderFont;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ESTextField.h"
+#import "UIFont+ES.h"
 
 @implementation ESTextField
 
@@ -16,6 +17,7 @@
     if (self) {
         // Initialization code
         self.placeholderTextColor = [UIColor whiteColor];
+        self.placeholderFont = [UIFont lightFontWithSize:self.font.pointSize];
     }
     return self;
 }
@@ -25,6 +27,7 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         self.placeholderTextColor = [UIColor whiteColor];
+        self.placeholderFont = [UIFont lightFontWithSize:self.font.pointSize];
     }
     return self;
 }
@@ -32,9 +35,10 @@
 - (void)drawPlaceholderInRect:(CGRect)rect
 {
     [self.placeholderTextColor set];
-    CGSize size = [self.placeholder sizeWithFont:self.font];
+    UIFont * font = (self.placeholderFont) ? self.placeholderFont : self.font;
+    CGSize size = [self.placeholder sizeWithFont:font];
     [self.placeholder drawInRect:CGRectMake(rect.origin.x, rect.origin.y + (CGRectGetHeight(rect) - size.height) / 2, size.width, size.height)
-                                      withFont:self.font];
+                                      withFont:font];
 }
 
 @end

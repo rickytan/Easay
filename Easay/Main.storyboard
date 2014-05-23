@@ -877,7 +877,7 @@ Saturday</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ma-hH-c0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1579" y="-3148"/>
+            <point key="canvasLocation" x="1579" y="-3134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7mJ-Lm-hwl">
@@ -893,7 +893,7 @@ Saturday</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lXC-e1-npy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="-3148"/>
+            <point key="canvasLocation" x="1187" y="-3134"/>
         </scene>
         <!--Activity View Controller - ACTIVITY-->
         <scene sceneID="Qfo-pb-fxM">
@@ -1153,7 +1153,7 @@ Saturday</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15x-fe-jRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1995" y="-2468"/>
+            <point key="canvasLocation" x="1969" y="-2468"/>
         </scene>
         <!--Share View Controller - SHARE-->
         <scene sceneID="dPC-fw-IZx">
@@ -1238,7 +1238,7 @@ Saturday</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83r-Z5-2XF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2389" y="-2468"/>
+            <point key="canvasLocation" x="2363" y="-2468"/>
         </scene>
         <!--Friend View Controller - FRIENDS-->
         <scene sceneID="xc9-1l-Ad8">
@@ -1559,6 +1559,159 @@ Saturday</string>
             </objects>
             <point key="canvasLocation" x="1187" y="-963"/>
         </scene>
+        <!--My Trip View Controller - MY TRIP-->
+        <scene sceneID="lPs-n1-X3D">
+            <objects>
+                <tableViewController id="mYg-qj-iiF" customClass="ESMyTripViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" id="cFk-OK-dg3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="2se-sA-QZb">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you choose to use public transport, you can choose any way follwing it. The you can see it on your Easay." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="311" translatesAutoresizingMaskIntoConstraints="NO" id="z0i-Ah-epj" customClass="ESLightLabel">
+                                    <rect key="frame" x="5" y="5" width="311" height="25"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="tH0-Ah-17O"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj4-u2-y2c">
+                                    <rect key="frame" x="20" y="71" width="24" height="19"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <state key="normal" image="switch-arrow">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDM-aW-RUw" customClass="ESBoldLabel">
+                                    <rect key="frame" x="60" y="44" width="30" height="12"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABN-ip-vba" customClass="ESBoldLabel">
+                                    <rect key="frame" x="60" y="78" width="14" height="12"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fh8-KC-d1j" customClass="ESTextField">
+                                    <rect key="frame" x="60" y="57" width="250" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lBY-bR-d7w" customClass="ESTextField">
+                                    <rect key="frame" x="60" y="90" width="250" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="z0i-Ah-epj" firstAttribute="centerX" secondItem="2se-sA-QZb" secondAttribute="centerX" id="1N3-NQ-7li"/>
+                                <constraint firstItem="ABN-ip-vba" firstAttribute="top" secondItem="DDM-aW-RUw" secondAttribute="bottom" constant="22" id="8Ur-QS-Cqv"/>
+                                <constraint firstItem="z0i-Ah-epj" firstAttribute="top" secondItem="2se-sA-QZb" secondAttribute="top" constant="5" id="HpG-80-Py7"/>
+                                <constraint firstItem="ABN-ip-vba" firstAttribute="leading" secondItem="DDM-aW-RUw" secondAttribute="leading" id="Jsc-IH-pen"/>
+                                <constraint firstItem="DDM-aW-RUw" firstAttribute="top" secondItem="2se-sA-QZb" secondAttribute="top" constant="44" id="Mei-Im-CqG"/>
+                                <constraint firstItem="DDM-aW-RUw" firstAttribute="leading" secondItem="2se-sA-QZb" secondAttribute="leading" constant="60" id="gI9-Zi-nIE"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="TripCell" rowHeight="69" id="GWx-Lv-KpB" customClass="ESTripCell">
+                                <rect key="frame" x="0.0" y="152" width="320" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GWx-Lv-KpB" id="mQV-u5-otC">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbW-Cv-boH" customClass="ESBoldLabel">
+                                            <rect key="frame" x="12" y="20" width="26" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4v-zn-8sg" customClass="ESLightLabel">
+                                            <rect key="frame" x="12" y="42" width="26" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuQ-CZ-8K3" customClass="ESLightLabel">
+                                            <rect key="frame" x="147" y="42" width="26" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDy-FM-BtM" customClass="ESLightLabel">
+                                            <rect key="frame" x="286" y="42" width="26" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="F4v-zn-8sg" secondAttribute="bottom" constant="14" id="0Dw-GD-EK3"/>
+                                        <constraint firstItem="QuQ-CZ-8K3" firstAttribute="baseline" secondItem="F4v-zn-8sg" secondAttribute="baseline" id="AnD-pc-imK"/>
+                                        <constraint firstItem="IbW-Cv-boH" firstAttribute="top" secondItem="mQV-u5-otC" secondAttribute="top" constant="20" id="DbC-KP-HPf"/>
+                                        <constraint firstItem="F4v-zn-8sg" firstAttribute="leading" secondItem="mQV-u5-otC" secondAttribute="leading" constant="12" id="HU3-P4-2Pe"/>
+                                        <constraint firstAttribute="centerX" secondItem="QuQ-CZ-8K3" secondAttribute="centerX" id="Ipy-Fz-7a5"/>
+                                        <constraint firstItem="F4v-zn-8sg" firstAttribute="baseline" secondItem="UDy-FM-BtM" secondAttribute="baseline" id="fVN-In-9ZE"/>
+                                        <constraint firstItem="IbW-Cv-boH" firstAttribute="leading" secondItem="mQV-u5-otC" secondAttribute="leading" constant="12" id="m6J-f4-ycC"/>
+                                        <constraint firstAttribute="trailing" secondItem="UDy-FM-BtM" secondAttribute="trailing" constant="8" id="sPq-hM-elJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="distanceLabel" destination="QuQ-CZ-8K3" id="EEF-Om-tDM"/>
+                                    <outlet property="exchangeLabel" destination="IbW-Cv-boH" id="soa-l4-23Q"/>
+                                    <outlet property="priceLabel" destination="UDy-FM-BtM" id="tAx-Qt-TTC"/>
+                                    <outlet property="timeLabel" destination="F4v-zn-8sg" id="lCc-yJ-rNp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mYg-qj-iiF" id="7Yx-Ee-j1B"/>
+                            <outlet property="delegate" destination="mYg-qj-iiF" id="l1D-Y3-atc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="MY TRIP" id="u0b-WQ-b0w"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khO-pJ-uc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1579" y="-3792"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GQc-vM-Lsn">
+            <objects>
+                <navigationController storyboardIdentifier="MytripNav" definesPresentationContext="YES" id="mWP-yM-ZR3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="FJi-US-9zZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mYg-qj-iiF" kind="relationship" relationship="rootViewController" id="VdF-IB-cB0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tvV-oZ-d2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187" y="-3792"/>
+        </scene>
     </scenes>
     <resources>
         <image name="battery" width="28" height="28"/>
@@ -1577,6 +1730,7 @@ Saturday</string>
         <image name="nav-back" width="32" height="30"/>
         <image name="nav-right" width="24" height="17"/>
         <image name="shadow" width="237" height="103"/>
+        <image name="switch-arrow" width="24" height="19"/>
         <image name="time" width="67" height="67"/>
         <image name="up" width="32" height="32"/>
         <image name="walk" width="20" height="20"/>
