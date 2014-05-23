@@ -272,6 +272,8 @@
 				9CD7A6C518EDF06A00641DA9 /* ESTextField.m */,
 				9C782697192FCED900D01BB5 /* ESTheHotViewController.h */,
 				9C782698192FCED900D01BB5 /* ESTheHotViewController.m */,
+				9C78269F192FDB1C00D01BB5 /* ESTripCell.h */,
+				9C7826A0192FDB1C00D01BB5 /* ESTripCell.m */,
 				9CEEF6801926AAA0009018D3 /* ESUnderLineButton.h */,
 				9CEEF6811926AAA0009018D3 /* ESUnderLineButton.m */,
 				9CC16AB618FBBBE2004D3F8A /* ESViewController.h */,
@@ -291,8 +293,6 @@
 				9C108DF519004815004CD572 /* UIFont+ES.m */,
 				9C1AC7BA18FADFB3009EAB1F /* UIViewController+ES.h */,
 				9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */,
-				9C78269F192FDB1C00D01BB5 /* ESTripCell.h */,
-				9C7826A0192FDB1C00D01BB5 /* ESTripCell.m */,
 			);
 			path = Easay;
 			sourceTree = "<group>";
