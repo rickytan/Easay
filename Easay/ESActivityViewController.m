@@ -59,6 +59,7 @@ static CGFloat _percents[] = {0.f, 0.f, 0.f};
 	// Do any additional setup after loading the view.
     self.segmentView.segments = @[@2, @3, @8];
     self.segmentView.titles = @[@"BUS", @"SUBWAY", @"OIL"];
+    [self calulatePercent];
     
     [self.segmentView performSelector:@selector(setSegments:)
                withObject:@[@4, @1, @5]
@@ -114,9 +115,9 @@ static CGFloat _percents[] = {0.f, 0.f, 0.f};
 {
     ESActivityViewDataCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DataCell"];
     cell.trafficMethod.text = [NSString stringWithUTF8String:_data[indexPath.row].method];
-    cell.distance.text = [NSString stringWithFormat:@"%ld km", _data[indexPath.row].distance];
-    cell.money.text = [NSString stringWithFormat:@"%ld USD", _data[indexPath.row].price];
-    cell.percentage.text = [NSString stringWithFormat:@"%.2f%%", _percents[indexPath.row]];
+    cell.distance.text = [NSString stringWithFormat:@"%ld km", (long)_data[indexPath.row].distance];
+    cell.money.text = [NSString stringWithFormat:@"%ld USD", (long)_data[indexPath.row].price];
+    cell.percentage.text = [NSString stringWithFormat:@"%.2f%%", _percents[indexPath.row] * 100];
     return cell;
 }
 

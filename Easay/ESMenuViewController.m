@@ -10,6 +10,7 @@
 #import "UIColor+RExtension.h"
 #import "UIFont+ES.h"
 #import "RTSiderViewController.h"
+#import <MapKit/MapKit.h>
 
 @interface ESMenuCell : UITableViewCell
 @end
@@ -160,7 +161,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
             
             break;
         case 4:
-            
+            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ThehotNav"]
+                                                     animated:YES];
             break;
         case 5:
             [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingNav"]];
