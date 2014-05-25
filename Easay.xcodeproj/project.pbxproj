@@ -26,6 +26,7 @@
 		9C78269B192FD3EE00D01BB5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C78269A192FD3EE00D01BB5 /* MapKit.framework */; };
 		9C78269E192FD99500D01BB5 /* ESMyTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C78269D192FD99500D01BB5 /* ESMyTripViewController.m */; };
 		9C7826A1192FDB1C00D01BB5 /* ESTripCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7826A0192FDB1C00D01BB5 /* ESTripCell.m */; };
+		9CAB50AA19324B5300E21574 /* ESPlaceInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAB50A919324B5300E21574 /* ESPlaceInputViewController.m */; };
 		9CC16AB818FBBBE2004D3F8A /* ESViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16AB718FBBBE2004D3F8A /* ESViewController.m */; };
 		9CC16ABB18FBBC13004D3F8A /* RTSiderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16ABA18FBBC13004D3F8A /* RTSiderViewController.m */; };
 		9CC16ABE18FBBEEC004D3F8A /* ESMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16ABD18FBBEEC004D3F8A /* ESMenuViewController.m */; };
@@ -106,6 +107,8 @@
 		9C78269D192FD99500D01BB5 /* ESMyTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESMyTripViewController.m; sourceTree = "<group>"; };
 		9C78269F192FDB1C00D01BB5 /* ESTripCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTripCell.h; sourceTree = "<group>"; };
 		9C7826A0192FDB1C00D01BB5 /* ESTripCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTripCell.m; sourceTree = "<group>"; };
+		9CAB50A819324B5300E21574 /* ESPlaceInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPlaceInputViewController.h; sourceTree = "<group>"; };
+		9CAB50A919324B5300E21574 /* ESPlaceInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPlaceInputViewController.m; sourceTree = "<group>"; };
 		9CC16AB618FBBBE2004D3F8A /* ESViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESViewController.h; sourceTree = "<group>"; };
 		9CC16AB718FBBBE2004D3F8A /* ESViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESViewController.m; sourceTree = "<group>"; };
 		9CC16AB918FBBC13004D3F8A /* RTSiderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSiderViewController.h; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				9C108DF819004B7E004CD572 /* ESNavigationController.m */,
 				9C05FC90191D6F2500889724 /* ESOptionSelectViewController.h */,
 				9C05FC91191D6F2600889724 /* ESOptionSelectViewController.m */,
+				9CAB50A819324B5300E21574 /* ESPlaceInputViewController.h */,
+				9CAB50A919324B5300E21574 /* ESPlaceInputViewController.m */,
 				9CE36875191E6CF2003F064D /* ESPrivacyCell.h */,
 				9CE36876191E6CF2003F064D /* ESPrivacyCell.m */,
 				9C05FC80191CB5F200889724 /* ESSegmentView.h */,
@@ -461,6 +466,7 @@
 				9CEEF6821926AAA1009018D3 /* ESUnderLineButton.m in Sources */,
 				9C108DF619004815004CD572 /* UIFont+ES.m in Sources */,
 				9CD7A6C618EDF06A00641DA9 /* ESTextField.m in Sources */,
+				9CAB50AA19324B5300E21574 /* ESPlaceInputViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

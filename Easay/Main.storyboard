@@ -1583,8 +1583,8 @@ Saturday</string>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj4-u2-y2c">
-                                    <rect key="frame" x="20" y="71" width="24" height="19"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sj4-u2-y2c" userLabel="Exchange">
+                                    <rect key="frame" x="20" y="72" width="24" height="19"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" image="switch-arrow">
@@ -1592,40 +1592,82 @@ Saturday</string>
                                     </state>
                                 </button>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDM-aW-RUw" customClass="ESBoldLabel">
-                                    <rect key="frame" x="60" y="44" width="30" height="12"/>
+                                    <rect key="frame" x="70" y="44" width="30" height="12"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABN-ip-vba" customClass="ESBoldLabel">
-                                    <rect key="frame" x="60" y="78" width="14" height="12"/>
+                                    <rect key="frame" x="70" y="82" width="14" height="12"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fh8-KC-d1j" customClass="ESTextField">
-                                    <rect key="frame" x="60" y="57" width="250" height="20"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RaK-cc-NDL" userLabel="Line">
+                                    <rect key="frame" x="70" y="76" width="240" height="1"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="oww-OK-VuF"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fh8-KC-d1j" customClass="ESTextField">
+                                    <rect key="frame" x="70" y="57" width="240" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="E1k-8B-5Wl"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="mYg-qj-iiF" id="14Z-WW-xD6"/>
+                                    </connections>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lBY-bR-d7w" customClass="ESTextField">
-                                    <rect key="frame" x="60" y="90" width="250" height="20"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="723-vC-Rqf" userLabel="Line">
+                                    <rect key="frame" x="70" y="112" width="240" height="1"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="pPP-MK-0B3"/>
+                                    </constraints>
+                                </view>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where are you going?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lBY-bR-d7w" customClass="ESTextField">
+                                    <rect key="frame" x="70" y="93" width="240" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="ehN-z8-j8s"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="mYg-qj-iiF" id="285-yK-XJL"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="z0i-Ah-epj" firstAttribute="centerX" secondItem="2se-sA-QZb" secondAttribute="centerX" id="1N3-NQ-7li"/>
-                                <constraint firstItem="ABN-ip-vba" firstAttribute="top" secondItem="DDM-aW-RUw" secondAttribute="bottom" constant="22" id="8Ur-QS-Cqv"/>
+                                <constraint firstItem="fh8-KC-d1j" firstAttribute="leading" secondItem="2se-sA-QZb" secondAttribute="leading" constant="70" id="3Xi-Qr-qTB"/>
+                                <constraint firstItem="RaK-cc-NDL" firstAttribute="width" secondItem="fh8-KC-d1j" secondAttribute="width" id="5G2-ks-u4o"/>
+                                <constraint firstItem="ABN-ip-vba" firstAttribute="top" secondItem="DDM-aW-RUw" secondAttribute="bottom" constant="26" id="8Ur-QS-Cqv"/>
                                 <constraint firstItem="z0i-Ah-epj" firstAttribute="top" secondItem="2se-sA-QZb" secondAttribute="top" constant="5" id="HpG-80-Py7"/>
                                 <constraint firstItem="ABN-ip-vba" firstAttribute="leading" secondItem="DDM-aW-RUw" secondAttribute="leading" id="Jsc-IH-pen"/>
+                                <constraint firstItem="723-vC-Rqf" firstAttribute="leading" secondItem="lBY-bR-d7w" secondAttribute="leading" id="Kc6-Cx-aQA"/>
                                 <constraint firstItem="DDM-aW-RUw" firstAttribute="top" secondItem="2se-sA-QZb" secondAttribute="top" constant="44" id="Mei-Im-CqG"/>
-                                <constraint firstItem="DDM-aW-RUw" firstAttribute="leading" secondItem="2se-sA-QZb" secondAttribute="leading" constant="60" id="gI9-Zi-nIE"/>
+                                <constraint firstItem="Sj4-u2-y2c" firstAttribute="leading" secondItem="2se-sA-QZb" secondAttribute="leading" constant="20" id="ShC-c7-Rm6"/>
+                                <constraint firstItem="lBY-bR-d7w" firstAttribute="leading" secondItem="2se-sA-QZb" secondAttribute="leading" constant="70" id="UBf-yz-rQu"/>
+                                <constraint firstItem="723-vC-Rqf" firstAttribute="width" secondItem="lBY-bR-d7w" secondAttribute="width" id="Wpi-Db-sh6"/>
+                                <constraint firstItem="lBY-bR-d7w" firstAttribute="top" secondItem="fh8-KC-d1j" secondAttribute="bottom" constant="16" id="Yq7-o7-Nj1"/>
+                                <constraint firstAttribute="trailing" secondItem="fh8-KC-d1j" secondAttribute="trailing" constant="10" id="bbf-bJ-FEb"/>
+                                <constraint firstItem="RaK-cc-NDL" firstAttribute="leading" secondItem="fh8-KC-d1j" secondAttribute="leading" id="dZg-tz-Tco"/>
+                                <constraint firstItem="RaK-cc-NDL" firstAttribute="bottom" secondItem="fh8-KC-d1j" secondAttribute="bottom" id="f3Y-0o-sOi"/>
+                                <constraint firstItem="DDM-aW-RUw" firstAttribute="leading" secondItem="2se-sA-QZb" secondAttribute="leading" constant="70" id="gI9-Zi-nIE"/>
+                                <constraint firstItem="fh8-KC-d1j" firstAttribute="top" secondItem="2se-sA-QZb" secondAttribute="top" constant="57" id="hIw-Hn-3nk"/>
+                                <constraint firstAttribute="trailing" secondItem="lBY-bR-d7w" secondAttribute="trailing" constant="10" id="jvF-VP-wVJ"/>
+                                <constraint firstItem="Sj4-u2-y2c" firstAttribute="top" secondItem="2se-sA-QZb" secondAttribute="top" constant="72" id="p9U-eT-Orz"/>
+                                <constraint firstItem="723-vC-Rqf" firstAttribute="bottom" secondItem="lBY-bR-d7w" secondAttribute="bottom" id="zCO-qv-Erd"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -1696,6 +1738,59 @@ Saturday</string>
             </objects>
             <point key="canvasLocation" x="1579" y="-3792"/>
         </scene>
+        <!--Table View Controller - Root View Controller-->
+        <scene sceneID="JTH-9s-05Y">
+            <objects>
+                <tableViewController id="65O-Pk-qdn" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="MaF-Go-uOl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="c5w-Fm-W3s">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="65O-Pk-qdn" id="DTI-z3-aDw"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ie3-va-Rfj">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ie3-va-Rfj" id="Dfm-9l-Ebn">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Xzd-zj-2bE"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="zYz-hk-0Zd" id="zB1-7X-eXD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJe-ze-qZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Fj2-il-8pS">
+                    <connections>
+                        <outlet property="delegate" destination="65O-Pk-qdn" id="dIb-n0-Jig"/>
+                        <outlet property="searchContentsController" destination="65O-Pk-qdn" id="A5t-Un-NSE"/>
+                        <outlet property="searchResultsDataSource" destination="65O-Pk-qdn" id="so4-DP-n2W"/>
+                        <outlet property="searchResultsDelegate" destination="65O-Pk-qdn" id="9f2-w0-RSY"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="zYz-hk-0Zd">
+                    <connections>
+                        <outlet property="delegate" destination="65O-Pk-qdn" id="rEm-05-Srr"/>
+                        <outlet property="searchBar" destination="c5w-Fm-W3s" id="ISw-Sp-tQ7"/>
+                        <outlet property="searchContentsController" destination="65O-Pk-qdn" id="crK-Oc-ip4"/>
+                        <outlet property="searchResultsDataSource" destination="65O-Pk-qdn" id="Kpa-AH-Z0I"/>
+                        <outlet property="searchResultsDelegate" destination="65O-Pk-qdn" id="aFI-5x-juy"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="2385" y="-3792"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="GQc-vM-Lsn">
             <objects>
@@ -1711,6 +1806,23 @@ Saturday</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvV-oZ-d2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1187" y="-3792"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DE5-J4-vm5">
+            <objects>
+                <viewController id="7Mz-dD-ttl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E9q-PR-6bW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qpq-Qj-R2e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="paG-R0-PLs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHl-wE-fFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
