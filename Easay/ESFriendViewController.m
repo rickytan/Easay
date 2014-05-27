@@ -32,8 +32,17 @@
 	// Do any additional setup after loading the view.
     self.searchDisplayController.searchBar.layer.borderColor = [UIColor whiteColor].CGColor;
     self.searchDisplayController.searchBar.layer.borderWidth = 1.0;
-    self.view.backgroundColor = [UIColor themeColor];
-    self.navigationController.view.backgroundColor = self.view.backgroundColor;
+    [self.searchDisplayController.searchBar setBackgroundImage:[UIImage imageNamed:@"clear"]
+                                                forBarPosition:UIBarPositionTop
+                                                    barMetrics:UIBarMetricsDefault];
+    [self.searchDisplayController.searchBar setImage:[UIImage imageNamed:@"search"]
+                                    forSearchBarIcon:UISearchBarIconSearch
+                                               state:UIControlStateNormal];
+    [self.searchDisplayController.searchBar setSearchFieldBackgroundImage:[UIImage imageNamed:@"clear"]
+                                                                 forState:UIControlStateNormal];
+    
+    self.tableView.backgroundView = [[UIView alloc] init];
+    self.tableView.backgroundView.backgroundColor = [UIColor themeColor];
     
     self.formatter = [[NSNumberFormatter alloc] init];
     self.formatter.formatterBehavior = NSNumberFormatterBehavior10_4;

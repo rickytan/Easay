@@ -11,7 +11,7 @@
 #import "UIFont+ES.h"
 #import "UIViewController+ES.h"
 
-@interface ESPlaceInputViewController () <UISearchDisplayDelegate>
+@interface ESPlaceInputViewController () <UISearchBarDelegate>
 @property (nonatomic, strong) NSArray * searchHistory;
 @end
 
@@ -30,7 +30,16 @@
 {
     [super viewDidLoad];
     self.title = @"Input Address";
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars = NO;
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.tableView.contentInset = UIEdgeInsetsMake([UIApplication sharedApplication].statusBarFrame.size.height, 0, 0, 0);
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"Cell"];
+    [self.tableView registerClass:[UITableViewHeaderFooterView class]
+           forHeaderFooterViewReuseIdentifier:@"Header"];
     
+    /*
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"Back"
                                                              style:UIBarButtonItemStyleBordered
                                                             target:self
@@ -40,48 +49,39 @@
     self.navigationController.navigationBar.translucent = NO;
     self.navigationController.navigationBar.backgroundColor = [UIColor themeColor];
     self.navigationController.navigationBar.barTintColor = [UIColor themeColor];
+     */
     
     self.view.backgroundColor = [UIColor themeColor];
     self.tableView.separatorColor = [UIColor darkGrayColor];
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
-    
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"Cell"];
-    [self.tableView registerClass:[UITableViewHeaderFooterView class]
-           forHeaderFooterViewReuseIdentifier:@"Header"];
+
     
     UISearchBar *searchBar = [[UISearchBar alloc] init];
     searchBar.tintColor = [UIColor whiteColor];
+    searchBar.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
     searchBar.barTintColor = [UIColor whiteColor];
     searchBar.backgroundColor = [UIColor clearColor];
     searchBar.layer.borderColor = [UIColor whiteColor].CGColor;
     searchBar.layer.borderWidth = 1.f;
+    searchBar.delegate = self;
     searchBar.showsCancelButton = YES;
-    searchBar.barStyle = UISearchBarStyleMinimal;
+    searchBar.barStyle = UIBarStyleDefault;
+    searchBar.searchBarStyle = UISearchBarStyleProminent;
     searchBar.placeholder = @"INPUT YOUR ADDR";
     [searchBar setImage:[UIImage imageNamed:@"search"]
        forSearchBarIcon:UISearchBarIconSearch
                   state:UIControlStateNormal];
-    [searchBar setBackgroundImage:[[UIImage alloc] init]
+    [searchBar setBackgroundImage:[UIImage imageNamed:@"clear"]
                    forBarPosition:UIBarPositionTop
                        barMetrics:UIBarMetricsDefault];
     
     [searchBar setSearchFieldBackgroundImage:[UIImage imageNamed:@"clear"]
                                     forState:UIControlStateNormal];
     [searchBar sizeToFit];
+    [searchBar becomeFirstResponder];
     self.tableView.tableHeaderView = searchBar;
-    
-    UISearchDisplayController *searchController = [[UISearchDisplayController alloc] initWithSearchBar:searchBar
-                                                                                    contentsController:self];
-    //searchController.displaysSearchBarInNavigationBar = YES;
-    searchController.delegate = self;
-    searchController.searchResultsDataSource = self;
-    searchController.searchResultsDelegate = self;
-    [searchController.searchResultsTableView registerClass:[UITableViewCell class]
-                                    forCellReuseIdentifier:@"Cell"];
-    //searchController.active = YES;
     
     self.searchHistory = @[@"ZheJiang University, Zijinggang Campus",
                            @"Incity Shopping Market",
@@ -124,7 +124,7 @@ viewForHeaderInSection:(NSInteger)section
 }
 
 - (CGFloat)tableView:(UITableView *)tableView
-estimatedHeightForHeaderInSection:(NSInteger)section
+heightForFooterInSection:(NSInteger)section
 {
     return 20;
 }
@@ -133,7 +133,8 @@ estimatedHeightForHeaderInSection:(NSInteger)section
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                            forIndexPath:indexPath];
     
     cell.backgroundColor = [UIColor clearColor];
     cell.contentView.backgroundColor = [UIColor clearColor];
@@ -143,6 +144,21 @@ estimatedHeightForHeaderInSection:(NSInteger)section
     cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.field.text = self.searchHistory[indexPath.row];
+    [self dismissViewControllerAnimated:YES
+                             completion:NULL];
+}
+
+#pragma mark - UISearch
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self onDismiss:nil];
 }
 
 @end

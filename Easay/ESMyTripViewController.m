@@ -9,6 +9,7 @@
 #import "ESMyTripViewController.h"
 #import "ESTripCell.h"
 #import "ESPlaceInputViewController.h"
+#import "ESTrafficExchangeViewController.h"
 
 @interface ESMyTripViewController () <UITextFieldDelegate>
 @property (nonatomic, strong) NSArray *trips;
@@ -79,10 +80,22 @@
     return attrStr;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ESTrafficExchangeViewController * controller = segue.destinationViewController;
+    controller.title = [NSString stringWithFormat:@"Project %ld", (long)[self.tableView indexPathForSelectedRow].row];
 }
 
 #pragma mark - UITable
@@ -100,7 +113,8 @@
         return 0;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ESTripCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TripCell" forIndexPath:indexPath];
     cell.exchangeLabel.attributedText = [self mergedExchangeInfo:self.trips[indexPath.row][@"exchanges"]];
@@ -117,8 +131,8 @@
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     ESPlaceInputViewController *input = [[ESPlaceInputViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:input];
-    [self presentViewController:nav
+    input.field = textField;
+    [self presentViewController:input
                        animated:YES
                      completion:NULL];
     

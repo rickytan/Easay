@@ -18,6 +18,7 @@
         // Initialization code
         self.placeholderTextColor = [UIColor whiteColor];
         self.placeholderFont = [UIFont lightFontWithSize:self.font.pointSize];
+        self.font = [UIFont lightFontWithSize:self.font.pointSize];
     }
     return self;
 }
@@ -28,6 +29,7 @@
     if (self) {
         self.placeholderTextColor = [UIColor whiteColor];
         self.placeholderFont = [UIFont lightFontWithSize:self.font.pointSize];
+        self.font = [UIFont lightFontWithSize:self.font.pointSize];
     }
     return self;
 }
