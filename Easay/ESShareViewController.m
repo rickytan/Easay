@@ -12,12 +12,17 @@
 @interface ESShareViewController () <UITextViewDelegate>
 @property (nonatomic, assign) IBOutlet UITextView * textView;
 @property (nonatomic, assign) IBOutlet UIButton * editButton;
+@property (nonatomic, assign) IBOutlet UIButton * addButton;
+@property (nonatomic, assign) IBOutlet UIView * mainBalloon;
+@property (nonatomic, assign) IBOutlet UIButton * weibo, * wechat, * path;
 
 @property (nonatomic, strong) UIDynamicAnimator * animator;
 @property (nonatomic, strong) UICollisionBehavior * collision;
 @property (nonatomic, strong) UIGravityBehavior * gravity;
+@property (nonatomic, strong) NSMutableArray * balloons;
 - (IBAction)onEdit:(id)sender;
 - (IBAction)onCamera:(id)sender;
+- (IBAction)onAdd:(id)sender;
 @end
 
 @implementation ESShareViewController
@@ -42,6 +47,7 @@
     self.collision = [[UICollisionBehavior alloc] init];
     self.gravity = [[UIGravityBehavior alloc] init];
 
+
     CGFloat w = self.view.bounds.size.width;
     CGFloat h = self.view.bounds.size.height;
     [self.collision addBoundaryWithIdentifier:@"Top"
@@ -60,9 +66,22 @@
 
     [self.animator addBehavior:self.collision];
     [self.animator addBehavior:self.gravity];
+
+    self.mainBalloon.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.mainBalloon.layer.borderWidth = 3.0;
+    self.mainBalloon.layer.cornerRadius = 48.0;
+    self.mainBalloon.backgroundColor = [UIColor yellowColor];
+    self.mainBalloon.clipsToBounds = YES;
+
+    self.balloons = [NSMutableArray arrayWithObject:self.mainBalloon];
+    //[self makeBalloon];
     
-    [self makeBalloon];
-    
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,6 +106,11 @@
 
 #pragma mark - Action
 
+- (IBAction)onAdd:(id)sender
+{
+    
+}
+
 - (IBAction)onEdit:(id)sender
 {
     if (self.textView.isEditable) {
@@ -105,6 +129,13 @@
 - (IBAction)onCamera:(id)sender
 {
     [self makeBalloon];
+}
+
+#pragma mark - UIGesture
+
+- (IBAction)onPan:(UIPanGestureRecognizer *)pan
+{
+
 }
 
 #pragma mark - UITextView

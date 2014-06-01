@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCZ-V1-anO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCZ-V1-anO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -610,6 +610,20 @@ Saturday</string>
                                     <action selector="onPageControl:" destination="6ZI-0v-fC8" eventType="valueChanged" id="Vva-6j-lWE"/>
                                 </connections>
                             </pageControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5I-6y-IYq">
+                                <rect key="frame" x="139" y="258" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbm-Ie-Rbd">
+                                <rect key="frame" x="139" y="197" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.2627450980392157" green="0.61568627450980395" blue="0.91764705882352937" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -1210,7 +1224,45 @@ Saturday</string>
                                 <rect key="frame" x="112" y="331" width="96" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="u2p-sA-bTH" appends="YES" id="ybG-2s-oog"/>
+                                </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEv-b5-0Qq" userLabel="Weibo">
+                                <rect key="frame" x="10" y="223" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="share-weibo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="share-weibo-highlighted"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u16-lq-dOv" userLabel="Wechat">
+                                <rect key="frame" x="118" y="223" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="share-wechat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="share-wechat-highlighted"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eu1-14-dhm" userLabel="Path">
+                                <rect key="frame" x="225" y="223" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="share-path">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="share-path-highlighted"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGK-z4-AA8" userLabel="Add">
+                                <rect key="frame" x="225" y="450" width="12" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="add-bubble">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onAdd:" destination="ObL-a5-lqT" eventType="touchUpInside" id="8qC-kB-I2C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
@@ -1232,11 +1284,21 @@ Saturday</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="TGK-z4-AA8" id="KAd-pM-R0W"/>
                         <outlet property="editButton" destination="VcW-DH-KBp" id="50D-zV-TLb"/>
+                        <outlet property="mainBalloon" destination="UD4-2d-sCE" id="rXl-PR-o4y"/>
+                        <outlet property="path" destination="eu1-14-dhm" id="FPU-Lb-0TF"/>
                         <outlet property="textView" destination="YeT-sS-RLm" id="3L5-7G-6rZ"/>
+                        <outlet property="wechat" destination="u16-lq-dOv" id="WF6-hB-EJR"/>
+                        <outlet property="weibo" destination="mEv-b5-0Qq" id="KsR-yd-0OT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="83r-Z5-2XF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="u2p-sA-bTH">
+                    <connections>
+                        <action selector="onPan:" destination="ObL-a5-lqT" id="OCP-O2-FUn"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2363" y="-2468"/>
         </scene>
@@ -1694,15 +1756,15 @@ Saturday</string>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuQ-CZ-8K3" customClass="ESLightLabel">
-                                            <rect key="frame" x="147" y="42" width="26" height="12"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuQ-CZ-8K3" customClass="ESLightLabel">
+                                            <rect key="frame" x="131" y="42" width="26" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDy-FM-BtM" customClass="ESLightLabel">
-                                            <rect key="frame" x="286" y="42" width="26" height="12"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDy-FM-BtM" customClass="ESLightLabel">
+                                            <rect key="frame" x="253" y="42" width="26" height="12"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1757,15 +1819,31 @@ Saturday</string>
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bVY-qt-MWW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5c-1j-77t">
+                                <rect key="frame" x="119" y="382" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="Dyg-iB-EQn"/>
+                                    <constraint firstAttribute="height" constant="82" id="UYG-rD-5bt"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBubble:" destination="hDd-ON-xea" eventType="touchUpInside" id="lre-NG-HIR"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="bVY-qt-MWW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="344"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SiteCell" textLabel="GYV-Tr-MHg" style="IBUITableViewCellStyleDefault" id="GkV-On-4tX" customClass="ESTrafficSiteCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GkV-On-4tX" id="pok-C5-r4k">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1796,25 +1874,22 @@ Saturday</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="33N-h9-j2a">
-                                <rect key="frame" x="119" y="382" width="82" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6q6-CX-RoM">
-                                <rect key="frame" x="159" y="464" width="2" height="40"/>
+                                <rect key="frame" x="160" y="464" width="1" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="b5c-1j-77t" secondAttribute="centerX" id="7Fd-vx-iL2"/>
                             <constraint firstItem="CyZ-NO-whF" firstAttribute="top" secondItem="bVY-qt-MWW" secondAttribute="bottom" constant="160" id="7fz-vx-KPe"/>
                             <constraint firstItem="XS3-sW-uO0" firstAttribute="top" secondItem="bVY-qt-MWW" secondAttribute="bottom" constant="18" id="DsB-lF-tR5"/>
                             <constraint firstAttribute="trailing" secondItem="bVY-qt-MWW" secondAttribute="trailing" id="VQX-9S-dIZ"/>
                             <constraint firstItem="bVY-qt-MWW" firstAttribute="top" secondItem="sCr-3U-g2R" secondAttribute="bottom" id="cFx-g7-XoZ"/>
                             <constraint firstItem="bVY-qt-MWW" firstAttribute="leading" secondItem="RnD-Dp-7nu" secondAttribute="leading" id="f9w-Tl-5Bq"/>
                             <constraint firstAttribute="centerX" secondItem="XS3-sW-uO0" secondAttribute="centerX" id="xsl-HE-hBK"/>
+                            <constraint firstItem="CyZ-NO-whF" firstAttribute="top" secondItem="b5c-1j-77t" secondAttribute="bottom" constant="40" id="ypH-ia-q2N"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OX8-YM-fP4">
@@ -1825,6 +1900,7 @@ Saturday</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bubble" destination="b5c-1j-77t" id="4uT-eW-mtj"/>
                         <outlet property="tableView" destination="bVY-qt-MWW" id="Uch-Jm-GFh"/>
                     </connections>
                 </viewController>
@@ -1864,9 +1940,11 @@ Saturday</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHl-wE-fFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="60" y="-486"/>
         </scene>
     </scenes>
     <resources>
+        <image name="add-bubble" width="12" height="12"/>
         <image name="battery" width="28" height="28"/>
         <image name="bus" width="20" height="20"/>
         <image name="camera" width="34" height="25"/>
@@ -1883,6 +1961,12 @@ Saturday</string>
         <image name="nav-back" width="32" height="30"/>
         <image name="nav-right" width="24" height="17"/>
         <image name="shadow" width="237" height="103"/>
+        <image name="share-path" width="85" height="85"/>
+        <image name="share-path-highlighted" width="87" height="87"/>
+        <image name="share-wechat" width="85" height="85"/>
+        <image name="share-wechat-highlighted" width="87" height="87"/>
+        <image name="share-weibo" width="85" height="85"/>
+        <image name="share-weibo-highlighted" width="87" height="87"/>
         <image name="switch-arrow" width="24" height="19"/>
         <image name="time" width="67" height="67"/>
         <image name="up" width="32" height="32"/>

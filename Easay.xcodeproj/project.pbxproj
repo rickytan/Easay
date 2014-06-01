@@ -35,6 +35,7 @@
 		9CC16AC618FBC101004D3F8A /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CC16AC318FBC101004D3F8A /* ProgressHUD.bundle */; };
 		9CC16AC718FBC101004D3F8A /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16AC518FBC101004D3F8A /* ProgressHUD.m */; };
 		9CC16ACA18FBC7EB004D3F8A /* ESHeaderButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16AC918FBC7EB004D3F8A /* ESHeaderButton.m */; };
+		9CC21F0A1938AE2D00072F4B /* TrafficExchangeHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC21F091938AE2D00072F4B /* TrafficExchangeHeader.xib */; };
 		9CD7A68A18EDDA7800641DA9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7A68918EDDA7800641DA9 /* Foundation.framework */; };
 		9CD7A68C18EDDA7800641DA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7A68B18EDDA7800641DA9 /* CoreGraphics.framework */; };
 		9CD7A68E18EDDA7800641DA9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD7A68D18EDDA7800641DA9 /* UIKit.framework */; };
@@ -125,6 +126,7 @@
 		9CC16AC518FBC101004D3F8A /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		9CC16AC818FBC7EB004D3F8A /* ESHeaderButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESHeaderButton.h; sourceTree = "<group>"; };
 		9CC16AC918FBC7EB004D3F8A /* ESHeaderButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESHeaderButton.m; sourceTree = "<group>"; };
+		9CC21F091938AE2D00072F4B /* TrafficExchangeHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrafficExchangeHeader.xib; sourceTree = "<group>"; };
 		9CD7A68618EDDA7800641DA9 /* Easay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD7A68918EDDA7800641DA9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9CD7A68B18EDDA7800641DA9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -297,6 +299,7 @@
 				9CC16AB918FBBC13004D3F8A /* RTSiderViewController.h */,
 				9CC16ABA18FBBC13004D3F8A /* RTSiderViewController.m */,
 				9CD7A69018EDDA7800641DA9 /* Supporting Files */,
+				9CC21F091938AE2D00072F4B /* TrafficExchangeHeader.xib */,
 				9C108DF119003F79004CD572 /* UIColor+RExtension.h */,
 				9C108DF219003F79004CD572 /* UIColor+RExtension.m */,
 				9C108DF419004815004CD572 /* UIFont+ES.h */,
@@ -418,6 +421,7 @@
 				9CC16AC618FBC101004D3F8A /* ProgressHUD.bundle in Resources */,
 				9CD7A6BD18EDDD9100641DA9 /* Main.storyboard in Resources */,
 				9CD7A6BB18EDDCCA00641DA9 /* Nexa Light.otf in Resources */,
+				9CC21F0A1938AE2D00072F4B /* TrafficExchangeHeader.xib in Resources */,
 				9CD7A6BA18EDDCCA00641DA9 /* Nexa Bold.otf in Resources */,
 				9CD7A69C18EDDA7800641DA9 /* Images.xcassets in Resources */,
 			);

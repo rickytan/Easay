@@ -13,5 +13,15 @@
 @end
 
 @interface ESBarChartView : UIView
+- (CGPoint)basePositionForIndex:(NSInteger)index;
+- (CGFloat)heightForIndex:(NSInteger)index;
+- (UIColor *)barColorForIndex:(NSInteger)index;
 
+- (NSInteger)numberOfTitles:(NSInteger)index;
+- (NSString *)titleForIndex:(NSInteger)index;
+- (CGPoint)titlePositionForIndex:(NSInteger)index;
 @end
+
+@interface ESYearBarChartView : ESBarChartView
+
+@end;

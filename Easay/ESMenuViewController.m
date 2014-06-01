@@ -136,6 +136,9 @@
     cell.imageView.image = [UIImage imageNamed:self.cellItems[indexPath.row][@"image"]];
     cell.textLabel.text = self.cellItems[indexPath.row][@"title"];
     cell.textLabel.font = [UIFont lightFontWithSize:16];
+    if (indexPath.row == 1) {
+        cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"badge-circle"]];
+    }
     
     return cell;
 }
@@ -160,7 +163,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
         case 3:
             [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"MytripNav"]
                                                      animated:YES];
-            break;
             break;
         case 4:
             [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ThehotNav"]
