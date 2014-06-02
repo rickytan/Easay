@@ -21,6 +21,8 @@
 		9C1AC7B918FADB5D009EAB1F /* ESSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7B818FADB5D009EAB1F /* ESSignUpViewController.m */; };
 		9C1AC7BC18FADFB3009EAB1F /* UIViewController+ES.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */; };
 		9C1AC7BF18FAE177009EAB1F /* ESFindPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */; };
+		9C44685C193C15ED0066A1FF /* ESPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44685B193C15ED0066A1FF /* ESPersonalViewController.m */; };
+		9C44685F193C199B0066A1FF /* ESActivityViewDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C44685E193C199B0066A1FF /* ESActivityViewDataCell.m */; };
 		9C5457AF19351E8500C6C546 /* ESTrafficExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C5457AE19351E8500C6C546 /* ESTrafficExchangeViewController.m */; };
 		9C782688192A824E00D01BB5 /* ESChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C782687192A824E00D01BB5 /* ESChartView.m */; };
 		9C782699192FCED900D01BB5 /* ESTheHotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C782698192FCED900D01BB5 /* ESTheHotViewController.m */; };
@@ -100,6 +102,10 @@
 		9C1AC7BB18FADFB3009EAB1F /* UIViewController+ES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ES.m"; sourceTree = "<group>"; };
 		9C1AC7BD18FAE177009EAB1F /* ESFindPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESFindPasswordViewController.h; sourceTree = "<group>"; };
 		9C1AC7BE18FAE177009EAB1F /* ESFindPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESFindPasswordViewController.m; sourceTree = "<group>"; };
+		9C44685A193C15ED0066A1FF /* ESPersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPersonalViewController.h; sourceTree = "<group>"; };
+		9C44685B193C15ED0066A1FF /* ESPersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPersonalViewController.m; sourceTree = "<group>"; };
+		9C44685D193C199B0066A1FF /* ESActivityViewDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESActivityViewDataCell.h; sourceTree = "<group>"; };
+		9C44685E193C199B0066A1FF /* ESActivityViewDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESActivityViewDataCell.m; sourceTree = "<group>"; };
 		9C5457AD19351E8500C6C546 /* ESTrafficExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTrafficExchangeViewController.h; sourceTree = "<group>"; };
 		9C5457AE19351E8500C6C546 /* ESTrafficExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTrafficExchangeViewController.m; sourceTree = "<group>"; };
 		9C782686192A824E00D01BB5 /* ESChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESChartView.h; sourceTree = "<group>"; };
@@ -236,6 +242,8 @@
 			children = (
 				9C05FC7D191CB3B100889724 /* ESActivityViewController.h */,
 				9C05FC7E191CB3B100889724 /* ESActivityViewController.m */,
+				9C44685D193C199B0066A1FF /* ESActivityViewDataCell.h */,
+				9C44685E193C199B0066A1FF /* ESActivityViewDataCell.m */,
 				9CD7A69818EDDA7800641DA9 /* ESAppDelegate.h */,
 				9CD7A69918EDDA7800641DA9 /* ESAppDelegate.m */,
 				9CD7A6BE18EDE1CC00641DA9 /* ESBoldLabel.h */,
@@ -262,6 +270,8 @@
 				9C108DF819004B7E004CD572 /* ESNavigationController.m */,
 				9C05FC90191D6F2500889724 /* ESOptionSelectViewController.h */,
 				9C05FC91191D6F2600889724 /* ESOptionSelectViewController.m */,
+				9C44685A193C15ED0066A1FF /* ESPersonalViewController.h */,
+				9C44685B193C15ED0066A1FF /* ESPersonalViewController.m */,
 				9CAB50A819324B5300E21574 /* ESPlaceInputViewController.h */,
 				9CAB50A919324B5300E21574 /* ESPlaceInputViewController.m */,
 				9CE36875191E6CF2003F064D /* ESPrivacyCell.h */,
@@ -466,10 +476,12 @@
 				9C108DF319003F79004CD572 /* UIColor+RExtension.m in Sources */,
 				9CD7A6C318EDE6F400641DA9 /* ESLoginViewController.m in Sources */,
 				9C05FC7F191CB3B100889724 /* ESActivityViewController.m in Sources */,
+				9C44685F193C199B0066A1FF /* ESActivityViewDataCell.m in Sources */,
 				9C782699192FCED900D01BB5 /* ESTheHotViewController.m in Sources */,
 				9C108DFF19005601004CD572 /* ESFriendViewController.m in Sources */,
 				9CC16ABB18FBBC13004D3F8A /* RTSiderViewController.m in Sources */,
 				9CC16ACA18FBC7EB004D3F8A /* ESHeaderButton.m in Sources */,
+				9C44685C193C15ED0066A1FF /* ESPersonalViewController.m in Sources */,
 				9CC16AB818FBBBE2004D3F8A /* ESViewController.m in Sources */,
 				9CD7A69618EDDA7800641DA9 /* main.m in Sources */,
 				9C05FC7C191CB07D00889724 /* ESFindFriendViewController.m in Sources */,

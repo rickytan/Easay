@@ -49,6 +49,7 @@
 @property (nonatomic, strong) NSIndexPath * selectedIndex;
 
 - (IBAction)onLogout:(id)sender;
+- (IBAction)onHeader:(id)sender;
 @end
 
 @implementation ESMenuViewController
@@ -114,6 +115,14 @@
                              completion:NULL];
 }
 
+- (IBAction)onHeader:(id)sender
+{
+    if ([sender isKindOfClass:[UITapGestureRecognizer class]] && ((UITapGestureRecognizer *)sender).state != UIGestureRecognizerStateEnded)
+        return;
+
+    [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"PersonalNav"]];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -132,14 +141,14 @@
 {
     static NSString *CellIdentifier = @"MenuCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+
     cell.imageView.image = [UIImage imageNamed:self.cellItems[indexPath.row][@"image"]];
     cell.textLabel.text = self.cellItems[indexPath.row][@"title"];
     cell.textLabel.font = [UIFont lightFontWithSize:16];
     if (indexPath.row == 1) {
         cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"badge-circle"]];
     }
-    
+
     return cell;
 }
 
@@ -177,14 +186,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
 
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
+ // In a story board-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
 
  */
 

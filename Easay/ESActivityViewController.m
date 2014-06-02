@@ -9,14 +9,7 @@
 #import "ESActivityViewController.h"
 #import "UIColor+RExtension.h"
 #import "ESSegmentView.h"
-
-@interface ESActivityViewDataCell : UITableViewCell
-@property (nonatomic, assign) IBOutlet UILabel * trafficMethod, * distance, * money, * percentage;
-@end
-
-@implementation ESActivityViewDataCell
-
-@end
+#import "ESActivityViewDataCell.h"
 
 static struct {
     char * method;
