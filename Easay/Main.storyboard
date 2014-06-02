@@ -1181,7 +1181,7 @@ Saturday</string>
                         <viewControllerLayoutGuide type="top" id="kvu-gC-nlz"/>
                         <viewControllerLayoutGuide type="bottom" id="O0v-BD-AGe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DrN-lk-ALp" customClass="SKView">
+                    <view key="view" contentMode="scaleToFill" id="DrN-lk-ALp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -1231,6 +1231,7 @@ Saturday</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="share-weibo-highlighted"/>
+                                <state key="highlighted" image="share-weibo-highlighted"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u16-lq-dOv" userLabel="Wechat">
                                 <rect key="frame" x="118" y="223" width="85" height="85"/>
@@ -1239,6 +1240,7 @@ Saturday</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="share-wechat-highlighted"/>
+                                <state key="highlighted" image="share-wechat-highlighted"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eu1-14-dhm" userLabel="Path">
                                 <rect key="frame" x="225" y="223" width="85" height="85"/>
@@ -1247,9 +1249,10 @@ Saturday</string>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="share-path-highlighted"/>
+                                <state key="highlighted" image="share-path-highlighted"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGK-z4-AA8" userLabel="Add">
-                                <rect key="frame" x="225" y="450" width="12" height="22"/>
+                                <rect key="frame" x="201" y="443" width="12" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="add-bubble">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1260,6 +1263,7 @@ Saturday</string>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="VcW-DH-KBp" secondAttribute="centerX" id="8BX-8x-ncZ"/>
                             <constraint firstAttribute="trailing" secondItem="YeT-sS-RLm" secondAttribute="trailing" constant="10" id="8RD-nO-xPa"/>
@@ -1267,6 +1271,9 @@ Saturday</string>
                             <constraint firstItem="YeT-sS-RLm" firstAttribute="leading" secondItem="DrN-lk-ALp" secondAttribute="leading" constant="10" id="O6m-M2-f5m"/>
                             <constraint firstItem="YeT-sS-RLm" firstAttribute="top" secondItem="kvu-gC-nlz" secondAttribute="bottom" constant="68" id="qgL-K5-CpI"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="u2p-sA-bTH" appends="YES" id="Q03-fo-huh"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="SHARE" id="bWf-T0-abg">
                         <barButtonItem key="rightBarButtonItem" title="Close" id="uJO-qb-0yZ">
@@ -1277,7 +1284,6 @@ Saturday</string>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="TGK-z4-AA8" id="KAd-pM-R0W"/>
-                        <outlet property="balloonView" destination="DrN-lk-ALp" id="uLZ-o7-96g"/>
                         <outlet property="editButton" destination="VcW-DH-KBp" id="50D-zV-TLb"/>
                         <outlet property="path" destination="eu1-14-dhm" id="FPU-Lb-0TF"/>
                         <outlet property="textView" destination="YeT-sS-RLm" id="3L5-7G-6rZ"/>
