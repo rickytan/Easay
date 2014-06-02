@@ -10,11 +10,94 @@
 #import "UIColor+RExtension.h"
 #import "UIFont+ES.h"
 
-@implementation ESLineChartView
+@implementation ESDataView
+
+- (UIColor *)titleBackgroundColor
 {
-    BOOL        _touchDown;
-    CGPoint     _touchPoint;
+    if (!_titleBackgroundColor) {
+        self.titleBackgroundColor = [UIColor clearColor];
+    }
+    return _titleBackgroundColor;
 }
+
+- (void)drawRect:(CGRect)rect
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    if (_touchDown) {
+        [[UIColor colorWithHexString:@"#ffe400"] setFill];
+        CGContextFillEllipseInRect(context, CGRectMake(_touchPoint.x - 2, _touchPoint.y - 2, 4, 4));
+        [[UIColor whiteColor] setStroke];
+        CGContextSetLineWidth(context, 1.0);
+        CGContextMoveToPoint(context, _touchPoint.x, [self lineMinY]);
+        CGPoint p = CGPointMake(_touchPoint.x, [self lineMaxY]);
+        CGContextAddLineToPoint(context, p.x, p.y);
+        CGContextDrawPath(context, kCGPathStroke);
+
+        NSString * title = [self pointTitle];
+        if (title) {
+            NSDictionary *attr = @{NSFontAttributeName: [UIFont lightFontWithSize:9],
+                                   NSForegroundColorAttributeName: [UIColor whiteColor],
+                                   NSBackgroundColorAttributeName: self.titleBackgroundColor};
+            CGSize size = [title sizeWithAttributes:attr];
+            CGPoint drawAt = CGPointMake(self.touchPoint.x + 10, self.touchPoint.y - size.height / 2);
+            if (size.width + 10 + drawAt.x > CGRectGetMaxX([self drawableRect])) {
+                drawAt.x -= size.width + 20;
+            }
+
+            [title drawAtPoint:drawAt
+                withAttributes:attr];
+        }
+    }
+}
+
+- (CGRect)drawableRect
+{
+    return self.bounds;
+}
+
+- (CGFloat)lineMinY
+{
+    return CGRectGetMinY([self drawableRect]);
+}
+
+- (CGFloat)lineMaxY
+{
+    return CGRectGetMaxY([self drawableRect]);
+}
+
+- (NSString *)pointTitle
+{
+    return @"1,302 km; 319 USD";
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    _touchDown = YES;
+    _touchPoint = [[touches anyObject] locationInView:self];
+    [self setNeedsDisplay];
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    _touchPoint = [[touches anyObject] locationInView:self];
+    [self setNeedsDisplay];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    _touchDown = NO;
+    [self setNeedsDisplay];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    _touchDown = NO;
+    [self setNeedsDisplay];
+}
+
+@end
+
+@implementation ESLineChartView
 
 - (void)awakeFromNib
 {
@@ -66,6 +149,7 @@
         
         [path stroke];
     }
+    
     NSDictionary *textAttr = @{NSFontAttributeName: [UIFont lightFontWithSize:10],
                                NSForegroundColorAttributeName: [UIColor whiteColor]};
     [@"12pm" drawAtPoint:CGPointMake(10, rect.size.height - 10)
@@ -74,22 +158,18 @@
           withAttributes:textAttr];
     [@"12pm" drawAtPoint:CGPointMake(rect.size.width - 24 - 10, rect.size.height - 10)
           withAttributes:textAttr];
-    
-    if (_touchDown) {
-        [[UIColor colorWithHexString:@"#ffe400"] setFill];
-        CGContextFillEllipseInRect(context, CGRectMake(_touchPoint.x - 2, _touchPoint.y - 2, 4, 4));
-        [[UIColor whiteColor] setStroke];
-        CGContextSetLineWidth(context, 1);
-        CGContextMoveToPoint(context, _touchPoint.x, CGRectGetMaxY([self drawableRect]));
-        CGPoint p = [self calMinY];
-        CGContextAddLineToPoint(context, p.x, p.y);
-        CGContextDrawPath(context, kCGPathStroke);
-    }
+
+    [super drawRect:rect];
+}
+
+- (CGFloat)lineMinY
+{
+    return [self calMinY].y;
 }
 
 - (CGPoint)calMinY
 {
-    CGPoint p = [self convertToDataPoint:_touchPoint];
+    CGPoint p = [self convertToDataPoint:self.touchPoint];
     CGFloat minY = 0.f;
     for (int i=0; i < self.data.count - 1; ++i) {
         CGPoint q0 = [self.data[i] CGPointValue];
@@ -121,34 +201,10 @@
 {
     CGRect rect = [self drawableRect];
     CGSize size = rect.size;
-    CGPoint p = CGPointMake(_touchPoint.x - rect.origin.x, _touchPoint.y - rect.origin.y);
+    CGPoint p = CGPointMake(self.touchPoint.x - rect.origin.x, self.touchPoint.y - rect.origin.y);
     return CGPointMake(p.x / size.width, 1.f - p.y / size.height);
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    _touchDown = YES;
-    _touchPoint = [[touches anyObject] locationInView:self];
-    [self setNeedsDisplay];
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    _touchPoint = [[touches anyObject] locationInView:self];
-    [self setNeedsDisplay];
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    _touchDown = NO;
-    [self setNeedsDisplay];
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    _touchDown = NO;
-    [self setNeedsDisplay];
-}
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import "ESPersonalViewController.h"
 #import "ESActivityViewDataCell.h"
+#import "UIColor+RExtension.h"
 
 static struct {
     char * method;
@@ -25,6 +26,9 @@ static CGFloat _percents[] = {0.f, 0.f, 0.f};
 @property (nonatomic, assign) IBOutlet UITableView * tableView;
 @property (nonatomic, assign) IBOutlet UICollectionView * collectionView;
 @property (nonatomic, assign) IBOutlet UIView * containerView;
+@property (nonatomic, strong) IBOutlet CAShapeLayer * shape0, * shape1;
+
+@property (nonatomic, strong) NSNumberFormatter * formatter;
 @end
 
 @implementation ESPersonalViewController
@@ -38,9 +42,79 @@ static CGFloat _percents[] = {0.f, 0.f, 0.f};
     return self;
 }
 
+- (void)loadView
+{
+    [super loadView];
+
+    NSInteger count = 0;
+
+    CGPoint data0[] = {
+        {0, 20},
+        {17, 40},
+        {40, 20},
+        {80, 70},
+        {120, 20},
+        {170, 30},
+        {200, 60},
+        {230, 56},
+        {260, 100},
+        {320, 40}
+    };
+    count = sizeof(data0) / sizeof(CGPoint);
+    self.shape0 = [CAShapeLayer layer];
+    UIBezierPath *path0 = [UIBezierPath bezierPath];
+    [path0 moveToPoint:CGPointZero];
+    for (int i=0; i < count; ++i) {
+        [path0 addLineToPoint:data0[i]];
+    }
+    [path0 addLineToPoint:CGPointMake(320, 0)];
+    [path0 closePath];
+    self.shape0.path = path0.CGPath;
+    self.shape0.backgroundColor = [UIColor clearColor].CGColor;
+    self.shape0.fillColor = [UIColor colorWithHexString:@"#ffc500"].CGColor;
+    self.shape0.frame = self.containerView.bounds;
+    self.shape0.geometryFlipped = YES;
+    [self.containerView.layer addSublayer:self.shape0];
+
+    CGPoint data1[] = {
+        {0, 0},
+        {24, 20},
+        {48, 8},
+        {100, 62},
+        {130, 26},
+        {166, 16},
+        {198, 40},
+        {230, 34},
+        {284, 90},
+        {320, 60}
+    };
+    count = sizeof(data1) / sizeof(CGPoint);
+    self.shape1 = [CAShapeLayer layer];
+    UIBezierPath *path1 = [UIBezierPath bezierPath];
+    [path1 moveToPoint:CGPointZero];
+    for (int i=0; i < count; ++i) {
+        [path1 addLineToPoint:data1[i]];
+    }
+    [path1 addLineToPoint:CGPointMake(320, 0)];
+    [path1 closePath];
+    self.shape1.path = path1.CGPath;
+    self.shape1.backgroundColor = [UIColor clearColor].CGColor;
+    self.shape1.fillColor = [UIColor colorWithHexString:@"#ffe400"].CGColor;
+    self.shape1.frame = self.containerView.bounds;
+    self.shape1.geometryFlipped = YES;
+    self.shape1.shadowPath = path1.CGPath;
+    self.shape1.shadowColor = [UIColor blackColor].CGColor;
+    self.shape1.shadowOpacity = 0.3;
+    self.shape1.shadowRadius = 6.0;
+    [self.containerView.layer addSublayer:self.shape1];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.formatter = [[NSNumberFormatter alloc] init];
+    self.formatter.numberStyle = NSNumberFormatterBehavior10_4;
 
     self.tableView.layer.shadowColor = [UIColor blackColor].CGColor;
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, CGRectGetHeight(self.tableView.bounds) - 1, CGRectGetWidth(self.tableView.bounds), 3)];
@@ -86,8 +160,8 @@ static CGFloat _percents[] = {0.f, 0.f, 0.f};
 {
     ESActivityViewDataCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DataCell"];
     cell.trafficMethod.text = [NSString stringWithUTF8String:_data[indexPath.row].method];
-    cell.distance.text = [NSString stringWithFormat:@"%ld km", (long)_data[indexPath.row].distance];
-    cell.money.text = [NSString stringWithFormat:@"%ld USD", (long)_data[indexPath.row].price];
+    cell.distance.text = [NSString stringWithFormat:@"%@ km", [self.formatter stringFromNumber:@(_data[indexPath.row].distance)]];
+    cell.money.text = [NSString stringWithFormat:@"%@ USD", [self.formatter stringFromNumber:@(_data[indexPath.row].price)]];
     cell.percentage.text = [NSString stringWithFormat:@"%.2f%%", _percents[indexPath.row] * 100];
     return cell;
 }

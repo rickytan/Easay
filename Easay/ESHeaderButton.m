@@ -11,27 +11,32 @@
 
 @interface ESHeaderButton ()
 @property (nonatomic, strong) UIImageView * foregroundImage;
+@property (nonatomic, strong) CALayer * maskLayer;
 @end
 
 @implementation ESHeaderButton
 
 - (void)commonInit
 {
-    self.foregroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"header-border"]];
-    [self addSubview:self.foregroundImage];
-    
     [self setImage:[UIImage imageNamed:@"header-default"]
           forState:UIControlStateNormal];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.layer.cornerRadius = 8;
+
+    self.maskLayer = [CALayer layer];
+    self.maskLayer.borderColor = [UIColor whiteColor].CGColor;
+    self.maskLayer.borderWidth = 3.f;
+    self.maskLayer.shadowColor = [UIColor blackColor].CGColor;
+    self.maskLayer.shadowOpacity = 0.25;
+    self.maskLayer.shadowRadius = 2.0;
+
+    [self.layer insertSublayer:self.maskLayer
+                       atIndex:0];
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (void)awakeFromNib
 {
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self commonInit];
-    }
-    return self;
+    [self commonInit];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -46,7 +51,13 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    CGSize size = self.bounds.size;
-    self.foregroundImage.center = CGPointMake(size.width / 2, size.height / 2);
+    self.maskLayer.frame = self.bounds;
+    self.maskLayer.cornerRadius = CGRectGetWidth(self.bounds) / 2;
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectOffset(self.bounds, 6, 6)
+                                                    cornerRadius:CGRectGetWidth(self.bounds)];
+
+    self.maskLayer.shadowPath = path.CGPath;
+    self.imageView.frame = CGRectInset(self.bounds, 2.5, 2.5);
 }
+
 @end

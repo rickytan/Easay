@@ -8,11 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ESLineChartView : UIView
+@interface ESDataView : UIView
+@property (nonatomic, readonly, assign) BOOL touchDown;
+@property (nonatomic, readonly, assign) CGPoint touchPoint;
+@property (nonatomic, strong) UIColor * titleBackgroundColor;   // Default clear;
+
+- (CGFloat)lineMinY;
+- (CGFloat)lineMaxY;
+- (CGRect)drawableRect;
+- (NSString *)pointTitle;
+
+@end
+
+@interface ESLineChartView : ESDataView
 @property (nonatomic, strong) NSArray * data;
 @end
 
-@interface ESBarChartView : UIView
+@interface ESBarChartView : ESDataView
 - (CGPoint)basePositionForIndex:(NSInteger)index;
 - (CGFloat)heightForIndex:(NSInteger)index;
 - (UIColor *)barColorForIndex:(NSInteger)index;

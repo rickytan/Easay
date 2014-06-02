@@ -121,6 +121,10 @@
         return;
 
     [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"PersonalNav"]];
+
+    [self.tableView deselectRowAtIndexPath:self.selectedIndex
+                                  animated:YES];
+    self.selectedIndex = nil;
 }
 
 #pragma mark - Table view data source
