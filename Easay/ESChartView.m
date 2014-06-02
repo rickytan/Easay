@@ -212,9 +212,55 @@
 
 @implementation ESBarChartView
 
+#define PADDING 8.0
+
 - (void)drawRect:(CGRect)rect
 {
-    
+
+}
+
+@end
+
+@implementation ESWeekBarChartView
+
+- (void)drawRect:(CGRect)rect
+{
+    CGPoint data[] = {
+        {90, 50},
+        {120, 96},
+        {160, 60},
+        {96, 110},
+        {120, 30},
+        {140, 70},
+        {50, 66}
+    };
+    CGContextRef content = UIGraphicsGetCurrentContext();
+    CGFloat offsetX = PADDING * 2;
+    CGFloat stepX = (CGRectGetWidth(rect) - 2 * 8 * PADDING) / 6;
+
+    [[UIColor colorWithRed:1.0
+                     green:1.0*197/255
+                      blue:0
+                     alpha:1] set];
+    CGContextSetLineWidth(content, PADDING);
+    CGContextSetLineCap(content, kCGLineCapRound);
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    for (int i=0; i < 7; ++i) {
+        [path moveToPoint:CGPointMake(offsetX - PADDING / 2 + i * stepX, CGRectGetMaxY(rect) - 16)];
+        [path addLineToPoint:CGPointMake(offsetX - PADDING / 2 + i * stepX, CGRectGetMaxY(rect) - 16 - data[i].x)];
+    }
+    [path fill];
+
+    [[UIColor colorWithRed:1.0
+                     green:1.0*228/255
+                      blue:0
+                     alpha:1] set];
+    path = [UIBezierPath bezierPath];
+    for (int i=0; i < 7; ++i) {
+        [path moveToPoint:CGPointMake(offsetX + PADDING / 2 + i * stepX, CGRectGetMaxY(rect) - 16)];
+        [path addLineToPoint:CGPointMake(offsetX + PADDING / 2 + i * stepX, CGRectGetMaxY(rect) - 16 - data[i].y)];
+    }
+    [path fill];
 }
 
 @end

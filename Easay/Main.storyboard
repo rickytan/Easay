@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCZ-V1-anO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Sxr-R8-yWS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -950,10 +950,22 @@ Saturday</string>
                                 <rect key="frame" x="0.0" y="120" width="320" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-y8-JPH" customClass="ESLineChartView">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="a-week" translatesAutoresizingMaskIntoConstraints="NO" id="3LW-0g-now">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="a-month" translatesAutoresizingMaskIntoConstraints="NO" id="woE-Mo-Dc3">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="a-year" translatesAutoresizingMaskIntoConstraints="NO" id="YzP-i9-SuD">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KVu-y8-JPH" customClass="ESLineChartView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="176"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -1145,8 +1157,12 @@ Saturday</string>
                     </view>
                     <navigationItem key="navigationItem" title="ACTIVITY" id="ubW-jl-fes"/>
                     <connections>
+                        <outlet property="containerView" destination="MiZ-EB-Qfh" id="CvE-pn-j4N"/>
                         <outlet property="dataView" destination="GTt-nV-Hsc" id="DnH-00-Kaf"/>
                         <outlet property="dayBtn" destination="N8f-bP-txG" id="wel-yX-Aq6"/>
+                        <outlet property="label0" destination="OOS-fy-K1M" id="cda-dV-qRu"/>
+                        <outlet property="label1" destination="qOU-0k-c9S" id="awI-ce-3UF"/>
+                        <outlet property="label2" destination="3EC-xr-STR" id="tz2-jL-uqH"/>
                         <outlet property="monthBtn" destination="9wU-Zk-MeI" id="Ugr-LE-iqA"/>
                         <outlet property="segmentView" destination="ZMj-is-j8a" id="pSP-KD-N9Q"/>
                         <outlet property="weekBtn" destination="N42-ya-xWN" id="7kn-Io-A3x"/>
@@ -2288,6 +2304,9 @@ Saturday</string>
         </scene>
     </scenes>
     <resources>
+        <image name="a-month" width="320" height="184"/>
+        <image name="a-week" width="320" height="176"/>
+        <image name="a-year" width="320" height="188"/>
         <image name="add-bubble" width="12" height="12"/>
         <image name="battery" width="28" height="28"/>
         <image name="bus" width="20" height="20"/>

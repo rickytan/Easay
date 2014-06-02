@@ -34,6 +34,10 @@
 - (CGPoint)titlePositionForIndex:(NSInteger)index;
 @end
 
+@interface ESWeekBarChartView : ESDataView
+
+@end
+
 @interface ESYearBarChartView : ESBarChartView
 
 @end;
