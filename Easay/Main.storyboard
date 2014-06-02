@@ -192,6 +192,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.26274509800000001" green="0.61568627450000002" blue="0.91764705879999997" alpha="1" colorSpace="deviceRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="qYc-vX-GSG" secondAttribute="centerX" id="8YD-at-Hxl"/>
                             <constraint firstAttribute="centerX" secondItem="9tk-XU-CGD" secondAttribute="centerX" id="Aey-Fo-iot"/>
@@ -219,6 +220,7 @@
                         </constraints>
                         <connections>
                             <action selector="onDismissKeyboard:" destination="Sxr-R8-yWS" eventType="touchDown" id="9WI-Su-wuv"/>
+                            <outletCollection property="gestureRecognizers" destination="cIr-Am-BkT" appends="YES" id="aEv-jq-SWJ"/>
                         </connections>
                     </view>
                     <connections>
@@ -238,6 +240,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eod-SI-lmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="cIr-Am-BkT">
+                    <connections>
+                        <action selector="onPan:" destination="Sxr-R8-yWS" id="Mzo-oj-eEw"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="432" y="210"/>
         </scene>
@@ -2284,23 +2291,6 @@ Saturday</string>
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="505" y="-2517"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="mPl-yW-eB3">
-            <objects>
-                <viewController id="NmF-Pz-rTf" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xGu-qq-r1J"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pb3-bK-oPF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bNL-Fq-coP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IIA-WI-okd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

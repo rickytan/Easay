@@ -96,14 +96,32 @@
             break;
         case UIGestureRecognizerStateChanged:
         {
-            //CGPoint trans = [pan translationInView:self.view];
-            //CGFloat ratio = -trans.y / 160;
+            CGPoint trans = [pan translationInView:self.view];
+            CGFloat ratio = -trans.y / 160;
+            if (ratio < 0) ratio = 0;
+            if (ratio > 1) ratio = 1;
+            
+            self.titleTop.constant = ratio * 24 + (1-ratio) * 72;
+            self.logoTop.constant = ratio * 60 + (1-ratio) * 202;
+            self.logoHeight.constant = ratio * 118 + (1-ratio) * 225;
+            self.textFieldTop.constant = ratio * 36 + (1-ratio) * 160;
+            self.accountBottom.constant = ratio * 0 + (1-ratio) * -100;
+            [self.view layoutIfNeeded];
+            self.titleLabel.transform = CGAffineTransformMakeScale(ratio * 0.6 + (1-ratio), ratio * 0.6 + (1-ratio));
+            self.subtitleLabel.alpha = 1-ratio;
+            self.upButton.alpha = 1-ratio;
+            self.startLabel.alpha = 1-ratio;
         }
             break;
         case UIGestureRecognizerStateEnded:
         case UIGestureRecognizerStateCancelled:
         {
-            
+            CGPoint trans = [pan translationInView:self.view];
+            CGFloat ratio = -trans.y / 160;
+            if (ratio > 0.2) {
+                [self onUp:nil];
+                pan.enabled = NO;
+            }
         }
             break;
         default:
