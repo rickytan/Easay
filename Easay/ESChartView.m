@@ -114,6 +114,8 @@
                   [NSValue valueWithCGPoint:CGPointMake(0.86, 0.38)],
                   [NSValue valueWithCGPoint:CGPointMake(0.94, 0.2)],
                   [NSValue valueWithCGPoint:CGPointMake(1.0, 0.0)]];
+
+    self.titleBackgroundColor = [UIColor themeColor];
 }
 
 - (void)drawRect:(CGRect)rect

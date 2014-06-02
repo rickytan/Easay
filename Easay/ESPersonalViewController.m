@@ -123,6 +123,44 @@ static CGFloat _percents[] = {0.f, 0.f, 0.f};
     self.tableView.layer.shadowRadius = 1.4;
     
     [self calulatePercent];
+
+    self.containerView.transform = CGAffineTransformMakeTranslation(0, 100);
+    self.containerView.alpha = 0.0;
+    self.tableView.transform = CGAffineTransformMakeTranslation(0, 100);
+    self.tableView.alpha = 0.0;
+    self.collectionView.transform = CGAffineTransformMakeTranslation(0, 100);
+    self.collectionView.alpha = 0.0;
+
+    [UIView animateWithDuration:1.0
+                          delay:0.2
+         usingSpringWithDamping:0.6
+          initialSpringVelocity:1
+                        options:0
+                     animations:^{
+                         self.containerView.transform = CGAffineTransformIdentity;
+                         self.containerView.alpha = 1.0;
+                     }
+                     completion:NULL];
+    [UIView animateWithDuration:1.0
+                          delay:0.4
+         usingSpringWithDamping:0.6
+          initialSpringVelocity:1
+                        options:0
+                     animations:^{
+                         self.tableView.transform = CGAffineTransformIdentity;
+                         self.tableView.alpha = 1.0;
+                     }
+                     completion:NULL];
+    [UIView animateWithDuration:1.0
+                          delay:0.6
+         usingSpringWithDamping:0.6
+          initialSpringVelocity:1
+                        options:0
+                     animations:^{
+                         self.collectionView.transform = CGAffineTransformIdentity;
+                         self.collectionView.alpha = 1.0;
+                     }
+                     completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning

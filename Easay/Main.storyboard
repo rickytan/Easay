@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCZ-V1-anO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wCZ-V1-anO">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -655,7 +655,11 @@ Saturday</string>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" image="nav-right" id="gcW-bV-ZfG"/>
+                        <barButtonItem key="rightBarButtonItem" image="nav-right" id="gcW-bV-ZfG">
+                            <connections>
+                                <action selector="onRight:" destination="6ZI-0v-fC8" id="7TN-yP-Pog"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="costLastWeek" destination="i0F-wK-U2G" id="mHD-b0-UD1"/>
@@ -1177,7 +1181,7 @@ Saturday</string>
                         <viewControllerLayoutGuide type="top" id="kvu-gC-nlz"/>
                         <viewControllerLayoutGuide type="bottom" id="O0v-BD-AGe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DrN-lk-ALp" customClass="UIControl">
+                    <view key="view" contentMode="scaleToFill" id="DrN-lk-ALp" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -1220,15 +1224,6 @@ Saturday</string>
                                     <action selector="onEdit:" destination="ObL-a5-lqT" eventType="touchUpInside" id="yfz-gj-YIW"/>
                                 </connections>
                             </button>
-                            <view tag="10" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UD4-2d-sCE">
-                                <rect key="frame" x="112" y="331" width="96" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="u2p-sA-bTH" appends="YES" id="ybG-2s-oog"/>
-                                </connections>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEv-b5-0Qq" userLabel="Weibo">
                                 <rect key="frame" x="10" y="223" width="85" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1272,9 +1267,6 @@ Saturday</string>
                             <constraint firstItem="YeT-sS-RLm" firstAttribute="leading" secondItem="DrN-lk-ALp" secondAttribute="leading" constant="10" id="O6m-M2-f5m"/>
                             <constraint firstItem="YeT-sS-RLm" firstAttribute="top" secondItem="kvu-gC-nlz" secondAttribute="bottom" constant="68" id="qgL-K5-CpI"/>
                         </constraints>
-                        <connections>
-                            <action selector="onDismissKeyboard:" destination="ObL-a5-lqT" eventType="touchDown" id="Aaw-LM-ugS"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="SHARE" id="bWf-T0-abg">
                         <barButtonItem key="rightBarButtonItem" title="Close" id="uJO-qb-0yZ">
@@ -1285,8 +1277,8 @@ Saturday</string>
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="TGK-z4-AA8" id="KAd-pM-R0W"/>
+                        <outlet property="balloonView" destination="DrN-lk-ALp" id="uLZ-o7-96g"/>
                         <outlet property="editButton" destination="VcW-DH-KBp" id="50D-zV-TLb"/>
-                        <outlet property="mainBalloon" destination="UD4-2d-sCE" id="rXl-PR-o4y"/>
                         <outlet property="path" destination="eu1-14-dhm" id="FPU-Lb-0TF"/>
                         <outlet property="textView" destination="YeT-sS-RLm" id="3L5-7G-6rZ"/>
                         <outlet property="wechat" destination="u16-lq-dOv" id="WF6-hB-EJR"/>
@@ -1851,7 +1843,6 @@ Saturday</string>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.21176470589999999" green="0.53725490200000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SiteCell" textLabel="GYV-Tr-MHg" style="IBUITableViewCellStyleDefault" id="GkV-On-4tX" customClass="ESTrafficSiteCell">
@@ -2047,7 +2038,7 @@ Saturday</string>
                                             <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXO-si-KwJ" customClass="ESLightButton">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXO-si-KwJ" customClass="ESLightButton">
                                                     <rect key="frame" x="7.5" y="18" width="40" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <constraints>
@@ -2067,8 +2058,8 @@ Saturday</string>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="centerY" secondItem="HXO-si-KwJ" secondAttribute="centerY" id="Ins-MH-Hiq"/>
-                                            <constraint firstAttribute="centerX" secondItem="HXO-si-KwJ" secondAttribute="centerX" id="bXH-df-JFm"/>
+                                            <constraint firstAttribute="centerY" secondItem="HXO-si-KwJ" secondAttribute="centerY" constant="1.5" id="Ins-MH-Hiq"/>
+                                            <constraint firstAttribute="centerX" secondItem="HXO-si-KwJ" secondAttribute="centerX" constant="1" id="bXH-df-JFm"/>
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>
@@ -2271,6 +2262,23 @@ Saturday</string>
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="505" y="-2517"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mPl-yW-eB3">
+            <objects>
+                <viewController id="NmF-Pz-rTf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xGu-qq-r1J"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pb3-bK-oPF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bNL-Fq-coP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIA-WI-okd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

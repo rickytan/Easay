@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ESMenuViewController : UITableViewController
-
+@property (nonatomic, strong) NSIndexPath * selectedIndex;
 @end

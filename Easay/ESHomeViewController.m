@@ -10,6 +10,8 @@
 #import "UIColor+RExtension.h"
 #import "UIFont+ES.h"
 #import "ESWeekDataView.h"
+#import "RTSiderViewController.h"
+#import "ESMenuViewController.h"
 
 @interface ESHomeViewController () <UIScrollViewDelegate>
 @property (nonatomic, assign) IBOutlet UIScrollView * scrollView;
@@ -23,6 +25,7 @@
 @property (nonatomic, strong) NSArray * weekData;
 
 - (IBAction)onPageControl:(id)sender;
+- (IBAction)onRight:(id)sender;
 @end
 
 @implementation ESHomeViewController
@@ -192,6 +195,13 @@
 {
     [self.scrollView setContentOffset:CGPointMake(self.pageControl.currentPage * self.scrollView.bounds.size.width, 0)
                              animated:YES];
+}
+
+- (IBAction)onRight:(id)sender
+{
+    [(ESMenuViewController *)self.siderViewController.currentLeftViewController setSelectedIndex:[NSIndexPath indexPathForRow:4 inSection:0]];
+    [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ThehotNav"]
+                                             animated:YES];
 }
 
 #pragma mark - UIScrollView

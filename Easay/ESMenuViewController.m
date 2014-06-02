@@ -46,7 +46,6 @@
 @property (nonatomic, assign) IBOutlet UIToolbar *headBar;
 
 @property (nonatomic, strong) NSArray * cellItems;
-@property (nonatomic, strong) NSIndexPath * selectedIndex;
 
 - (IBAction)onLogout:(id)sender;
 - (IBAction)onHeader:(id)sender;
