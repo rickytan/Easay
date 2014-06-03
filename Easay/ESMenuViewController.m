@@ -110,7 +110,7 @@
 
 - (IBAction)onLogout:(id)sender
 {
-    [self dismissViewControllerAnimated:YES
+    [self.siderViewController dismissViewControllerAnimated:YES
                              completion:NULL];
 }
 

@@ -54,6 +54,9 @@
 {
     [_currentMiddleViewController.view removeObserver:self
                                            forKeyPath:@"transform"];
+    _currentLeftViewController = nil;
+    _currentMiddleViewController = nil;
+    _currentRightViewController = nil;
     SAFE_RELEASE(_maskView);
     SAFE_RELEASE(_pan);
     SAFE_RELEASE(_swipe);
@@ -261,7 +264,7 @@
             _currentMiddleViewController = controller;
             [_currentMiddleViewController.view addObserver:self
                                                 forKeyPath:@"transform"
-                                                   options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                                                   options:NSKeyValueObservingOptionNew
                                                    context:NULL];
             if (self.isViewLoaded) {
                 _currentMiddleViewController.view.frame = self.view.bounds;
@@ -290,7 +293,7 @@
                                         _currentMiddleViewController = controller;
                                         [_currentMiddleViewController.view addObserver:self
                                                                             forKeyPath:@"transform"
-                                                                               options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld
+                                                                               options:NSKeyValueObservingOptionNew
                                                                                context:NULL];
                                         if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)])
                                             [self setNeedsStatusBarAppearanceUpdate];

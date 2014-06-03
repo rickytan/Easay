@@ -49,19 +49,19 @@
     self.formatter.numberStyle = NSNumberFormatterDecimalStyle;
     [self.formatter setNumberStyle: NSNumberFormatterDecimalStyle];
 
-    self.friends = @[@{@"image": @"head",
+    self.friends = @[@{@"image": @"1",
                        @"name": @"gusty",
                        @"distance": @28810},
-                     @{@"image": @"head",
+                     @{@"image": @"2",
                        @"name": @"clumsy",
                        @"distance": @532},
-                     @{@"image": @"head",
+                     @{@"image": @"3",
                        @"name": @"brainy",
                        @"distance": @19731},
-                     @{@"image": @"head",
+                     @{@"image": @"4",
                        @"name": @"papa",
                        @"distance": @528810},
-                     @{@"image": @"head",
+                     @{@"image": @"5",
                        @"name": @"hackus",
                        @"distance": @63}];
 }
