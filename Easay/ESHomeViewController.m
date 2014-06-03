@@ -62,8 +62,8 @@
 {
     [super loadView];
     
-    [CATransaction setDisableActions:YES];
-    [CATransaction setAnimationDuration:0.5];
+    //[CATransaction setDisableActions:YES];
+    //[CATransaction setAnimationDuration:0.5];
     
     self.shape0 = [self shapeWithRadius:120
                                andColor:[UIColor colorWithHexString:@"#ffe400"]];
@@ -105,12 +105,24 @@
 	// Do any additional setup after loading the view.
     
     self.weekData = @[@10, @8, @4, @7, @2, @5, @9];
-    
-    self.scrollView.contentSize = CGSizeMake(960, 640);
-    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+
     [self performSelector:@selector(showContent)
                withObject:nil
                afterDelay:0.5];
+
+    self.scrollView.alpha = 0.0;
+    self.scrollView.transform = CGAffineTransformMakeTranslation(0, CGRectGetHeight(self.scrollView.frame));
+
+    [UIView animateWithDuration:1.0
+                          delay:0.5
+         usingSpringWithDamping:0.5
+          initialSpringVelocity:1.0
+                        options:0
+                     animations:^{
+                         self.scrollView.transform = CGAffineTransformIdentity;
+                         self.scrollView.alpha = 1.0;
+                     }
+                     completion:NULL];
 }
 
 - (void)viewDidLayoutSubviews

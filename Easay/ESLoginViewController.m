@@ -9,6 +9,7 @@
 #import "ESLoginViewController.h"
 #import "ESSignUpViewController.h"
 #import "ESViewController.h"
+#import "ProgressHUD.h"
 
 @interface ESLoginViewController () <ESSignUpViewControllerDelegate>
 @property (nonatomic, assign) IBOutlet UIImageView * logo;
@@ -154,8 +155,16 @@
 
 - (IBAction)onLogin:(id)sender
 {
-    [self performSegueWithIdentifier:@"ShowHomeSegue"
-                              sender:self];
+    [ProgressHUD show:@"Loading..."];
+    [self.view endEditing:YES];
+
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [ProgressHUD dismiss];
+        [self performSegueWithIdentifier:@"ShowHomeSegue"
+                                  sender:self];
+    });
 }
 
 #pragma mark - ESSignUp

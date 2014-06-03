@@ -261,7 +261,11 @@ static CGPoint pos[] = {
 
 - (IBAction)onCamera:(id)sender
 {
-
+    [[[UIActionSheet alloc] initWithTitle:nil
+                                 delegate:nil
+                        cancelButtonTitle:@"Cancal"
+                   destructiveButtonTitle:nil
+                        otherButtonTitles:@"From Photo Library", @"From Camera", nil] showInView:self.view];
 }
 
 #pragma mark - UIGesture
@@ -283,11 +287,11 @@ static CGPoint pos[] = {
         case UIGestureRecognizerStateChanged:
             self.selectedBalloon.center = [pan locationInView:self.view];
             if (!self.wechat.isSelected)
-            self.wechat.highlighted = CGRectContainsPoint(self.wechat.frame, self.selectedBalloon.center);
+                self.wechat.highlighted = CGRectContainsPoint(self.wechat.frame, self.selectedBalloon.center);
             if (!self.weibo.isSelected)
-            self.weibo.highlighted = CGRectContainsPoint(self.weibo.frame, self.selectedBalloon.center);
+                self.weibo.highlighted = CGRectContainsPoint(self.weibo.frame, self.selectedBalloon.center);
             if (!self.path.isSelected)
-            self.path.highlighted = CGRectContainsPoint(self.path.frame, self.selectedBalloon.center);
+                self.path.highlighted = CGRectContainsPoint(self.path.frame, self.selectedBalloon.center);
             break;
         case UIGestureRecognizerStateEnded:
         case UIGestureRecognizerStateCancelled:
@@ -301,11 +305,11 @@ static CGPoint pos[] = {
             self.selectedBalloon = nil;
 
             if (!self.weibo.isSelected)
-            self.weibo.selected = self.weibo.highlighted;
+                self.weibo.selected = self.weibo.highlighted;
             if (!self.wechat.isSelected)
-            self.wechat.selected = self.wechat.highlighted;
+                self.wechat.selected = self.wechat.highlighted;
             if (!self.path.isSelected)
-            self.path.selected = self.path.highlighted;
+                self.path.selected = self.path.highlighted;
 
             self.weibo.highlighted = NO;
             self.wechat.highlighted = NO;

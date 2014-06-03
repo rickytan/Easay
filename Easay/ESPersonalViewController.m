@@ -232,8 +232,10 @@ static CGFloat _percents[] = {0.f, 0.f, 0.f};
     if (indexPath.item == 4)
         return [collectionView dequeueReusableCellWithReuseIdentifier:@"More"
                                                          forIndexPath:indexPath];
-    return [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell"
-                                                     forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell"
+                                                                           forIndexPath:indexPath];
+    ((UIImageView *)cell.contentView.subviews.firstObject).image = [UIImage imageNamed:@(indexPath.item + 1).stringValue];
+    return cell;
 }
 
 @end
