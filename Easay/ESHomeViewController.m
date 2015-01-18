@@ -10,7 +10,8 @@
 #import "UIColor+RExtension.h"
 #import "UIFont+ES.h"
 #import "ESWeekDataView.h"
-#import "RTSiderViewController.h"
+#import "MMDrawerController.h"
+#import "UIViewController+MMDrawerController.h"
 #import "ESMenuViewController.h"
 
 @interface ESHomeViewController () <UIScrollViewDelegate>
@@ -48,7 +49,6 @@
     shape.strokeColor = color.CGColor;
     shape.strokeStart = 0.0;
     shape.strokeEnd = 0.0;
-    shape.delegate = self;
     shape.path = [UIBezierPath bezierPathWithArcCenter:CGPointZero
                                                 radius:radius
                                             startAngle:0
@@ -64,7 +64,7 @@
     
     //[CATransaction setDisableActions:YES];
     //[CATransaction setAnimationDuration:0.5];
-    
+
     self.shape0 = [self shapeWithRadius:120
                                andColor:[UIColor colorWithHexString:@"#ffe400"]];
     self.shape1 = [self shapeWithRadius:100
@@ -84,7 +84,7 @@
     
     dotLine.position = CGPointMake(0, self.scrollView.frame.origin.y);
     [self.view.layer addSublayer:dotLine];
-    
+
     self.textLayer = [CATextLayer layer];
     self.textLayer.fontSize = 44;
     self.textLayer.hidden = YES;
@@ -110,6 +110,7 @@
                withObject:nil
                afterDelay:0.5];
 
+
     self.scrollView.alpha = 0.0;
     self.scrollView.transform = CGAffineTransformMakeTranslation(0, CGRectGetHeight(self.scrollView.frame));
 
@@ -123,6 +124,7 @@
                          self.scrollView.alpha = 1.0;
                      }
                      completion:NULL];
+
 }
 
 - (void)viewDidLayoutSubviews
@@ -135,18 +137,6 @@
     self.shape2.position = self.shape0.position;
     
     self.textLayer.position = self.shape0.position;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    //[CATransaction setDisableActions:YES];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -211,9 +201,10 @@
 
 - (IBAction)onRight:(id)sender
 {
-    [(ESMenuViewController *)self.siderViewController.currentLeftViewController setSelectedIndex:[NSIndexPath indexPathForRow:4 inSection:0]];
-    [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ThehotNav"]
-                                             animated:YES];
+    [(ESMenuViewController *)self.mm_drawerController.leftDrawerViewController setSelectedIndex:[NSIndexPath indexPathForRow:4 inSection:0]];
+    [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ThehotNav"]
+                                   withCloseAnimation:YES
+                                           completion:NULL];
 }
 
 #pragma mark - UIScrollView
@@ -229,29 +220,6 @@
     if (!decelerate) {
         [self updatePageControl];
     }
-}
-
-#pragma mark - CALayer
-
-- (void)displayLayer:(CALayer *)layer
-{
-    
-}
-
-/* If defined, called by the default implementation of -drawInContext: */
-
-- (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
-{
-    
-}
-
-/* Called by the default -layoutSublayers implementation before the layout
- * manager is checked. Note that if the delegate method is invoked, the
- * layout manager will be ignored. */
-
-- (void)layoutSublayersOfLayer:(CALayer *)layer
-{
-    
 }
 
 @end

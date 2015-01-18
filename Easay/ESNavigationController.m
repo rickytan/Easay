@@ -19,4 +19,10 @@
     return [self.visibleViewController preferredStatusBarStyle];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.visibleViewController viewDidAppear:animated];
+}
+
 @end

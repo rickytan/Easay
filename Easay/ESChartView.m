@@ -144,11 +144,12 @@
                                    (id)fillColor.CGColor, nil];
         CGFloat gradientLocations[] = {0, 0.7};
         CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (CFArrayRef)gradientColors, gradientLocations);
+        CFRelease(colorSpace);
         CGContextSaveGState(context);
         [path addClip];
         CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, rect.size.height), 0);
         CGContextRestoreGState(context);
-        
+        CFRelease(gradient);
         [path stroke];
     }
     

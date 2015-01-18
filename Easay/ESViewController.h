@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "RTSiderViewController.h"
+#import "MMDrawerController.h"
 
-@interface ESViewController : RTSiderViewController
+@interface ESViewController : MMDrawerController
 
 @end

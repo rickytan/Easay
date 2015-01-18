@@ -12,14 +12,16 @@
 
 + (instancetype)lightFontWithSize:(CGFloat)size
 {
-    return [UIFont fontWithName:[self lightFontName]
-                           size:size];
+    return [UIFont fontWithDescriptor:[UIFontDescriptor fontDescriptorWithFontAttributes:@{@"NSFontNameAttribute": [UIFont lightFontName],
+                                                                                           @"NSCTFontUIUsageAttribute": UIFontTextStyleBody}]
+                                 size:size];
 }
 
 + (instancetype)boldFontWithSize:(CGFloat)size
 {
-    return [UIFont fontWithName:[self boldFontName]
-                           size:size];
+    return [UIFont fontWithDescriptor:[UIFontDescriptor fontDescriptorWithFontAttributes:@{@"NSFontNameAttribute": [UIFont boldFontName],
+                                                                                           @"NSCTFontUIUsageAttribute": UIFontTextStyleBody}]
+                                 size:size];
 }
 
 + (NSString *)lightFontName

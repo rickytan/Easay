@@ -9,7 +9,8 @@
 #import "ESMenuViewController.h"
 #import "UIColor+RExtension.h"
 #import "UIFont+ES.h"
-#import "RTSiderViewController.h"
+#import "MMDrawerController.h"
+#import "UIViewController+MMDrawerController.h"
 #import <MapKit/MapKit.h>
 
 @interface ESMenuCell : UITableViewCell
@@ -110,8 +111,8 @@
 
 - (IBAction)onLogout:(id)sender
 {
-    [self.siderViewController dismissViewControllerAnimated:YES
-                             completion:NULL];
+    [self.mm_drawerController dismissViewControllerAnimated:YES
+                                                 completion:NULL];
 }
 
 - (IBAction)onHeader:(id)sender
@@ -119,7 +120,7 @@
     if ([sender isKindOfClass:[UITapGestureRecognizer class]] && ((UITapGestureRecognizer *)sender).state != UIGestureRecognizerStateEnded)
         return;
 
-    [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"PersonalNav"]];
+    [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"PersonalNav"]];
 
     [self.tableView deselectRowAtIndexPath:self.selectedIndex
                                   animated:YES];
@@ -158,30 +159,47 @@
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([self.selectedIndex isEqual:indexPath]) {
+        [self.mm_drawerController closeDrawerAnimated:YES
+                                           completion:^(BOOL finished) {
+                                               if (finished) {
+                                                   [self.mm_drawerController.centerViewController viewDidAppear:YES];
+                                               }
+                                           }];
+        return;
+    }
+
     self.selectedIndex = indexPath;
     switch (indexPath.row) {
         case 0:
-            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeNav"]
-                                                     animated:YES];
+            [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeNav"]
+                                           withCloseAnimation:YES
+                                                   completion:NULL];
             break;
         case 1:
-            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ActivityNav"]
-                                                     animated:YES];
+            [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ActivityNav"]
+                                           withCloseAnimation:YES
+                                                   completion:NULL];
             break;
         case 2:
-            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"FriendNav"]
-                                                     animated:YES];
+            [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"FriendNav"]
+                                           withCloseAnimation:YES
+                                                   completion:NULL];
             break;
         case 3:
-            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"MytripNav"]
-                                                     animated:YES];
+            [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"MytripNav"]
+                                           withCloseAnimation:YES
+                                                   completion:NULL];
             break;
         case 4:
-            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ThehotNav"]
-                                                     animated:YES];
+            [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ThehotNav"]
+                                           withCloseAnimation:YES
+                                                   completion:NULL];
             break;
         case 5:
-            [self.siderViewController setMiddleViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingNav"]];
+            [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"SettingNav"]
+                                           withCloseAnimation:YES
+                                                   completion:NULL];
             break;
         default:
             break;

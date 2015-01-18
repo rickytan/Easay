@@ -7,7 +7,8 @@
 //
 
 #import "ESSiderMiddleBaseViewController.h"
-#import "RTSiderViewController.h"
+#import "MMDrawerController.h"
+#import "UIViewController+MMDrawerController.h"
 
 @interface ESSiderMiddleBaseViewController ()
 @property (nonatomic, strong) UIButton * menuButton;
@@ -57,7 +58,12 @@
 
 - (void)onMenu:(id)sender
 {
-    [self.siderViewController slideToRightAnimated:YES];
+    [self.mm_drawerController openDrawerSide:MMDrawerSideLeft
+                                    animated:YES
+                                  completion:^(BOOL finished) {
+
+                                  }];
+
     [UIView animateWithDuration:0.2
                           delay:0.35
                         options:UIViewAnimationOptionCurveEaseOut
@@ -110,16 +116,19 @@
                      animations:^{
                          self.menuButton.transform = CGAffineTransformIdentity;
                      }
-                     completion:^(BOOL finished) {
-                         
-                     }];
+                     completion:NULL];
 }
 
 #pragma mark - Action
 
 - (void)onMenu:(id)sender
 {
-    [self.siderViewController slideToRightAnimated:YES];
+    [self.mm_drawerController openDrawerSide:MMDrawerSideLeft
+                                    animated:YES
+                                  completion:^(BOOL finished) {
+
+                                  }];
+    
     [UIView animateWithDuration:0.2
                           delay:0.35
                         options:UIViewAnimationOptionCurveEaseOut

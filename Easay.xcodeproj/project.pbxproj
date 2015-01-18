@@ -33,6 +33,10 @@
 		9C78269B192FD3EE00D01BB5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C78269A192FD3EE00D01BB5 /* MapKit.framework */; };
 		9C78269E192FD99500D01BB5 /* ESMyTripViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C78269D192FD99500D01BB5 /* ESMyTripViewController.m */; };
 		9C7826A1192FDB1C00D01BB5 /* ESTripCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7826A0192FDB1C00D01BB5 /* ESTripCell.m */; };
+		9C98877C1A6C076E00AF4CFC /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9887741A6C076E00AF4CFC /* MMDrawerBarButtonItem.m */; };
+		9C98877D1A6C076E00AF4CFC /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9887771A6C076E00AF4CFC /* MMDrawerController.m */; };
+		9C98877E1A6C076E00AF4CFC /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9887791A6C076E00AF4CFC /* MMDrawerVisualState.m */; };
+		9C98877F1A6C076E00AF4CFC /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C98877B1A6C076E00AF4CFC /* UIViewController+MMDrawerController.m */; };
 		9CAB50AA19324B5300E21574 /* ESPlaceInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CAB50A919324B5300E21574 /* ESPlaceInputViewController.m */; };
 		9CC16AB818FBBBE2004D3F8A /* ESViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16AB718FBBBE2004D3F8A /* ESViewController.m */; };
 		9CC16ABB18FBBC13004D3F8A /* RTSiderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CC16ABA18FBBC13004D3F8A /* RTSiderViewController.m */; };
@@ -127,6 +131,15 @@
 		9C78269D192FD99500D01BB5 /* ESMyTripViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESMyTripViewController.m; sourceTree = "<group>"; };
 		9C78269F192FDB1C00D01BB5 /* ESTripCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTripCell.h; sourceTree = "<group>"; };
 		9C7826A0192FDB1C00D01BB5 /* ESTripCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTripCell.m; sourceTree = "<group>"; };
+		9C9887731A6C076E00AF4CFC /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		9C9887741A6C076E00AF4CFC /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		9C9887751A6C076E00AF4CFC /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		9C9887761A6C076E00AF4CFC /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		9C9887771A6C076E00AF4CFC /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		9C9887781A6C076E00AF4CFC /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		9C9887791A6C076E00AF4CFC /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		9C98877A1A6C076E00AF4CFC /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		9C98877B1A6C076E00AF4CFC /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		9CAB50A819324B5300E21574 /* ESPlaceInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPlaceInputViewController.h; sourceTree = "<group>"; };
 		9CAB50A919324B5300E21574 /* ESPlaceInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPlaceInputViewController.m; sourceTree = "<group>"; };
 		9CC16AB618FBBBE2004D3F8A /* ESViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESViewController.h; sourceTree = "<group>"; };
@@ -206,6 +219,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C9887721A6C076E00AF4CFC /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				9C9887731A6C076E00AF4CFC /* MMDrawerBarButtonItem.h */,
+				9C9887741A6C076E00AF4CFC /* MMDrawerBarButtonItem.m */,
+				9C9887751A6C076E00AF4CFC /* MMDrawerController+Subclass.h */,
+				9C9887761A6C076E00AF4CFC /* MMDrawerController.h */,
+				9C9887771A6C076E00AF4CFC /* MMDrawerController.m */,
+				9C9887781A6C076E00AF4CFC /* MMDrawerVisualState.h */,
+				9C9887791A6C076E00AF4CFC /* MMDrawerVisualState.m */,
+				9C98877A1A6C076E00AF4CFC /* UIViewController+MMDrawerController.h */,
+				9C98877B1A6C076E00AF4CFC /* UIViewController+MMDrawerController.m */,
+			);
+			name = MMDrawerController;
+			path = MMDrawerController/MMDrawerController;
+			sourceTree = "<group>";
+		};
 		9CC16AC218FBC101004D3F8A /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +250,7 @@
 		9CD7A67D18EDDA7800641DA9 = {
 			isa = PBXGroup;
 			children = (
+				9C9887721A6C076E00AF4CFC /* MMDrawerController */,
 				9CC16AC218FBC101004D3F8A /* ProgressHUD */,
 				9CD7A68F18EDDA7800641DA9 /* Easay */,
 				9CD7A6A818EDDA7800641DA9 /* EasayTests */,
@@ -476,17 +507,21 @@
 				9C05FC92191D6F2600889724 /* ESOptionSelectViewController.m in Sources */,
 				9C446862193C4F610066A1FF /* ESMoreFriendTableViewController.m in Sources */,
 				9C05FC82191CB5F200889724 /* ESSegmentView.m in Sources */,
+				9C98877F1A6C076E00AF4CFC /* UIViewController+MMDrawerController.m in Sources */,
+				9C98877E1A6C076E00AF4CFC /* MMDrawerVisualState.m in Sources */,
 				9C782688192A824E00D01BB5 /* ESChartView.m in Sources */,
 				9CC16AC718FBC101004D3F8A /* ProgressHUD.m in Sources */,
 				9C108DFC1900514A004CD572 /* ESSiderMiddleBaseViewController.m in Sources */,
 				9C7826A1192FDB1C00D01BB5 /* ESTripCell.m in Sources */,
 				9C108DF919004B7E004CD572 /* ESNavigationController.m in Sources */,
+				9C98877D1A6C076E00AF4CFC /* MMDrawerController.m in Sources */,
 				9CC16ABE18FBBEEC004D3F8A /* ESMenuViewController.m in Sources */,
 				9CD7A69A18EDDA7800641DA9 /* ESAppDelegate.m in Sources */,
 				9C1AC7BC18FADFB3009EAB1F /* UIViewController+ES.m in Sources */,
 				9C1AC7B918FADB5D009EAB1F /* ESSignUpViewController.m in Sources */,
 				9CEEF67F19269CF1009018D3 /* ESWeekDataView.m in Sources */,
 				9C5457AF19351E8500C6C546 /* ESTrafficExchangeViewController.m in Sources */,
+				9C98877C1A6C076E00AF4CFC /* MMDrawerBarButtonItem.m in Sources */,
 				9C108E02190060DA004CD572 /* ESShareViewController.m in Sources */,
 				9C78269E192FD99500D01BB5 /* ESMyTripViewController.m in Sources */,
 				9CE3687A191E7625003F064D /* ESSetNameViewController.m in Sources */,
@@ -625,12 +660,14 @@
 		9CD7A6B318EDDA7800641DA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Easay/Easay-Prefix.pch";
 				INFOPLIST_FILE = "Easay/Easay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -640,6 +677,7 @@
 		9CD7A6B418EDDA7800641DA9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: hang zhang (JM9WSY7Q38)";
@@ -647,8 +685,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Easay/Easay-Prefix.pch";
 				INFOPLIST_FILE = "Easay/Easay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "333BFD0C-0CAB-4F22-B636-4B880CE1B89D";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

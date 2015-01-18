@@ -1,3 +1,6 @@
 [submodule "ProgressHUD"]
 	path = ProgressHUD
 	url = https://github.com/relatedcode/ProgressHUD
+[submodule "MMDrawerController"]
+	path = MMDrawerController
+	url = https://github.com/mutualmobile/MMDrawerController.git
