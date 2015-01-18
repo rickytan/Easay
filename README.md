@@ -8,6 +8,10 @@
 ## 开发者
 **Ricky Tan**，本项目的所有者。
 
+## 真机体验
+![qrcode](http://www.pgyer.com/app/qrcode/5c046866e69cece8ab2f30a3a8582900)
+
+**密码：**`123456`
 ## 截图
 ![image](./easay.gif)
 
