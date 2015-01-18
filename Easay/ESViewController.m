@@ -26,7 +26,7 @@
     self.delegate = self;
     self.dataSource = self;
      */
-    self.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+
     [self setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"HomeNav"]];
     [self setLeftDrawerViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"Menu"]];
     

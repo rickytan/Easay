@@ -120,7 +120,9 @@
     if ([sender isKindOfClass:[UITapGestureRecognizer class]] && ((UITapGestureRecognizer *)sender).state != UIGestureRecognizerStateEnded)
         return;
 
-    [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"PersonalNav"]];
+    [self.mm_drawerController setCenterViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"PersonalNav"]
+                                   withCloseAnimation:YES
+                                           completion:NULL];
 
     [self.tableView deselectRowAtIndexPath:self.selectedIndex
                                   animated:YES];
