@@ -12,7 +12,7 @@
 
 @interface ESOptionItem : NSObject
 @property (nonatomic, strong) NSString *text;
-@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSString *itemDescription;
 @property (nonatomic, strong) UIImage *image;
 + (instancetype)optionItemWithText:(NSString *)text
                        description:(NSString *)desc

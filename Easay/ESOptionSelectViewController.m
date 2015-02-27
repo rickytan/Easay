@@ -17,7 +17,7 @@
 {
     ESOptionItem *item = [[ESOptionItem alloc] init];
     item.text = text;
-    item.description = desc;
+    item.itemDescription = desc;
     item.image = image;
     return item;
 }
@@ -106,7 +106,7 @@
         cell.textLabel.text = (NSString *)item;
     else {
         cell.textLabel.text = item.text;
-        cell.detailTextLabel.text = item.description;
+        cell.detailTextLabel.text = item.itemDescription;
         cell.imageView.image = item.image;
     }
     
